@@ -1,0 +1,15 @@
+Description of the data
+Let's pursue Example 2 from above.
+
+We have data on 250 groups that went to a park. Each group was questioned about how many fish they caught (count), how many children were in the group (child), how many people were in the group (persons), and whether or not they brought a camper to the park (camper).
+
+In addition to predicting the number of fish caught, there is interest in predicting the existence of excess zeros, i.e., the probability that a group caught zero fish. We will use the variables child, persons, and camper in our model. Let's look at the data.
+
+zinb <- read.csv("http://www.ats.ucla.edu/stat/data/fish.csv")
+zinb <- within(zinb, {
+    nofish <- factor(nofish)
+    livebait <- factor(livebait)
+    camper <- factor(camper)
+})
+
+summary(zinb)
