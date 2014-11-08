@@ -1,0 +1,27 @@
+%============================================================%
+\begin{frame}
+\frametitle{Zero Truncated Poisson Distribution}
+\Large
+
+
+\end{frame}
+%============================================================%
+\begin{frame}
+\frametitle{Zero Truncated Poisson Distribution}
+\Large
+
+The zero-truncated Poisson (ZTP) distribution is a certain discrete probability distribution whose support is the set of positive integers. This distribution is also known as the conditional Poisson distribution[1] or the positive Poisson distribution.[2] It is the conditional probability distribution of a Poisson-distributed random variable, given that the value of the random variable is not zero. Thus it is impossible for a ZTP random variable to be zero. Consider for example the random variable of the number of items in a shopper's basket at a supermarket checkout line. Presumably a shopper does not stand in line with nothing to buy (i.e. the minimum purchase is 1 item), so this phenomenon may follow a ZTP distribution.[3]
+
+\end{frame}
+%============================================================%
+\begin{frame}
+
+Since the ZTP is a truncated distribution with the truncation stipulated as k > 0, one can derive the probability mass 
+function g(k;λ) from a standard Poisson distribution f(k;λ) as follows: [4]
+g(k;\lambda) = P(X = k \mid k > 0) = 
+\frac{f(k;\lambda)}{1-f(0;\lambda)} = 
+\frac{\lambda ^ k e^{- \lambda} }{k ! \left ( 1 - e^{- \lambda} \right )} = \frac{\lambda^k}{(e^\lambda-1)k!}
+
+\end{frame}
+%============================================================%
+\end{document}
