@@ -1,0 +1,34 @@
+
+ABSTRACT
+Real-life count data are frequently characterized by overdispersion and excess zeros. Zero-inflated count models
+provide a parsimonious yet powerful way to model this type of situation. Such models assume that the data are a
+mixture of two separate data generation processes: one generates only zeros, and the other is either a Poisson or
+a negative binomial data-generating process. The result of a Bernoulli trial is used to determine which of the two
+processes generates an observation.
+OVERVIEW
+The COUNTREG (count regression) procedure analyzes regression models in which the dependent variable takes
+nonnegative integer or count values. The dependent variable is usually the number of times an event occurs. Some
+examples of event counts are:
+ number of claims per year on a particular car owner’s auto insurance policy
+ number of workdays missed due to sickness of a dependent in a 4-week period
+ number of papers published per year by a researcher
+In count regression, the conditional mean E.yi jxi / of the dependent variable, yi , is assumed to be a function of a vector
+of covariates, xi . Possible covariates for the auto insurance example are:
+ age of the driver
+ type of car
+ daily commuting distance
+
+MARGINAL EFFECTS IN COUNT REGRESSION
+Marginal effects provide a way to measure the effect of each covariate on the dependent variable. The marginal effect
+of one covariate is the expected instantaneous rate of change in the dependent variable as a function of the change
+in that covariate, while keeping all other covariates constant. Unlike in linear models, the derivative of the conditional
+expectation with respect to xi;j is no longer equal to ?j —that is, @E.yi jxi /=@xi;j ¤ ?j . For example, for the Poisson
+regression with E.yi jxi / D ex0
+
+Therefore the marginal effect of the change in covariate xi;j depends not only on ?j , but also on all other estimated
+coefficients, and on all other covariate values. Another interpretation is that a one-unit change in the j th covariate leads
+to a proportional change in the conditional mean E.yi jxi / of ?j .
+BASIC MODELS: POISSON AND NEGATIVE BINOMIAL REGRESSION MODELS
+The Poisson (log-linear) regression model is the most basic model that explicitly takes into account the nonnegative
+integer-valued aspect of the dependent count variable. In this model, the probability of an event count yi , given the
+vector of covariates xi , is given by the Poisson distribution:
