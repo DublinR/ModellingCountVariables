@@ -1,9 +1,17 @@
-\frametitle{Negative Binomial Regression with \texttt{R} }
-\Large
-\begin{itemize}
-\item
-The outcome variable in a negative binomial regression cannot have negative numbers.
-\item You will need to use the \texttt{m1\$resid} command to obtain the residuals from our model to check
-other assumptions of the negative binomial model
-% (see Cameron and Trivedi (1998) and Dupont (2002) for more information).
-\end{itemize}
+\frametitle{Generalized Linear Models}
+\large
+\begin{center}
+\begin{tabular}{|c|l|} \hline
+Family & Default Link Function \\ \hline \hline
+binomial& \texttt{(link = "logit")} \\ \hline
+gaussian& \texttt{(link = "identity")} \\ \hline
+Gamma& \texttt{(link = "inverse")} \\ \hline
+inverse.gaussian& \texttt{(link = "$1/mu^2$")} \\ \hline
+\textbf{poisson} &\texttt{(link = "log")} \\ \hline
+%quasi& \texttt{(link = "identity", variance = "constant")} \\ \hline
+quasibinomial& \texttt{(link = "logit")} \\ \hline
+quasipoisson& \texttt{(link = "log")} \\ \hline
+
+\end{tabular}
+\end{center}
+

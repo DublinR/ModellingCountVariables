@@ -18,14 +18,102 @@ examples of event counts are:
 \item number of papers published per year by a researcher.
 \end{itemize}
 \end{frame}
+%==================================================== %
+\begin{frame}
+	\frametitle{Poisson Distribution: Prussian Cavalary}
+\Large
+\begin{itemize}
+\item The classic Poisson example is the data set of von Bortkiewicz (1898), for the chance of a Prussian cavalryman being killed by the kick of a horse. 
+\item Ten army corps were observed over 20 years, giving a total of 200 observations of one corps for a one year period. The period or module of observation is thus one year. 
+
+
+\end{itemize}
+\end{frame}
+%======================================================== %
+\begin{frame}
+	\frametitle{Poisson Distribution: Prussian Cavalary}
+	\Large
+	\begin{itemize}
+\item The total deaths from horse kicks were 122, and the average number of deaths per year per corps was thus 122/200 = 0.61. 
+%\item This is a rate of less than 1. It is also obvious that it is meaningless to ask how many times per year a cavalryman was not killed by the kick of a horse. 
+\item In any given year, we expect to observe, well, not exactly 0.61 deaths in one corps 
+%(that is not possible; deaths occur in modules of 1), but sometimes none, sometimes one, occasionally two, perhaps once in a while three, and (we might intuitively expect) very rarely any more. 
+\item Here, then, is the classic Poisson situation: a rare event, whose average rate is small, with observations made over many small intervals of time.
+\end{itemize}
+\end{frame}
 %======================================================== %
 \begin{frame}
 \frametitle{Overview}
 \Large
 \begin{itemize}
-\item  Poisson regression is used to model count variables.
+\item  Poisson regression is main technique used to model count variables.
+\item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead.
 \item  Negative Binomial regression is for modelling count variables, usually for over-dispersed count outcome variables.
 \end{itemize}
+\end{frame}
+%=========================================================== %
+
+\begin{frame}[fragile]
+\frametitle{Generalized Linear Models}\large
+\begin{itemize}
+\item In statistics, the problem of modelling count variables is an example of generalized linear modelling.
+\item Generalized linear models are fit using the \texttt{glm()} function. 
+\item The form of the \texttt{glm} function is
+\end{itemize}
+{
+\normalsize
+\begin{framed}
+ \begin{verbatim}
+glm(formula, family=familytype(link=linkfunction),
+  data=dataname)
+\end{verbatim}
+\end{framed}
+}
+\end{frame}
+%========================================================== %
+\begin{frame}[fragile]
+	\frametitle{Generalized Linear Models}
+	\large
+\begin{center}
+\begin{tabular}{|c|l|} \hline
+	Family &	Default Link Function \\ \hline \hline 
+	binomial&	\texttt{(link = "logit")} \\ \hline
+	gaussian&	\texttt{(link = "identity")} \\ \hline
+	Gamma&	\texttt{(link = "inverse")} \\ \hline
+	inverse.gaussian&	\texttt{(link = "$1/mu^2$")} \\ \hline
+	\textbf{poisson}	&\texttt{(link = "log")} \\ \hline
+	%quasi&	\texttt{(link = "identity", variance = "constant")} \\ \hline
+	quasibinomial&	\texttt{(link = "logit")} \\ \hline
+	quasipoisson&	\texttt{(link = "log")} \\ \hline
+	
+\end{tabular}
+\end{center}
+ 
+\end{frame}
+
+\begin{frame}
+	\large
+	\textbf{Texts on GLMs}\\ \bigskip
+\begin{itemize}
+\item Dobson, A. J. (1990) An Introduction to Generalized Linear Models. (\textit{London: Chapman and Hall}.)
+\bigskip
+\item Hastie, T. J. and Pregibon, D. (1992) Generalized linear models. Chapter 6 of Statistical Models in S eds J. M. Chambers and T. J. Hastie, Wadsworth \& Brooks/Cole.
+\bigskip
+\item McCullagh P. and Nelder, J. A. (1989) Generalized Linear Models. (\textit{London: Chapman and Hall.})
+\bigskip
+\item Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. \textit{New York: Springer.}
+\end{itemize}
+
+\end{frame}
+%========================================================== %
+\begin{frame}
+\textbf{VGAM: Vector Generalized Linear and Additive Models}
+\begin{description}
+\item[Author(s):] Thomas W. Yee (t.yee@auckland.ac.nz)
+\item[License:] GPL-2
+\item[URL:] http://www.stat.auckland.ac.nz/$\sim$ yee/VGAM
+\end{description}
+Vector generalized linear and additive models, and associated models (Reduced-Rank VGLMs, Quadratic RR-VGLMs, Reduced-Rank VGAMs). \\ \bigskip This package fits many models and distribution by maximum likelihood estimation (MLE) or penalized MLE. Also fits constrained ordination models in ecology.
 \end{frame}
 %================================================================== %
 \end{document}
