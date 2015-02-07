@@ -1,0 +1,104 @@
+R Data Analysis Examples: Interval Regression
+
+Interval regression is used to model outcomes that have interval censoring. In other words, you know the ordered category into which each observation falls, but you do not know the exact value of the observation. Interval regression is a generalization of censored regression.
+
+This page uses the following packages. Make sure that you can load them before trying to run the examples on this page. If you do not have a package installed, run: install.packages("packagename"), or if you see the version is out of date, run: update.packages().
+ 
+
+
+require(foreign)
+require(ggplot2)
+require(GGally)
+require(survival)
+require(rgl)
+
+ Version info: Code for this page was tested in R Under development (unstable) (2012-11-16 r61126)
+ On: 2012-12-15
+ With: rgl 0.92.894; survival 2.36-14; GGally 0.4.2; reshape 0.8.4; plyr 1.8; ggplot2 0.9.3; foreign 0.8-51; knitr 0.9
+ 
+Please note: The purpose of this page is to show how to use various data analysis commands. It does not cover all aspects of the research process which researchers are expected to do. In particular, it does not cover data cleaning and checking, verification of assumptions, model diagnostics or potential follow-up analyses.
+
+Examples of interval regression
+
+Example 1. We wish to model annual income using years of education and marital status. However, we do not have access to the precise values for income. Rather, we only have data on the income ranges: <$15,000, $15,000-$25,000, $25,000-$50,000, $50,000-$75,000, $75,000-$100,000, and >$100,000. Note that the extreme values of the categories on either end of the range are either left-censored or right-censored. The other categories are interval censored, that is, each interval is both left- and right-censored. Analyses of this type require a generalization of censored regression known as interval regression.
+
+Example 2. We wish to predict GPA from teacher ratings of effort and from reading and writing test scores. The measure of GPA is a self-report response to the following item:
+ Select the category that best represents your overall GPA.
+  less than 2.0
+  2.0 to 2.5
+  2.5 to 3.0
+  3.0 to 3.4
+  3.4 to 3.8
+  3.8 to 3.9
+  4.0 or greater
+
+ Again, we have a situation with both interval censoring and left- and right-censoring. We do not know the exact value of GPA for each student; we only know the interval in which their GPA falls.
+
+Example 3. We wish to predict GPA from teacher ratings of effort, writing test scores and the type of program in which the student was enrolled (vocational, general or academic). The measure of GPA is a self-report response to the following item:
+ Select the category that best represents your overall GPA.
+  0.0 to 2.0
+  2.0 to 2.5
+  2.5 to 3.0
+  3.0 to 3.4
+  3.4 to 3.8
+  3.8 to 4.0
+ 
+This is a slight variation of Example 2. In this example, there is only interval censoring.
+
+Description of the data
+
+Let's pursue Example 3 from above. We have a hypothetical data file, intreg_data.dta with 30 observations. The GPA score is represented by two values, the lower interval score (lgpa) and the upper interval score (ugpa). The writing test scores, the teacher rating and the type of program (a nominal variable which has three levels) are write, rating and type, respectively. Let's look at the data. It is always a good idea to start with descriptive statistics.
+ 
+
+
+dat <- read.dta("http://www.ats.ucla.edu/stat/data/intreg_data.dta")
+
+# summary of the variables
+summary(dat)
+
+##        id             lgpa          ugpa         write         rating    
+##  Min.   : 1.00   Min.   :0.0   Min.   :2.0   Min.   : 50   Min.   :48.0  
+##  1st Qu.: 8.25   1st Qu.:2.0   1st Qu.:2.5   1st Qu.: 70   1st Qu.:51.6  
+##  Median :15.50   Median :2.5   Median :3.0   Median :105   Median :54.0  
+##  Mean   :15.50   Mean   :2.6   Mean   :3.1   Mean   :114   Mean   :57.5  
+##  3rd Qu.:22.75   3rd Qu.:3.3   3rd Qu.:3.7   3rd Qu.:154   3rd Qu.:66.2  
+##  Max.   :30.00   Max.   :3.8   Max.   :4.0   Max.   :205   Max.   :72.0  
+##          type   
+##  vocational: 8  
+##  general   :10  
+##  academic  :12  
+##                 
+##                 
+## 
+
+# bivariate plots
+ggpairs(dat[, -1], lower = list(combo = "box"), upper = list(combo = "blank"))
+
+
+
+ Note that there are two GPA responses for each observation, lgpa for the lower end of the interval and ugpa for the upper end. We can compare the means of the variables by each type of program using by.
+ 
+
+
+by(dat[, 2:5], dat$type, colMeans, na.rm = TRUE)
+
+## dat$type: vocational
+##   lgpa   ugpa  write rating 
+##  1.750  2.438 71.875 52.500 
+## -------------------------------------------------------- 
+## dat$type: general
+##   lgpa   ugpa  write rating 
+##   2.78   3.24 148.00  56.80 
+## -------------------------------------------------------- 
+## dat$type: academic
+##    lgpa    ugpa   write  rating 
+##   3.017   3.417 113.333  61.500
+
+ Analysis methods you might consider
+
+Below is a list of some analysis methods you may have encountered. Some of the methods listed are quite reasonable, while others have either fallen out of favor or have limitations.
+•Interval regression - This method is appropriate when you know into what interval each observation of the outcome variable falls, but you do not know the exact value of the observation.
+•Ordered probit - It is possible to conceptualize this model as an ordered probit regression with six ordered categories: 0 (0.0-2.0), 1 (2.0-2.5), 2 (2.5-3.0), 3 (3.0-3.4), 4 (3.4-3.8), and 5 (3.8-4.0).
+•Ordinal logistic regression - The results would be very similar in terms of which predictors are significant; however, the predicted values would be in terms of probabilities of membership in each of the categories. It would be necessary that the data meet the proportional odds assumption which, in fact, these data do not meet when converted into ordinal categories. 
+•OLS regression - You could analyze these data using OLS regression on the midpoints of the intervals. However, that analysis would not reflect our uncertainty concerning the nature of the exact values within each interval, nor would it deal adequately with the left- and right-censoring issues in the tails.
+ 

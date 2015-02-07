@@ -1,0 +1,12 @@
+Zero-truncated negative binomial regression is used to model count data for which the value zero cannot occur and for which over dispersion exists.
+
+This page uses the following packages. Make sure that you can load them before trying to run the examples on this page. If you do not have a package installed, run: install.packages("packagename"), or if you see the version is out of date, run: update.packages().
+
+\begin{framed}
+\begin{verbatim}
+require(foreign)
+require(ggplot2)
+require(VGAM)
+require(boot)
+\end{verbatim}
+\end{framed}
