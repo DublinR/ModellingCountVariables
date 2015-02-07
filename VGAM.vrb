@@ -1,0 +1,12 @@
+\frametitle{Zero-inflated negative binomial regression with VGAM}
+Vuong-Test using \texttt{vuong()} from package pscl: negative binomial model against zero-inflated negative binomial model
+\begin{verbatim}
+
+library(pscl)
+vuong(ziFitNB, glmFitNB)
+Vuong Non-Nested Hypothesis Test-Statistic: -1.037018
+(test-statistic is asymptotically distributed N(0,1) under the
+null that the models are indistinguishible)
+in this case:
+model2 > model1, with p-value 0.14986
+\end{verbatim}
