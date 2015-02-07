@@ -38,32 +38,6 @@
 %Please note: The purpose of this page is to show how to use various data analysis commands. It does not cover all aspects of the research process which researchers are expected to do. In particular, it does not cover data cleaning and checking, verification of assumptions, model diagnostics or potential follow-up analyses.
 %\end{frame}
 
-%================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R} } 
-\Large	
-\textbf{Examples of Poisson regression} 
-
-\begin{itemize}
-\item The number of persons killed by mule or horse kicks in the Prussian army per year. 
-\item Ladislaus Bortkiewicz collected data from 20 volumes of Preussischen Statistik. 
-\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years.
-\end{itemize}
-
-\end{frame}
-%================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R} }
-\Large	 
-\textbf{Examples of Poisson regression}
-\begin{itemize}	
-\item The number of people in line in front of you at the grocery store. 
-\item Predictors may include the number of items currently offered at a special discounted price and whether a special event (e.g., a holiday, a big sporting event) is three or fewer days away.
-\end{itemize}
-\end{frame}
-
  %================================================================================================%
 \begin{frame}[fragile]
 
@@ -74,7 +48,7 @@
  \textbf{Examples of Poisson regression} \\
  	
  \begin{itemize}	
- \item The number of awards earned by students at one high school. 
+ \item The number of awards earned by students at a secondary or high school. 
  \item Predictors of the number of awards earned include the type of program in which the student was enrolled (e.g., vocational, general or academic) and the score on their final exam in math.
  \end{itemize}
  
@@ -157,7 +131,17 @@
   (Other):194
 \end{verbatim}
 \end{frame}
-
+%================================================== %	
+\begin{frame}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{poisson1}
+		\caption{}
+		\label{fig:poisson1}
+	\end{figure}
+	
+	
+\end{frame}
 %================================================================================================%
 \begin{frame}[fragile]
 
@@ -166,7 +150,7 @@
 
 \begin{itemize}
 \item Each variable has 200 valid observations and their distributions seem quite reasonable. 
-\item The unconditional mean and variance of our outcome variable are not extremely different. 
+\item The mean and variance of our outcome variable are more or less the same. 
 \item Our model assumes that these values, conditioned on the predictor variables, will be equal (or at least roughly so).
 \end{itemize}
 \end{frame}
@@ -211,15 +195,5 @@
 %General               Academic             Vocational 
 %"M (SD) = 0.20 (0.40)" "M (SD) = 1.00 (1.28)" "M (SD) = 0.24 (0.52)"
 
-%================================================== %	
-\begin{frame}
-	\begin{figure}
-\centering
-\includegraphics[width=0.8\linewidth]{poisson1}
-\caption{}
-\label{fig:poisson1}
-\end{figure}
 
-	
-\end{frame}
 \end{document}

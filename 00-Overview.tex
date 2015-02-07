@@ -18,17 +18,22 @@ examples of event counts are:
 \item number of papers published per year by a researcher.
 \end{itemize}
 \end{frame}
-%==================================================== %
-\begin{frame}
-	\frametitle{Poisson Distribution: Prussian Cavalary}
-\Large
-\begin{itemize}
-\item The classic Poisson example is the data set of von Bortkiewicz (1898), for the chance of a Prussian cavalryman being killed by the kick of a horse. 
-\item Ten army corps were observed over 20 years, giving a total of 200 observations of one corps for a one year period. The period or module of observation is thus one year. 
-
-
-\end{itemize}
+%================================================================================================%
+\begin{frame}[fragile]
+	
+	\frametitle{Poisson Regression with \texttt{R} } 
+	\Large	
+	\textbf{Poisson Distribution} 
+	
+	\begin{itemize}
+		\item The number of persons killed by mule or horse kicks in the Prussian army per year. 
+		\item Ladislaus Bortkiewicz collected data from 20 volumes of Preussischen Statistik. 
+		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. The period or module of observation is thus one year. 
+		
+	\end{itemize}
+	
 \end{frame}
+
 %======================================================== %
 \begin{frame}
 	\frametitle{Poisson Distribution: Prussian Cavalary}
@@ -41,14 +46,43 @@ examples of event counts are:
 \item Here, then, is the classic Poisson situation: a rare event, whose average rate is small, with observations made over many small intervals of time.
 \end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+	\begin{framed}
+		\begin{verbatim}
+		rpois(200,lambda=0.61)
+		> X
+		[1]   1 2 0 1 0 3 0 0 1 0 0 4 0 0 0 1 0 1 0 2
+		[21]  0 0 0 2 2 0 0 0 1 0 0 0 0 1 0 0 0 1 2 0
+		[41]  0 0 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 0 3 1
+		.......
+		.......
+		[141] 0 0 0 0 1 2 0 1 0 1 0 0 0 0 0 0 0 1 0 0
+		[161] 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 2 0 1
+		[181] 0 0 2 0 2 0 0 1 0 0 3 1 0 0 0 1 1 0 0 0
+		>
+		> mean(X)
+		[1] 0.53
+		> var(X)
+		[1] 0.5317588
+		\end{verbatim}
+	\end{framed}
+\end{frame}
 %======================================================== %
 \begin{frame}
 \frametitle{Overview}
 \Large
 \begin{itemize}
 \item  Poisson regression is main technique used to model count variables.
+
+\item Poisson Distribution : Mean and Variance are equal
+\[ \mathrm{E}(X)  = \mathrm{Var}(X) \]
+
+
 \item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead.
-\item  Negative Binomial regression is for modelling count variables, usually for over-dispersed count outcome variables.
+
+
+\item  For example, Negative Binomial regression is for modelling count variables, usually for over-dispersed count outcome variables.
 \end{itemize}
 \end{frame}
 %=========================================================== %

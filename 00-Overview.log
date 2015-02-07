@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 17:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 19:51
 entering extended mode
 **00-Overview.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.tex
@@ -977,6 +977,7 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [2
 
 ]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [3
@@ -987,12 +988,16 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [4
 
 ]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.vrb)
+Overfull \vbox (12.6228pt too high) detected at line 70
+ []
+
+
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [5
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [6
@@ -1004,6 +1009,7 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [7
 
 ]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [8
@@ -1014,15 +1020,20 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [9
 
 ]
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [10
+
+]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `00-Overview.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1032,26 +1043,27 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16428 strings out of 493921
- 317859 string characters out of 3144875
- 380278 words of memory out of 3000000
- 19304 multiletter control sequences out of 15000+200000
- 14671 words of font info for 54 fonts, out of 3000000 for 9000
+ 16463 strings out of 493921
+ 318662 string characters out of 3144875
+ 381278 words of memory out of 3000000
+ 19330 multiletter control sequences out of 15000+200000
+ 20434 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,14n,57p,452b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on 00-Overview.pdf (9 pages, 149278 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on 00-Overview.pdf (10 pages, 166777 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
