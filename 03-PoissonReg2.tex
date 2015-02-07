@@ -9,8 +9,8 @@
 		
 		\textbf{Poisson regression}
 		\begin{itemize}
-			\item At this point, we are ready to perform our Poisson model analysis using the \texttt{glm} function. 
-			\item We fit the model and store it in the object \texttt{model1} and get a summary of the model.
+			\item At this point, we are ready to perform our Poisson regression model analysis using the \texttt{glm} function. 
+			\item We fit the model and save it in the object \texttt{model1} and get a summary of the model.
 		\end{itemize}
 	\end{frame}
 	
@@ -22,7 +22,7 @@
 		\begin{framed}
 			\begin{verbatim}
 			model1 <- glm(num_awards ~ prog + math, 
-			family="poisson", data=p)
+			family="poisson", data=poissonreg)
 			
 			summary(model1)
 			\end{verbatim}
@@ -31,12 +31,15 @@
 	%================================================================================================%
 	\begin{frame}[fragile]
 		\frametitle{Poisson Regression with \texttt{R}}
-		\large
+	
 		\begin{framed}
 			\begin{verbatim}
 			
 			Call:
-			glm(formula = num_awards ~ prog + math, family = "poisson", data = p)
+			glm(formula = num_awards ~ prog + math, 
+			      family = "poisson", 
+			      data = poissonreg)
+			               
 			Deviance Residuals: 
 			Min      1Q  Median      3Q     Max  
 			-2.204  -0.844  -0.511   0.256   2.680  
@@ -48,8 +51,7 @@
 	\begin{frame}[fragile]
 		
 		\frametitle{Poisson Regression with \texttt{R}}
-		\large
-		\begin{framed}
+
 			\begin{verbatim}
 			
 			Coefficients:
@@ -62,15 +64,15 @@
 			Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 			
 			\end{verbatim}
-		\end{framed}
+		
 	\end{frame}
 	
 	%================================================================================================%
 	\begin{frame}[fragile]
 		
 		\frametitle{Poisson Regression with \texttt{R}}
-		\large
-		\begin{framed}
+
+
 			\begin{verbatim}
 			
 			(Dispersion parameter for poisson family taken to be 1)
@@ -82,7 +84,7 @@
 			Number of Fisher Scoring iterations: 6
 			
 			\end{verbatim}
-		\end{framed}
+	
 	\end{frame}
 	
 	%================================================================================================%

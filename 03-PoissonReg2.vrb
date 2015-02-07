@@ -1,15 +1,16 @@
 
 \frametitle{Poisson Regression with \texttt{R}}
-\large
+
 
 \begin{verbatim}
-r.est
 
-Estimate Robust SE  Pr(>|z|)      LL       UL
-(Intercept)    -5.24712   0.64600 4.567e-16 -6.5133 -3.98097
-progAcademic    1.08386   0.32105 7.355e-04  0.4546  1.71311
-progVocational  0.36981   0.40042 3.557e-01 -0.4150  1.15463
-math            0.07015   0.01044 1.784e-11  0.0497  0.09061
+(Dispersion parameter for poisson family taken to be 1)
+
+Null deviance: 287.67  on 199  degrees of freedom
+Residual deviance: 189.45  on 196  degrees of freedom
+AIC: 373.5
+
+Number of Fisher Scoring iterations: 6
+
 \end{verbatim}
-
 

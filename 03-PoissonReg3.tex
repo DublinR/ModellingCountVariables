@@ -7,11 +7,29 @@
 \Large 
 \textbf{glm} function output
 \begin{itemize}
- \item The output begins with echoing the function call. The information on deviance residuals is displayed next. 
+ \item The output begins with echoing the function call. Then the information on deviance residuals is displayed. 
  \item Deviance residuals are approximately normally distributed if the model is specified correctly.
  \item Here it shows a little bit of skeweness since median is not quite zero. 
 \end{itemize}
 \end{frame}
+%============================================================================================ %
+	\begin{frame}[fragile]
+		\frametitle{Poisson Regression with \texttt{R}}
+		
+		\begin{framed}
+			\begin{verbatim}
+			
+			Call:
+			glm(formula = num_awards ~ prog + math, 
+			family = "poisson", 
+			data = poissonreg)
+			
+			Deviance Residuals: 
+			Min      1Q     Median      3Q     Max  
+			-2.204  -0.844  -0.511   0.256   2.680  
+			\end{verbatim}
+		\end{framed}
+	\end{frame}
 %================================================================================================%
 \begin{frame}
 \Large 
@@ -23,8 +41,27 @@ and 95\% confidence intervals for the coefficients.
 \item This means that the expected log count for a one-unit increase in math is 0.07. 
 \end{itemize}
 \end{frame}
-\begin{frame}[fragile]
+%============================================================================ %
+		\begin{frame}[fragile]
+			
+			\frametitle{Poisson Regression with \texttt{R}}
+			
+			\begin{verbatim}
+			
+			Coefficients:
+			Estimate Std. Error z value Pr(>|z|)    
+			(Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
+			progAcademic     1.0839     0.3583    3.03   0.0025 ** 
+			progVocational   0.3698     0.4411    0.84   0.4018    
+			math             0.0702     0.0106    6.62  3.6e-11 ***
+			---
+			Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+			
+			\end{verbatim}
+			
+		\end{frame}
 %===========================================================%
+\begin{frame}[fragile]
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
 \textbf{glm} function output
@@ -66,7 +103,17 @@ residuals in ordinary least squares to cases where model-fitting is achieved by 
 \Large 
 \textbf{glm} function output
 \begin{itemize}
-\item Therefore, if the residual difference is small enough, the goodness of fit test will not be significant, indicating that the model fits the data. We conclude that the model fits reasonably well because the goodness-of-fit chi-squared test is not statistically significant. 
+\item Therefore, if the residual difference is small enough, the goodness of fit test will not be significant, indicating that the model fits the data. 
+\item We conclude that the model fits reasonably well because the goodness-of-fit chi-squared test is not statistically significant.
+
+\end{itemize}
+\end{frame}
+%===========================================================%
+\begin{frame}[fragile]
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large 
+	\textbf{glm} function output
+	\begin{itemize}
 \item If the test had been statistically significant, it would indicate that the data do not fit the model well. 
 \item We could try to determine if there are omitted predictor variables, if our linearity assumption holds and/or if there is an issue of over-dispersion. 
 \end{itemize}
@@ -100,7 +147,7 @@ with(m1, cbind(res.deviance = deviance,
 \item 
 We can also test the overall effect of prog by comparing the deviance of the full model with the deviance of the model 
 excluding prog.
-\item The two degree-of-freedom chi-square test indicates that prog, taken together, is a statistically significant predictor of num\_awards.
+\item The two degree-of-freedom chi-square test indicates that prog, taken together, is a statistically significant predictor of \textbf{num\_awards}.
 \end{itemize} 
 
 \end{frame}
@@ -110,11 +157,12 @@ excluding prog.
 
 \frametitle{Poisson Regression with \texttt{R}}
 \large
-
+\textbf{Comparing Models}
 \begin{framed}
 \begin{verbatim}
 # update m1 model dropping prog
 m2 <- update(m1, . ~ . - prog)
+
 # test model differences with chi square test
 anova(m2, m1, test="Chisq")
 \end{verbatim}
@@ -126,7 +174,7 @@ anova(m2, m1, test="Chisq")
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
-\large
+
 
 \begin{framed}
 \begin{verbatim}
@@ -163,7 +211,7 @@ their standard errors, together with the confidence interval.
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
 \textbf{Incident Rate Ratios}\\
-A rate ratio (sometimes called an incidence density ratio) in epidemiology, is a relative difference measure used to compare the incidence rates of events occurring at any given point in time. A common application for this measure in analytic epidemiologic studies is in the search for a causal association between a certain risk factor and an outcome.[1]
+A rate ratio (sometimes called an incidence density ratio) in epidemiology, is a relative difference measure used to compare the incidence rates of events occurring at any given point in time. A common application for this measure in analytic epidemiologic studies is in the search for a causal association between a certain risk factor and an outcome.
 \[ \mbox{Incidence Rate Ratio }  = \frac{\mbox{Incidence Rate 1}}{\mbox{Incidence Rate 2}} \]
 \end{frame}
 %================================================================================================%
@@ -182,16 +230,20 @@ Note: the same time intervals must be used for both incidence rates.
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
-\Large
+
 
 \begin{framed}
 \begin{verbatim}
 s <- deltamethod(list(~ exp(x1), ~ exp(x2), ~ exp(x3), ~ exp(x4)), coef(m1), cov.m1)
+
 #exponentiate old estimates dropping the p values
+
 rexp.est <- exp(r.est[, -3])
 
 # replace SEs with estimates for exponentiated coefficients
+
 rexp.est[, "Robust SE"] <- s
+
 \end{verbatim}
 \end{framed}
 \end{frame}
@@ -200,7 +252,6 @@ rexp.est[, "Robust SE"] <- s
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
-\large
 
 \begin{framed}
 \begin{verbatim}
