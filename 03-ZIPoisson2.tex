@@ -1,15 +1,60 @@
-Description of the data
-Let's pursue Example 2 from above.
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+%\subsection*{Analysis of Deviance Procedure}
+%====================================================================================================== %
+\begin{frame}[fragile]
+	\begin{itemize}
+		\item	All of the predictors in both the count and inflation portions of the model are statistically significant. 
+%		\item This model fits the data significantly better than the null model, i.e., the intercept-only model. 
+%		\item To show that this is the case, we can compare with the current model to a null model without predictors using chi-squared test on the difference of log likelihoods.
+	\end{itemize}
+\end{frame}
 
-We have data on 250 groups that went to a park. Each group was questioned about how many fish they caught (count), how many children were in the group (child), how many people were in the group (persons), and whether or not they brought a camper to the park (camper).
+%====================================================================================================== %
+%\begin{frame}[fragile]
+%	\begin{verbatim}
+%	mnull <- update(m1, . ~ 1)
+%	
+%	pchisq(2 * (logLik(m1) - logLik(mnull)), df = 3, lower.tail = FALSE)
+%	## 'log Lik.' 4.041e-41 (df=5)
+%	\end{verbatim}
+%	
+%	\begin{itemize}
+%\item Since we have three predictor variables in the full model, the degrees of freedom for the chi-squared test is 3. 
+%\item This yields a high significant p-value; thus, our overall model is statistically significant.
+%\end{itemize}
+%\end{frame}
+%=================================================================== %
 
-In addition to predicting the number of fish caught, there is interest in predicting the existence of excess zeros, i.e., the probability that a group caught zero fish. We will use the variables child, persons, and camper in our model. Let's look at the data.
-
-zinb <- read.csv("http://www.ats.ucla.edu/stat/data/fish.csv")
-zinb <- within(zinb, {
-    nofish <- factor(nofish)
-    livebait <- factor(livebait)
-    camper <- factor(camper)
-})
-
-summary(zinb)
+%====================================================================================================== %
+\begin{frame}[fragile]
+\frametitle{Vuong Testing}
+	\begin{itemize}
+		\item Note that the model output above does not indicate in any way if our zero-inflated model is an improvement over a standard Poisson regression. 
+		\item We can determine this by running the corresponding standard Poisson model and then performing a Vuong test of the two models.
+	\end{itemize}
+	\begin{verbatim}
+	summary(p1 <- glm(count ~ child + camper, 
+	family = poisson, data = fishing))
+	\end{verbatim}
+\end{frame}
+%====================================================================================================== %
+\begin{frame}[fragile]
+	\begin{itemize}
+		\item The Vuong test compares the zero-inflated model with an ordinary Poisson regression model. 
+		\item In this example, we can see that our test statistic is significant, indicating that the zero-inflated model is superior to the standard Poisson model.
+	\end{itemize}
+\end{frame}
+%============================================================================================ %
+\begin{frame}[fragile]
+	\large
+	\begin{verbatim}
+	vuong(p1, m1)
+	## Vuong Non-Nested Hypothesis Test-Statistic: -3.574 
+	## (test-statistic is asymptotically distributed N(0,1) under the
+	##  null that the models are indistinguishible)
+	## in this case:
+	## model2 > model1, with p-value 0.0001756
+	\end{verbatim}
+\end{frame}
+\end{document}

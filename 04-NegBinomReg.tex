@@ -8,7 +8,7 @@
 \Large
 
 % - R Data Analysis Examples: Negative Binomial Regression
-\textbf{Introduction}
+\textbf{Introduction}\\ 
 Negative binomial regression is for modeling count variables, usually for over-dispersed count outcome variables.
 
 \end{frame}
@@ -107,7 +107,7 @@ Let's pursue Example 1 from above.
 \frametitle{Negative Binomial Regression with \texttt{R} }
 \normalsize
 \textbf{Exploratory Data Analysis}
-\begin{framed}
+
 \begin{verbatim}	
 summary(dat)
         id         gender         math         daysabs     
@@ -123,7 +123,6 @@ summary(dat)
   Academic  :167  
   Vocational:107  
 \end{verbatim}	
-\end{framed}
 
 	
                
@@ -132,23 +131,24 @@ summary(dat)
 \begin{frame}
 \begin{figure}
 \centering
-\includegraphics[width=0.99\linewidth]{negbin1}
+\includegraphics[width=0.89\linewidth]{negbin1}
 %\caption{}
 %\label{fig:negbin1}
 \end{figure}
-
+Histogram plots showing distribution of the data
 \end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
 
-\begin{verbatim}	
-ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(binwidth = 1) + facet_grid(prog ~ 
-., margins = TRUE, scales = "free")
-\end{verbatim}
-Histogram plots showing distribution of the data
-Each variable has 314 valid observations and their distributions seem quite reasonable. The unconditional mean of our outcome variable is much lower than its variance.
+%\begin{verbatim}	
+%ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(binwidth = 1) + facet_grid(prog ~ 
+%., margins = TRUE, scales = "free")
+%\end{verbatim}
+
+Each variable has 314 valid observations and their distributions seem quite reasonable. 
+The unconditional mean of our outcome variable is much lower than its variance.
 \end{frame}
 
 \end{document}

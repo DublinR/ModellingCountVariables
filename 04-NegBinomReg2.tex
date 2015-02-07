@@ -8,9 +8,13 @@
 		\begin{framed}
 			\begin{verbatim}
 			
-				newdata1 <- data.frame(math = mean(dat$math), prog = factor(1:3, levels = 1:3, 
+				newdata1 <- data.frame(math = mean(dat$math), 
+				prog = factor(1:3, levels = 1:3, 
 				labels = levels(dat$prog)))
-				newdata1$phat <- predict(m1, newdata1, type = "response")
+				
+				newdata1$phat <- predict(m1, newdata1, 
+				 type = "response")
+				 
 				newdata1
 				    math       prog   phat
 				 1 48.27    General 10.237
@@ -84,29 +88,31 @@
 	
 \end{frame}
 	%================================================ %
-	\begin{frame}[fragile]
-		\frametitle{Negative Binomial Regression with \texttt{R} }
-		\large
-		
-		\begin{framed}
-			\begin{verbatim}
-			
-			ggplot(newdata2, aes(math, DaysAbsent)) +
-			geom_ribbon(aes(ymin = LL, ymax = UL, fill = prog), alpha = .25) +
-			geom_line(aes(colour = prog), size = 2) +
-			labs(x = "Math Score", y = "Predicted Days Absent")
-			
-			\end{verbatim}	
-		\end{framed}
-		
-\end{frame}
+%	\begin{frame}[fragile]
+%		\frametitle{Negative Binomial Regression with \texttt{R} }
+%		\large
+%		
+%		\begin{framed}
+%			\begin{verbatim}
+%			
+%			ggplot(newdata2, aes(math, DaysAbsent)) +
+%			geom_ribbon(aes(ymin = LL, ymax = UL, fill = prog), alpha = .25) +
+%			geom_line(aes(colour = prog), size = 2) +
+%			labs(x = "Math Score", y = "Predicted Days Absent")
+%			
+%			\end{verbatim}	
+%		\end{framed}
+%		
+%\end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
-	
+	\begin{itemize}
 	% Plot of the model predicted days absent with confidence intervals
-	The graph shows the expected count across the range of math scores, for each type of program along with 95 percent confidence intervals. Note that the lines are not straight because this is a log linear model, and what is plotted are the expected values, not the log of the expected values.
+\item The graph shows the expected count across the range of math scores, for each type of program along with 95 percent confidence intervals. 
+\item Note that the lines are not straight because this is a log linear model, and what is plotted are the expected values, not the log of the expected values.
+\end{itemize}
 \end{frame}
 
 
@@ -120,18 +126,12 @@
 	\begin{itemize}
 	\item It is not recommended that negative binomial models be applied to small samples.
 	\item One common cause of over-dispersion is excess zeros by an additional data generating process. 
-	\item In this situation, zero-inflated model should be considered.
-	\end{itemize}
-\end{frame}
-%================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-\begin{itemize}
+	In this situation, \textbf{zero-inflated model} should be considered.
 	\item	
-	If the data generating process does not allow for any 0s (such as the number of days spent in the hospital), then a zero-truncated model may be more appropriate.
+	If the data generating process does not allow for any 0s (such as the number of days spent in the hospital), then a \textbf{zero-truncated model} may be more appropriate.
 	\end{itemize}
 \end{frame}
+
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
@@ -140,7 +140,7 @@
 	\item
 	Count data often have an exposure variable, which indicates the number of times the event could have happened. 
 	\item This variable should be incorporated into your negative binomial regression model with the 
-	use of the offset option. 
+	use of the \texttt{offset} option. 
 	%See the glm documentation for details.
 	\end{itemize}
 \end{frame}

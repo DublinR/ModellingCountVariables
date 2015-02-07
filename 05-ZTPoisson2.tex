@@ -1,0 +1,22 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+
+%================================================================== %
+\begin{frame}[fragile]
+	\frametitle{Zero-Truncated Poisson regression}
+\begin{itemize}
+\item To fit the zero-truncated poisson model, we use the vglm function in the VGAM package. 
+\item This function fits a very flexible class of models called vector generalized linear models to a wide range of assumed distributions. 
+\item In our case, we believe the data are poisson, but without zeros. 
+\item Thus the values are strictly positive poisson, for which we use the positive poisson family via the pospoisson function passed to vglm.
+\end{itemize}
+\end{frame}
+%================================================================== %
+\begin{frame}[fragile]
+	\frametitle{Zero-Truncated Poisson regression}
+\begin{verbatim}
+m1 <- vglm(stay ~ age + hmo + died, 
+    family = pospoisson(), data = dat)
+summary(m1)
+\end{verbatim}
+\end{frame}

@@ -1,4 +1,4 @@
-\documentclass[00-GLMregslides.tex]{subfiles}
+\documentclass[MASTER.tex]{subfiles}
 \begin{document}
 
 %================================================ %
@@ -7,12 +7,10 @@
 	\Large
 \textbf{Data Set}
 \begin{itemize}
-% \item Let's continue with our description of the variables in this dataset. 
 \item The table below shows the average numbers of days absent by program type and seems to 
 	suggest that program type is a good candidate for predicting the number of days absent, our outcome variable, 
-	because the mean value of the outcome appears to vary by prog. 
-	
-\end{itemize}
+	because the mean value of the outcome appears to vary by \textbf{prog}. 
+	\end{itemize}
 \end{frame}
 %================================================ %
 \begin{frame}[fragile]
@@ -49,10 +47,9 @@ that a Negative Binomial model would be appropriate.
 	
 \textbf{Negative binomial regression analysis}\\
 	We will use the \texttt{glm.nb} function from the MASS package to estimate a negative binomial regression.
-	
-	\begin{framed}
-		\begin{verbatim}
-		summary(m1 <- glm.nb(daysabs ~ math + prog, data = dat))
+	\begin{verbatim}
+		summary(m1 <- glm.nb(daysabs ~ math + prog, 
+		 data = negbinom))
 		## 
 		## Call:
 		## glm.nb(formula = daysabs ~ math + prog, 
@@ -63,14 +60,21 @@ that a Negative Binomial model would be appropriate.
 		##    Min      1Q  Median      3Q     Max  
 		## -2.155  -1.019  -0.369   0.229   2.527  
 			\end{verbatim}
-		\end{framed}
-		
 	\end{frame}
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+	\Large
+	\begin{itemize}
+		\item \texttt{R} first displays the call and the deviance residuals. 
+		\item Next, we see the regression coefficients for each of the variables, along with standard errors, z-scores, 
+		and p-values. 
+	\end{itemize}
+\end{frame}
 	%================================================ %
 	\begin{frame}[fragile]
 		\frametitle{Negative Binomial Regression with \texttt{R} }
-		\large
-		\begin{framed}
+
 		\begin{verbatim} 
 		 Coefficients:
 		                Estimate Std. Error z value Pr(>|z|)    
@@ -82,14 +86,24 @@ that a Negative Binomial model would be appropriate.
 		 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 		\end{verbatim}
-	\end{framed}
+
 	
 \end{frame}
+
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
-	\begin{framed}
+	\begin{itemize}
+		\item The variable \textbf{math} has a coefficient of -0.006, which is statistically significant.
+		\item This means that for each one-unit increase in \textbf{math}, the expected log count of the number of days absent decreases by 0.006. 
+		\item The indicator variable shown as \textbf{progAcademic} is the expected difference in log count between group 2 and the reference group (prog=1). 
+	\end{itemize}
+\end{frame}
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+
 		\begin{verbatim}
 		## (Dispersion parameter for Negative Binomial(1.033) family taken to be 1)
 		## 
@@ -105,29 +119,9 @@ that a Negative Binomial model would be appropriate.
 		## 
 		##  2 x log-likelihood:  -1731.258
 		\end{verbatim}
-	\end{framed}
-	
-	
+
 \end{frame}
-%================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-	\begin{itemize}
-	\item R first displays the call and the deviance residuals. 
-	\item Next, we see the regression coefficients for each of the variables, along with standard errors, z-scores, 
-	and p-values. 
-	\end{itemize}
-\end{frame}
-%================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-	\begin{itemize}
-	\item The variable math has a coefficient of -0.006, which is statistically significant.
-	\item This means that for each one-unit increase in math, the expected log count of the number of days absent decreases by 0.006. The indicator variable shown as progAcademic is the expected difference in log count between group 2 and the reference group (prog=1). 
-	\end{itemize}
-\end{frame}
+
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
@@ -146,14 +140,14 @@ that a Negative Binomial model would be appropriate.
 	\begin{itemize}	
 	
 	\item The expected log count for level 3 of prog is 1.28 lower than the expected log count for level 1. 
-	\item To determine if prog itself, overall, is statistically significant, we can compare a model with and without prog. The reason it is important to fit separate models, is that unless we do, the overdispersion parameter is held constant.
+	\item To determine if prog itself, overall, is statistically significant, we can compare a model with and without prog. 
+	\item The reason it is important to fit separate models, is that unless we do, the overdispersion parameter is held constant.
 	\end{itemize}
 \end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\normalsize
-	\begin{framed}
+
 		\begin{verbatim}	
 		m2 <- update(m1, . ~ . - prog)
 		anova(m1, m2)
@@ -167,7 +161,6 @@ that a Negative Binomial model would be appropriate.
 		## 1          
 		## 2 1.652e-10
 		\end{verbatim}
-	\end{framed}
 \end{frame}
 %================================================ %
 \begin{frame}[fragile]
@@ -176,7 +169,9 @@ that a Negative Binomial model would be appropriate.
 	
 	\begin{itemize}
 	\item The two degree-of-freedom chi-square test indicates that prog is a statistically significant predictor of daysabs.
-	\item The null deviance is calculated from an intercept-only model with 313 degrees of freedom. Then we see the residual deviance, the deviance from the full model. We are also shown the AIC and 2*log likelihood.
+	\item The null deviance is calculated from an intercept-only model with 313 degrees of freedom. 
+	\item Then we see the residual deviance, the deviance from the full model. 
+	\item We are also shown the AIC and 2*log likelihood.
 \end{itemize}
 \end{frame}
 %================================================ %
@@ -186,7 +181,8 @@ that a Negative Binomial model would be appropriate.
 \begin{itemize}
 	\item The theta parameter shown is the dispersion parameter. 
 	\item Note that R parameterizes this differently from SAS, Stata, and SPSS. 
-	\item The R parameter (theta) is equal to the inverse of the dispersion parameter (alpha) estimated in these other software packages. Thus, the theta value of 1.033 seen here is equivalent to the 0.968 value seen in the Stata Negative Binomial Data Analysis Example because 1/0.968 = 1.033.
+	\item The R parameter (theta) is equal to the inverse of the dispersion parameter (alpha) estimated in these other software packages. 
+	\item Thus, the theta value of 1.033 seen here is equivalent to the 0.968 value seen in the Stata Negative Binomial Data Analysis Example because 1/0.968 = 1.033.
 \end{itemize}
 \end{frame}
 %================================================ %
@@ -232,7 +228,7 @@ In this example the associated chi-squared value is 926.03 with one degree of fr
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
+	\large
 	
 	We can get the confidence intervals for the coefficients by profiling the likelihood function.
 	\begin{verbatim}
@@ -259,7 +255,7 @@ In this example the associated chi-squared value is 926.03 with one degree of fr
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
+	\large
 	\begin{verbatim}	
 	exp(est)
 	##                Estimate  2.5 %  97.5 %
@@ -273,36 +269,45 @@ In this example the associated chi-squared value is 926.03 with one degree of fr
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
-	
-	The output above indicates that the incident rate for prog = 2 is 0.64 times the incident rate for the reference group (prog = 1). Likewise, the incident rate for prog = 3 is 0.28 times the incident rate for the reference group holding the other variables constant. The percent change in the incident rate of daysabs is a 1% decrease for every unit increase in math.
+	\begin{itemize}
+\item 	The output above indicates that the incident rate for prog = 2 is 0.64 times the incident rate for the reference group (prog = 1). 
+\item Likewise, the incident rate for prog = 3 is 0.28 times the incident rate for the reference group holding the other variables constant. 
+\item The percent change in the incident rate of \textbf{daysabs} is a 1\% decrease for every unit increase in math.
+\end{itemize}
 \end{frame}
-%================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-	
-	The form of the model equation for negative binomial regression is the same as that for Poisson regression. The log of the outcome is predicted with a linear combination of the predictors:
-\end{frame}
-%================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-	
-	\[ ln(\widehat{daysabs_i}) = Intercept + b_1(prog_i = 2) + b_2(prog_i = 3) + b_3math_i \] \[ \therefore \] \[ \widehat{daysabs_i} = e^{Intercept + b_1(prog_i = 2) + b_2(prog_i = 3) + b_3math_i} = e^{Intercept}e^{b_1(prog_i = 2)}e^{b_2(prog_i = 3)}e^{b_3math_i} \]
-	The coefficients have an additive effect in the \(ln(y)\) scale and the IRR have a multiplicative effect 
-	in the y scale. The dispersion parameter in negative binomial regression does not effect the expected counts, 
-	but it does effect the estimated variance of the expected counts. 
-	\end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
 	\begin{itemize}
-\item More details can be found in the Modern Applied Statistics with S by W.N. Venables and B.D. Ripley (the book companion of the MASS package).
-
-\item 	For additional information on the various metrics in which the results can be presented, and the interpretation of such, please see Regression Models for Categorical Dependent Variables Using Stata, Second Edition by J. Scott Long and Jeremy Freese (2006).
+\item 	The form of the model equation for negative binomial regression is the same as that for Poisson regression. 
+\item The log of the outcome is predicted with a linear combination of the predictors:
 \end{itemize}
+{
+	\normalsize
+\[ ln(\widehat{daysabs_i}) = Intercept + b_1(prog_i = 2) + b_2(prog_i = 3) + b_3math_i \] 
+}
 \end{frame}
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+	\Large
+	
+	\[ \widehat{daysabs_i} = e^{Intercept + b_1(prog_i = 2) + b_2(prog_i = 3) + b_3math_i}\]\[ = e^{Intercept}e^{b_1(prog_i = 2)}e^{b_2(prog_i = 3)}e^{b_3math_i} \]
+	The coefficients have an additive effect in the \(ln(y)\) scale and the IRR have a multiplicative effect 
+	in the y scale. The dispersion parameter in negative binomial regression does not effect the expected counts, 
+	but it does effect the estimated variance of the expected counts. 
+	\end{frame}
+%================================================ %
+%\begin{frame}[fragile]
+%	\frametitle{Negative Binomial Regression with \texttt{R} }
+%	\Large
+%	\begin{itemize}
+%\item More details can be found in the Modern Applied Statistics with S by W.N. Venables and B.D. Ripley (the book companion of the MASS package).
+%
+%\item 	For additional information on the various metrics in which the results can be presented, and the interpretation of such, please see Regression Models for Categorical Dependent Variables Using Stata, Second Edition by J. Scott Long and Jeremy Freese (2006).
+%\end{itemize}
+%\end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
@@ -310,7 +315,8 @@ In this example the associated chi-squared value is 926.03 with one degree of fr
 	
 	\textbf{Predicted values}
 	\begin{itemize}
-\item	For assistance in further understanding the model, we can look at predicted counts for various levels of our predictors. Below we create new datasets with values of math and prog and then use the predict command to calculate the predicted number of events.
+\item	For assistance in further understanding the model, we can look at predicted counts for various levels of our predictors. 
+\item Below we create new datasets with values of math and prog and then use the predict command to calculate the predicted number of events.
 \end{itemize}
 \end{frame}
 %================================================ %
@@ -319,7 +325,8 @@ In this example the associated chi-squared value is 926.03 with one degree of fr
 	\Large
 	
 	\begin{itemize}
-\item	First, we can look at predicted counts for each value of prog while holding math at its mean. To do this, we create a new dataset with the combinations of prog and math for which we would like to find predicted values, then use the predict command.
+\item	First, we can look at predicted counts for each value of prog while holding math at its mean. 
+\item To do this, we create a new dataset with the combinations of prog and math for which we would like to find predicted values, then use the \texttt{predict} command.
 \end{itemize}
 \end{frame}
 %================================================ %

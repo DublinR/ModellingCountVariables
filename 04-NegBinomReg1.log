@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  6 NOV 2014 18:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 22:57
 entering extended mode
 **04-NegBinomReg1.tex
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -21,8 +21,8 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks15
 \verbatim@in@stream=\read1
 )
-Preamble taken from file `00-GLMregslides.tex'
-(C:\Users\Kevin\Documents\GitHub\GLMregression\00-GLMregslides.tex
+Preamble taken from file `MASTER.tex'
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.tex
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\beamer.cls
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\beamerbasercs.
 sty
@@ -778,7 +778,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen190
 \FrameSep=\dimen191
 )))
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.aux)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
@@ -857,8 +857,8 @@ LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
 
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.out)
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.out)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.out)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.out)
 \@outlinefile=\write5
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 2.
@@ -941,19 +941,19 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 2.
 
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 6.
+line 5.
 
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\sansmathaccent\ot1mathkern
 cmss.fd
@@ -962,7 +962,7 @@ thkerncmss.
 ))
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 16.
+(Font)              size <5> substituted on input line 14.
 
 
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
@@ -970,140 +970,116 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [1
 
 {C:/Users/Kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [2
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [3
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (57.31029pt too wide) in paragraph at lines 9--9
-[]\OT1/cmtt/m/n/12 summary(m1 <- glm.nb(daysabs ~ math + prog, data = dat))[] 
- []
-
-)
-Overfull \vbox (13.31291pt too high) detected at line 68
- []
-
-
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [4
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (32.61028pt too wide) in paragraph at lines 6--6
-[]                \OT1/cmtt/m/n/12 Estimate Std. Error z value Pr(>|z|)[] 
- []
-
-
-Overfull \hbox (57.31029pt too wide) in paragraph at lines 7--7
-[] \OT1/cmtt/m/n/12 (Intercept)     2.61527    0.19746   13.24  < 2e-16 ***[] 
- []
-
-
-Overfull \hbox (44.96028pt too wide) in paragraph at lines 8--8
-[] \OT1/cmtt/m/n/12 math           -0.00599    0.00251   -2.39    0.017 *[] 
- []
-
-
-Overfull \hbox (44.96028pt too wide) in paragraph at lines 9--9
-[] \OT1/cmtt/m/n/12 progAcademic   -0.44076    0.18261   -2.41    0.016 *[] 
- []
-
-
-Overfull \hbox (57.31029pt too wide) in paragraph at lines 10--10
-[] \OT1/cmtt/m/n/12 progVocational -1.27865    0.20072   -6.37  1.9e-10 ***[] 
- []
-
-
-Overfull \hbox (100.53531pt too wide) in paragraph at lines 12--12
-[] \OT1/cmtt/m/n/12 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' 
-' 1[] 
- []
-
-)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [5
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (267.25925pt too wide) in paragraph at lines 5--5
-[]\OT1/cmtt/m/n/14.4 ## (Dispersion parameter for Negative Binomial(1.033) fami
-ly taken to be 1)[] 
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
+Overfull \hbox (14.63664pt too wide) in paragraph at lines 6--6
+[] \OT1/cmtt/m/n/10.95 (Intercept)     2.61527    0.19746   13.24  < 2e-16 ***[
+] 
  []
 
 
-Overfull \hbox (126.46947pt too wide) in paragraph at lines 7--7
-[]\OT1/cmtt/m/n/14.4 ##     Null deviance: 427.54  on 313  degrees of freedom[]
- 
+Overfull \hbox (3.13927pt too wide) in paragraph at lines 7--7
+[] \OT1/cmtt/m/n/10.95 math           -0.00599    0.00251   -2.39    0.017 *[] 
+
  []
 
 
-Overfull \hbox (126.46947pt too wide) in paragraph at lines 8--8
-[]\OT1/cmtt/m/n/14.4 ## Residual deviance: 358.52  on 310  degrees of freedom[]
- 
+Overfull \hbox (3.13927pt too wide) in paragraph at lines 8--8
+[] \OT1/cmtt/m/n/10.95 progAcademic   -0.44076    0.18261   -2.41    0.016 *[] 
+
  []
 
 
-Overfull \hbox (15.31964pt too wide) in paragraph at lines 11--11
-[]\OT1/cmtt/m/n/14.4 ## Number of Fisher Scoring iterations: 1[] 
+Overfull \hbox (14.63664pt too wide) in paragraph at lines 9--9
+[] \OT1/cmtt/m/n/10.95 progVocational -1.27865    0.20072   -6.37  1.9e-10 ***[
+] 
+ []
+
+
+Overfull \hbox (54.87746pt too wide) in paragraph at lines 11--11
+[] \OT1/cmtt/m/n/10.95 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1
+ ' ' 1[] 
  []
 
 )
-Overfull \vbox (70.17958pt too high) detected at line 111
- []
-
-
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [6
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [7
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
+Overfull \hbox (123.86171pt too wide) in paragraph at lines 4--4
+[]\OT1/cmtt/m/n/10.95 ## (Dispersion parameter for Negative Binomial(1.033) fam
+ily taken to be 1)[] 
+ []
+
+
+Overfull \hbox (14.63664pt too wide) in paragraph at lines 6--6
+[]\OT1/cmtt/m/n/10.95 ##     Null deviance: 427.54  on 313  degrees of freedom[
+] 
+ []
+
+
+Overfull \hbox (14.63664pt too wide) in paragraph at lines 7--7
+[]\OT1/cmtt/m/n/10.95 ## Residual deviance: 358.52  on 310  degrees of freedom[
+] 
+ []
+
+)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [8
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [9
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [10
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (16.19057pt too wide) in paragraph at lines 7--7
-[]\OT1/cmtt/m/n/10.95 ## Likelihood ratio tests of Negative Binomial Models[] 
- []
-
-
-Overfull \hbox (119.66695pt too wide) in paragraph at lines 10--10
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
+Overfull \hbox (100.86696pt too wide) in paragraph at lines 9--9
 []\OT1/cmtt/m/n/10.95 ##         Model  theta Resid. df    2 x log-lik.   Test 
    df LR stat.[] 
  []
 
 
-Overfull \hbox (119.66695pt too wide) in paragraph at lines 12--12
+Overfull \hbox (100.86696pt too wide) in paragraph at lines 11--11
 []\OT1/cmtt/m/n/10.95 ## 2 math + prog 1.0327       310           -1731 1 vs 2 
     2    45.05[] 
  []
@@ -1114,20 +1090,20 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [11
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [12
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [13
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
-Overfull \vbox (14.9796pt too high) detected at line 208
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+Overfull \vbox (14.9796pt too high) detected at line 204
  []
 
 
@@ -1136,126 +1112,75 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [14
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [15
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [16
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (48.38957pt too wide) in paragraph at lines 6--6
-[]\OT1/cmtt/m/n/14.4 (est <- cbind(Estimate = coef(m1), confint(m1)))[] 
- []
-
-
-Overfull \hbox (26.1596pt too wide) in paragraph at lines 8--8
-[]\OT1/cmtt/m/n/14.4 ##                 Estimate   2.5 %    97.5 %[] 
- []
-
-
-Overfull \hbox (26.1596pt too wide) in paragraph at lines 9--9
-[]\OT1/cmtt/m/n/14.4 ## (Intercept)     2.615265  2.2421  3.012936[] 
- []
-
-
-Overfull \hbox (26.1596pt too wide) in paragraph at lines 10--10
-[]\OT1/cmtt/m/n/14.4 ## math           -0.005993 -0.0109 -0.001067[] 
- []
-
-
-Overfull \hbox (26.1596pt too wide) in paragraph at lines 11--11
-[]\OT1/cmtt/m/n/14.4 ## progAcademic   -0.440760 -0.8101 -0.092643[] 
- []
-
-
-Overfull \hbox (26.1596pt too wide) in paragraph at lines 12--12
-[]\OT1/cmtt/m/n/14.4 ## progVocational -1.278651 -1.6835 -0.890078[] 
- []
-
-)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [17
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [18
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [19
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [20
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [21
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb
-Overfull \hbox (73.6542pt too wide) detected at line 4
-\OT1/mathkerncmss/m/sl/14.4 ln\OT1/cmss/m/n/14.4 ([]) = \OT1/mathkerncmss/m/sl/
-14.4 Intercept \OT1/cmss/m/n/14.4 + \OT1/mathkerncmss/m/sl/14.4 b[]\OT1/cmss/m/
-n/14.4 (\OT1/mathkerncmss/m/sl/14.4 prog[] \OT1/cmss/m/n/14.4 = 2) + \OT1/mathk
-erncmss/m/sl/14.4 b[]\OT1/cmss/m/n/14.4 (\OT1/mathkerncmss/m/sl/14.4 prog[] \OT
-1/cmss/m/n/14.4 = 3) + \OT1/mathkerncmss/m/sl/14.4 b[]math[]
- []
-
-
-Overfull \hbox (189.6557pt too wide) detected at line 4
-[] \OT1/cmss/m/n/14.4 = \OT1/mathkerncmss/m/sl/14.4 e[] \OT1/cmss/m/n/14.4 = \O
-T1/mathkerncmss/m/sl/14.4 e[]e[]e[]e[]
- []
-
-)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [22
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [23
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [24
 
 ]
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [25
-
-]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
 
-(C:\Users\Kevin\Documents\GitHub\GLMregression\04-NegBinomReg1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
 Package rerunfilecheck Info: File `04-NegBinomReg1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1265,13 +1190,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16504 strings out of 493921
- 321030 string characters out of 3144875
- 381404 words of memory out of 3000000
- 19303 multiletter control sequences out of 15000+200000
- 15287 words of font info for 57 fonts, out of 3000000 for 9000
+ 16506 strings out of 493921
+ 321539 string characters out of 3144875
+ 380278 words of memory out of 3000000
+ 19309 multiletter control sequences out of 15000+200000
+ 16935 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,14n,57p,436b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,14n,57p,456b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/P
@@ -1283,9 +1208,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 04-NegBinomReg1.pdf (25 pages, 249996 bytes).
+Output written on 04-NegBinomReg1.pdf (24 pages, 244511 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

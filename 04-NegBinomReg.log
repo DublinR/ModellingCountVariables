@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 16:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 22:55
 entering extended mode
 **04-NegBinomReg.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.tex
@@ -1004,52 +1004,48 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.vrb
-Overfull \hbox (21.93925pt too wide) in paragraph at lines 7--7
+Overfull \hbox (3.13927pt too wide) in paragraph at lines 7--7
 []        \OT1/cmtt/m/n/10.95 id         gender         math         daysabs[] 
 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 8--8
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 8--8
 []  \OT1/cmtt/m/n/10.95 1001   :  1   female:160   Min.   : 1.0   Min.   : 0.00
 [] 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 9--9
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 9--9
 []  \OT1/cmtt/m/n/10.95 1002   :  1   male  :154   1st Qu.:28.0   1st Qu.: 1.00
 [] 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 10--10
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 10--10
 []  \OT1/cmtt/m/n/10.95 1003   :  1                Median :48.0   Median : 4.00
 [] 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 11--11
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 11--11
 []  \OT1/cmtt/m/n/10.95 1004   :  1                Mean   :48.3   Mean   : 5.96
 [] 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 12--12
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 12--12
 []  \OT1/cmtt/m/n/10.95 1005   :  1                3rd Qu.:70.0   3rd Qu.: 8.00
 [] 
  []
 
 
-Overfull \hbox (39.18532pt too wide) in paragraph at lines 13--13
+Overfull \hbox (20.38533pt too wide) in paragraph at lines 13--13
 []  \OT1/cmtt/m/n/10.95 1006   :  1                Max.   :99.0   Max.   :35.00
 [] 
  []
 
 )
-Overfull \vbox (20.98384pt too high) detected at line 130
- []
-
-
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [6
@@ -1058,10 +1054,10 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
 <negbin1.png, id=168, 505.89pt x 505.89pt>
 File: negbin1.png Graphic file (type png)
  <use negbin1.png>
-Package pdftex.def Info: negbin1.png used on input line 140.
-(pdftex.def)             Requested size: 304.21866pt x 304.22334pt.
+Package pdftex.def Info: negbin1.png used on input line 139.
+(pdftex.def)             Requested size: 273.4878pt x 273.49301pt.
 
-Overfull \vbox (72.52945pt too high) detected at line 140
+Overfull \vbox (57.52829pt too high) detected at line 139
  []
 
 
@@ -1070,13 +1066,7 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [7
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/negbin1.png>]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.vrb
-Overfull \hbox (352.1991pt too wide) in paragraph at lines 5--5
-[]\OT1/cmtt/m/n/14.4 ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(bi
-nwidth = 1) + facet_grid(prog ~[] 
- []
-
-)
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [8
@@ -1105,19 +1095,20 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  16407 strings out of 493921
  317946 string characters out of 3144875
- 383278 words of memory out of 3000000
+ 382278 words of memory out of 3000000
  19277 multiletter control sequences out of 15000+200000
  10707 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,14n,57p,455b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on 04-NegBinomReg.pdf (8 pages, 108362 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on 04-NegBinomReg.pdf (8 pages, 112963 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
+ 247 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
