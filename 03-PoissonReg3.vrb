@@ -1,0 +1,13 @@
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+% create the plot
+
+\begin{framed}
+\begin{verbatim}
+ggplot(p, aes(x = math, y = phat, colour = prog)) +
+  geom_point(aes(y = num_awards), alpha=.5, position=position_jitter(h=.2)) +
+  geom_line(size = 1) +
+  labs(x = "Math Score", y = "Expected number of awards")
+\end{verbatim}
+\end{framed}
