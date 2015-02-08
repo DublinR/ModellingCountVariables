@@ -1,0 +1,84 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document} 
+\begin{frame}
+	\begin{itemize}
+\item Note that the model output above does not indicate in any way if our zero-inflated model is an improvement over a standard negative binomial regression. 
+\item We can determine this by running the corresponding standard negative binomial model and then performing a Vuong test of the two models.
+\item We use the MASS package to run the standard negative binomial regression.
+	\end{itemize}
+
+
+\end{frame}
+%============================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+library(MASS)
+summary(m2 <- glm.nb(count ~ child + camper, data = zinb))
+.....
+\end{verbatim}
+\end{frame}
+%============================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+## Coefficients:
+##             Estimate Std. Error z value Pr(>|z|)    
+## (Intercept)    1.073      0.242    4.42  9.7e-06 ***
+## child         -1.375      0.196   -7.03  2.1e-12 ***
+## camper1        0.909      0.284    3.21   0.0013 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+\end{frame}
+%%============================================================================== %
+%\begin{frame}[fragile]
+%	\begin{verbatim}
+%## (Dispersion parameter for Negative Binomial(0.2553) family taken to be 1)
+%## 
+%##     Null deviance: 258.93  on 249  degrees of freedom
+%## Residual deviance: 201.89  on 247  degrees of freedom
+%## AIC: 887.4
+%\end{verbatim}
+%\end{frame}
+%%============================================================================== %
+%\begin{frame}[fragile]
+%	\begin{verbatim}
+%## Number of Fisher Scoring iterations: 1
+%## 
+%## 
+%##               Theta:  0.2553 
+%##           Std. Err.:  0.0329 
+%## 
+%##  2 x log-likelihood:  -879.4210
+%\end{verbatim}
+%\end{frame}
+%============================================================================== %
+\begin{frame}[fragile]
+	\begin{verbatim}
+vuong(m1, m2)
+ 
+## Vuong Non-Nested Hypothesis Test-Statistic: 1.702 
+## (test-statistic is asymptotically distributed N(0,1) under the
+##  null that the models are indistinguishible)
+## in this case:
+## model1 > model2, with p-value 0.0444
+\end{verbatim}
+\end{frame}
+%========================================================================== %
+\begin{frame}
+\begin{itemize}
+\item The predictors child and camper in the part of the negative binomial regression model predicting number of fish caught (count) are both significant predictors.
+\item The predictor person in the part of the logit model predicting excessive zeros is statistically significant.
+\item For these data, the expected change in log(count) for a one-unit increase in child is -1.515255 holding other variables constant. 
+\item A camper (camper = 1) has an expected log(count) of 0.879051 higher than that of a non-camper (camper = 0) holding other variables constant.
+\end{itemize}
+\end{frame}
+%========================================================================== %
+\begin{frame}
+\begin{itemize}
+\item The log odds of being an excessive zero would decrease by 1.67 for every additional person in the group. 
+\item In other words, the more people in the group the less likely that the zero would be due to not gone fishing. 
+\item Put plainly, the larger the group the person was in, the more likely that the person went fishing.
+\item The Vuong test suggests that the zero-inflated negative binomial model is a significant improvement over a standard negative binomial model. 
+\end{itemize}
+\end{frame}
+\end{document}

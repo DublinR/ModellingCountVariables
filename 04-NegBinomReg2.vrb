@@ -1,0 +1,9 @@
+\frametitle{Negative Binomial Regression with \texttt{R} }
+\Large
+\begin{itemize}
+\item
+The outcome variable in a negative binomial regression cannot have negative numbers.
+\item You will need to use the \texttt{m1\$resid} command to obtain the residuals from our model to check
+other assumptions of the negative binomial model
+% (see Cameron and Trivedi (1998) and Dupont (2002) for more information).
+\end{itemize}

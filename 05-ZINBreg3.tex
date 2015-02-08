@@ -1,0 +1,189 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+\subsection*{Confidence Intervals for Paramaters}
+\begin{frame}
+\begin{itemize}
+\item We can get confidence intervals for the parameters and the exponentiated parameters using bootstrapping. For the negative binomial model, these would be incident risk ratios, for the zero inflation model, odds ratios. 
+\item We use the \textbf{boot} package.
+\item First, we get the coefficients from our original model to use as start values for the model to speed up the time it takes to estimate.
+\end{itemize}
+
+
+\end{frame}
+%========================================================================================== %
+\begin{frame}
+ Then we write a short function that takes data and indices as input and returns the parameters we are interested in. Finally, we pass that to the boot function and do 1200 replicates, using \textbf{snow} to distribute across four cores. Note that you should adjust the number of cores to whatever your machine has. Also, for final results, one may wish to increase the number of replications to help ensure stable results.
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+
+dput(round(coef(m1, "count"), 4))
+ 
+## structure(c(1.3711, -1.5152, 0.879), .Names = c("(Intercept)", 
+## "child", "camper1"))
+ 
+dput(round(coef(m1, "zero"), 4))
+ 
+## structure(c(1.6028, -1.6663), .Names = c("(Intercept)", "persons"
+## ))
+
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+f <- function(data, i) {
+  require(pscl)
+  m <- zeroinfl(count ~ child + camper | persons,
+    data = data[i, ], dist = "negbin",
+    start = list(count = c(1.3711, -1.5152, 0.879), zero = c(1.6028, -1.6663)))
+  as.vector(t(do.call(rbind, coef(summary(m)))[, 1:2]))
+}
+
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+	\begin{verbatim}
+set.seed(10)
+(res <- boot(zinb, f, R = 1200, parallel = "snow", ncpus = 4))
+ 
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = zinb, statistic = f, R = 1200, parallel = "snow", 
+##     ncpus = 4)
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+	\begin{verbatim}
+## Bootstrap Statistics :
+##      original    bias    std. error
+## t1*    1.3711 -0.083023     0.39403
+## t2*    0.2561 -0.002622     0.03191
+## t3*   -1.5153 -0.061487     0.26892
+## t4*    0.1956  0.006034     0.02027
+## t5*    0.8791  0.091431     0.47124
+## t6*    0.2693  0.001873     0.01998
+## t7*   -0.9854  0.080120     0.21896
+## t8*    0.1760  0.002577     0.01689
+## t9*    1.6031  0.473597     1.59331
+## t10*   0.8365  3.767327    15.65780
+## t11*  -1.6666 -0.462364     1.56789
+## t12*   0.6793  3.771994    15.69675
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+
+The results are alternating parameter estimates and standard errors. That is, the first row has the first parameter estimate from our model. The second has the standard error for the first parameter. The third column contains the bootstrapped standard errors, which are considerably larger than those estimated by zeroinfl.
+
+Now we can get the confidence intervals for all the parameters. We start on the original scale with percentile and bias adjusted CIs. We also compare these results with the regular confidence intervals based on the standard errors.
+
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+	\begin{verbatim}
+
+
+## basic parameter estimates with percentile and bias adjusted CIs
+parms <- t(sapply(c(1, 3, 5, 7, 9), function(i) {
+  out <- boot.ci(res, index = c(i, i + 1), type = c("perc", "bca"))
+  with(out, c(Est = t0, pLL = percent[4], pUL = percent[5],
+    bcaLL = bca[4], bcaLL = bca[5]))
+}))
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+## add row names
+row.names(parms) <- names(coef(m1))
+## print results
+parms
+ 
+##                       Est     pLL     pUL   bcaLL   bcaLL
+## count_(Intercept)  1.3711  0.5132  2.0540  0.7577  2.3268
+## count_child       -1.5153 -2.1495 -1.0807 -1.9872 -0.9827
+## count_camper1      0.8791  0.1119  1.8628 -0.2267  1.6648
+## zero_(Intercept)  -0.9854 -1.3143 -0.4465 -1.4472 -0.6407
+## zero_persons       1.6031  0.3520  8.0796 -0.1858  3.6867
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+	\begin{verbatim}
+## compare with normal based approximation
+confint(m1)
+ 
+##                      2.5 %  97.5 %
+## count_(Intercept)  0.86911  1.8731
+## count_child       -1.89860 -1.1319
+## count_camper1      0.35127  1.4068
+## zero_(Intercept)  -0.03636  3.2419
+## zero_persons      -2.99701 -0.3355
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+
+The bootstrapped confidence intervals are considerably wider than the normal based approximation. The bootstrapped CIs are more consistent with the CIs from Stata when using robust standard errors.
+
+Now we can estimate the incident risk ratio (IRR) for the negative binomial model and odds ratio (OR) for the logistic (zero inflation) model. This is done using almost identical code as before, but passing a transformation function to the h argument of boot.ci, in this case, exp to exponentiate.
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+
+
+## exponentiated parameter estimates with percentile and bias adjusted CIs
+expparms <- t(sapply(c(1, 3, 5, 7, 9), function(i) {
+  out <- boot.ci(res, index = c(i, i + 1), type = c("perc", "bca"), h = exp)
+  with(out, c(Est = t0, pLL = percent[4], pUL = percent[5],
+    bcaLL = bca[4], bcaLL = bca[5]))
+}))
+
+## add row names
+row.names(expparms) <- names(coef(m1))
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+\begin{verbatim}
+## print results
+expparms
+ 
+##                      Est    pLL       pUL  bcaLL   bcaLL
+## count_(Intercept) 3.9395 1.6707    7.7990 2.1334 10.2453
+## count_child       0.2198 0.1165    0.3393 0.1371  0.3743
+## count_camper1     2.4086 1.1185    6.4420 0.7971  5.2845
+## zero_(Intercept)  0.3733 0.2687    0.6398 0.2352  0.5269
+## zero_persons      4.9686 1.4219 3227.9196 0.8305 39.9126
+ 
+\end{verbatim}
+\end{frame}
+%========================================================================================== %
+\begin{frame}[fragile]
+
+To better understand our model, we can compute the expected number of fish caught for different combinations of our predictors. In fact, since we are working with essentially categorical predictors, we can compute the expected values for all combinations using the expand.grid function to create all combinations and then the predict function to do it. Finally we create a graph.
+\end{frame}
+
+ 
+%======================================================================================================================================== %
+%\begin{frame}
+%Things to consider
+% 
+%Here are some issues that you may want to consider in the course of your research analysis.
+% •Question about the over-dispersion parameter is in general a tricky one. A large over-dispersion parameter could be due to a miss-specified model or could be due to a real process with over-dispersion. Adding an over-dispersion problem does not necessarily improve a miss-specified model. 
+%•The zero inflated negative binomial model has two parts, a negative binomial count model and the logit model for predicting excess zeros, so you might want to review these Data Analysis Example pages, Negative Binomial Regression and Logit Regression. 
+%•Since zero inflated negative binomial has both a count model and a logit model, each of the two models should have good predictors. The two models do not necessarily need to use the same predictors. 
+%•Problems of perfect prediction, separation or partial separation can occur in the logistic part of the zero-inflated model. 
+%•Count data often use exposure variable to indicate the number of times the event could have happened. You can incorporate exposure (also called an offset) into your model by using the offset() function. 
+%•It is not recommended that zero-inflated negative binomial models be applied to small samples. What constitutes a small sample does not seem to be clearly defined in the literature. 
+%•Pseudo-R-squared values differ from OLS R-squareds, please see FAQ: What are pseudo R-squareds? for a discussion on this issue.
+%\end{frame}
+\end{document}

@@ -1,0 +1,187 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+\begin{frame}
+	\Large
+\begin{itemize}
+\item This talks is about regression methods in which the dependent variable takes
+nonnegative integer or count values. \item The dependent variable is usually the number of times an event occurs. 
+\end{itemize}
+\end{frame}
+%================================================================== %
+\begin{frame}[fragile]
+	\begin{itemize}
+		\item Linear regression is used to model and predict continuous measurement variables.
+		\item Poisson regression is used to model and predict discrete count variables.
+	\end{itemize}
+	Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. A Poisson regression model is sometimes known as a log-linear model, especially when used to model contingency tables.
+	
+\end{frame}
+%================================================================== %
+\begin{frame}[fragile]
+	\textbf{Examples of Poisson regression}
+	\begin{itemize}
+		\item[(1) ]The number of persons killed by mule or horse kicks in the Prussian army per year. Ladislaus Bortkiewicz collected data from 20 volumes of\textit{ Preussischen Statistik}. These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years.
+		
+		\item[(2)] The number of people in line in front of you at the grocery store. Predictors may include the number of items currently offered at a special discounted price and whether a special event (e.g., a holiday, a big sporting event) is three or fewer days away.
+		
+		\item[(3)] The number of awards earned by students at one high school. Predictors of the number of awards earned include the type of program in which the student was enrolled (e.g., vocational, general or academic) and the score on their final exam in math.
+	\end{itemize}
+\end{frame}
+%======================================================== %
+\begin{frame}
+	\frametitle{Overview}
+	\Large Some
+examples of event counts are:
+\begin{itemize}
+\item number of claims per year on a particular car owner’s insurance policy,
+\item number of workdays missed due to sickness of a dependent in a one-year period,
+\item number of papers published per year by a researcher.
+\end{itemize}
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
+	
+	\frametitle{Poisson Regression with \texttt{R} } 
+	\Large	
+	\textbf{Poisson Distribution} 
+	
+	\begin{itemize}
+		\item The number of persons killed by mule or horse kicks in the Prussian army per year. 
+		\item Ladislaus Bortkiewicz collected data from 20 volumes of Preussischen Statistik. 
+		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. The period or module of observation is thus one year. 
+		
+	\end{itemize}
+	
+\end{frame}
+
+%======================================================== %
+\begin{frame}
+	\frametitle{Poisson Distribution: Prussian Cavalary}
+	\Large
+	\begin{itemize}
+\item The total deaths from horse kicks were 122, and the average number of deaths per year per corps was thus 122/200 = 0.61. 
+%\item This is a rate of less than 1. It is also obvious that it is meaningless to ask how many times per year a cavalryman was not killed by the kick of a horse. 
+\item In any given year, we expect to observe, well, not exactly 0.61 deaths in one corps 
+%(that is not possible; deaths occur in modules of 1), but sometimes none, sometimes one, occasionally two, perhaps once in a while three, and (we might intuitively expect) very rarely any more. 
+\item Here, then, is the classic Poisson situation: a rare event, whose average rate is small, with observations made over many small intervals of time.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{framed}
+		\begin{verbatim}
+		rpois(200,lambda=0.61)
+		> X
+		[1]   1 2 0 1 0 3 0 0 1 0 0 4 0 0 0 1 0 1 0 2
+		[21]  0 0 0 2 2 0 0 0 1 0 0 0 0 1 0 0 0 1 2 0
+		[41]  0 0 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 0 3 1
+		.......
+		.......
+		[141] 0 0 0 0 1 2 0 1 0 1 0 0 0 0 0 0 0 1 0 0
+		[161] 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 2 0 1
+		[181] 0 0 2 0 2 0 0 1 0 0 3 1 0 0 0 1 1 0 0 0
+		>
+		> mean(X)
+		[1] 0.53
+		> var(X)
+		[1] 0.5317588
+		\end{verbatim}
+	\end{framed}
+\end{frame}
+%======================================================== %
+\begin{frame}
+\frametitle{Overview}
+\Large
+\begin{itemize}
+\item  Poisson regression is main technique used to model count variables.
+
+\item Poisson Distribution : Mean and Variance are equal
+\[ \mathrm{E}(X)  = \mathrm{Var}(X) \]
+
+
+\item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead.
+
+
+\item  For example, Negative Binomial regression is for modelling count variables, usually for over-dispersed count outcome variables.
+\end{itemize}
+\end{frame}
+%=========================================================== %
+
+\begin{frame}[fragile]
+\frametitle{Generalized Linear Models}\large
+\begin{itemize}
+\item In statistics, the problem of modelling count variables is an example of generalized linear modelling.
+\item Generalized linear models are fit using the \texttt{glm()} function. 
+\item The form of the \texttt{glm} function is
+\end{itemize}
+{
+\normalsize
+\begin{framed}
+ \begin{verbatim}
+glm(formula, family=familytype(link=linkfunction),
+  data=dataname)
+\end{verbatim}
+\end{framed}
+}
+\end{frame}
+%========================================================== %
+\begin{frame}[fragile]
+	\frametitle{Generalized Linear Models}
+	\large
+\begin{center}
+\begin{tabular}{|c|l|} \hline
+	Family &	Default Link Function \\ \hline \hline 
+	binomial&	\texttt{(link = "logit")} \\ \hline
+	gaussian&	\texttt{(link = "identity")} \\ \hline
+	Gamma&	\texttt{(link = "inverse")} \\ \hline
+	inverse.gaussian&	\texttt{(link = "$1/mu^2$")} \\ \hline
+	\textbf{poisson}	&\texttt{(link = "log")} \\ \hline
+	%quasi&	\texttt{(link = "identity", variance = "constant")} \\ \hline
+	quasibinomial&	\texttt{(link = "logit")} \\ \hline
+	quasipoisson&	\texttt{(link = "log")} \\ \hline
+	
+\end{tabular}
+\end{center}
+ 
+\end{frame}
+
+\begin{frame}
+	\large
+	\textbf{Texts on GLMs}\\ \bigskip
+\begin{itemize}
+\item Dobson, A. J. (1990) An Introduction to Generalized Linear Models. (\textit{London: Chapman and Hall}.)
+\bigskip
+\item Hastie, T. J. and Pregibon, D. (1992) Generalized linear models. Chapter 6 of Statistical Models in S eds J. M. Chambers and T. J. Hastie, Wadsworth \& Brooks/Cole.
+\bigskip
+\item McCullagh P. and Nelder, J. A. (1989) Generalized Linear Models. (\textit{London: Chapman and Hall.})
+\bigskip
+\item Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. \textit{New York: Springer.}
+\end{itemize}
+
+\end{frame}
+%========================================================== %
+\begin{frame}
+	\textbf{glm2: Fitting Generalized Linear Models}
+\begin{description}
+	\item[Author(s):] Ian Marschner 
+
+\end{description}
+Fits generalized linear models using the same model specification as glm in the stats package, but with a modified default fitting method that provides greater stability for models that may fail to converge using glm
+\end{frame}
+\begin{frame}
+	\textbf{VGAM: Vector Generalized Linear and Additive Models}
+\begin{description}
+\item[Author(s):] Thomas W. Yee (t.yee@auckland.ac.nz)
+%\item[License:] GPL-2
+\item[URL:] http://www.stat.auckland.ac.nz/$\sim$ yee/VGAM
+\end{description}\bigskip
+Vector generalized linear and additive models, and associated models (Reduced-Rank VGLMs, Quadratic RR-VGLMs, Reduced-Rank VGAMs). \\ \bigskip This package fits many models and distribution by maximum likelihood estimation (MLE) or penalized MLE. Also fits constrained ordination models in ecology.
+\end{frame}
+%================================================================== %
+\end{document}
+
+
+
+
+
+

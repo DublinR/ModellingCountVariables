@@ -1,0 +1,17 @@
+\frametitle{Generalized Linear Models}
+\large
+\begin{center}
+\begin{tabular}{|c|l|} \hline
+Family & Default Link Function \\ \hline \hline
+binomial& \texttt{(link = "logit")} \\ \hline
+gaussian& \texttt{(link = "identity")} \\ \hline
+Gamma& \texttt{(link = "inverse")} \\ \hline
+inverse.gaussian& \texttt{(link = "$1/mu^2$")} \\ \hline
+\textbf{poisson} &\texttt{(link = "log")} \\ \hline
+%quasi& \texttt{(link = "identity", variance = "constant")} \\ \hline
+quasibinomial& \texttt{(link = "logit")} \\ \hline
+quasipoisson& \texttt{(link = "log")} \\ \hline
+
+\end{tabular}
+\end{center}
+

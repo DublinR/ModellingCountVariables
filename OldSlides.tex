@@ -1,0 +1,37 @@
+
+
+\section*{Section 5}
+%============================================================%
+\begin{frame}
+\frametitle{Zero Truncated Poisson Distribution}
+\Large
+
+The zero-truncated Poisson (ZTP) distribution is a certain discrete probability distribution whose support is the set of positive integers. This distribution is also known as the conditional Poisson distribution[1] or the positive Poisson distribution.[2] It is the conditional probability distribution of a Poisson-distributed random variable, given that the value of the random variable is not zero. Thus it is impossible for a ZTP random variable to be zero. 
+
+\end{frame}
+%============================================================%
+\begin{frame}
+\frametitle{Zero Truncated Poisson Distribution}
+\Large
+Since the ZTP is a truncated distribution with the truncation stipulated as k > 0, one can derive the probability mass 
+function g(k;λ) from a standard Poisson distribution f(k;λ) as follows: [4]
+\[g(k;\lambda) = P(X = k \mid k > 0) = 
+\frac{f(k;\lambda)}{1-f(0;\lambda)} = 
+\frac{\lambda ^ k e^{- \lambda} }{k ! \left ( 1 - e^{- \lambda} \right )} = \frac{\lambda^k}{(e^\lambda-1)k!}\]
+
+\end{frame}
+%============================================================%
+\begin{frame}
+	\frametitle{Zero Truncated Poisson Distribution}
+	\Large
+\textbf{Distribution Parameters}\\
+The mean is
+\[ \operatorname{E}[X]=\frac{\lambda}{1-e^{-\lambda}}=\frac{\lambda e^\lambda}{e^\lambda-1} \]
+and the variance is
+\[ \operatorname{Var}[X]=\frac{\lambda}{1-e^{-\lambda}} - \frac{\lambda^2 e^{-\lambda}}{(1-e^{-\lambda})^2}\] 
+\[ = \frac{\lambda e^\lambda}{e^\lambda-1}\left[1-\frac{\lambda}{e^\lambda-1}\right] \]
+
+\end{frame}
+%========================================================= %
+
+\end{document}

@@ -1,0 +1,12 @@
+\frametitle{Zero-Truncated Poisson regression}
+\large
+\textbf{Fitting the Model with \texttt{R}}\\
+Model Summary
+\begin{verbatim}
+## Coefficients:
+##             Estimate Std. Error z value
+## (Intercept)    2.436      0.027    89.1
+## age           -0.014      0.005    -2.9
+## hmo1          -0.136      0.024    -5.7
+## died1         -0.204      0.018   -11.1
+\end{verbatim}

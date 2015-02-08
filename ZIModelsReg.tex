@@ -1,0 +1,30 @@
+\documentclass{beamer}
+%
+\usepackage{amsmath}
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{graphicx}
+
+\begin{document}
+%======================================================================== %
+\begin{frame}
+	
+	\huge
+	\[ \mbox{Modelling Count Variables with \texttt{R} } \]
+	\end{frame}
+	%==================================================================%
+
+\section{Zero Inflation Models}
+\subfile{ZeroInflation.tex} % Fish Data and Introduction to ZI models
+\subfile{03-ZIPoisson1.tex} % Model Fitting
+\subfile{03-ZIPoisson2.tex} % Anlysis of Deviance Procedure and Vuong Procedure
+% \subfile{03-ZIPoisson3.tex} % Not Used Bootstrapping and Prediction
+
+%-------------------------------------- %
+% \subfile{05-ZINBregIntro.tex}
+
+\subfile{05-ZINBreg1.tex} % Model fitting
+\subfile{05-ZINBreg2.tex} % Vuong Test
+% \subfile{05-ZINBreg3.tex} % Bootstrapping not used
+
+\end{document}

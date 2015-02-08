@@ -1,0 +1,92 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+		\Large
+		
+		\textbf{Poisson regression}
+		\begin{itemize}
+			\item At this point, we are ready to perform our Poisson regression model analysis using the \texttt{glm} function. 
+			\item We fit the model and save it in the object \texttt{model1} and get a summary of the model.
+		\end{itemize}
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+		\large
+		\begin{framed}
+			\begin{verbatim}
+			model1 <- glm(num_awards ~ prog + math, 
+			family="poisson", data=poissonreg)
+			
+			summary(model1)
+			\end{verbatim}
+		\end{framed}
+	\end{frame}
+	%================================================================================================%
+	\begin{frame}[fragile]
+		\frametitle{Poisson Regression with \texttt{R}}
+	
+		\begin{framed}
+			\begin{verbatim}
+			
+			Call:
+			glm(formula = num_awards ~ prog + math, 
+			      family = "poisson", 
+			      data = poissonreg)
+			               
+			Deviance Residuals: 
+			Min      1Q  Median      3Q     Max  
+			-2.204  -0.844  -0.511   0.256   2.680  
+			\end{verbatim}
+		\end{framed}
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+
+			\begin{verbatim}
+			
+			Coefficients:
+			Estimate Std. Error z value Pr(>|z|)    
+			(Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
+			progAcademic     1.0839     0.3583    3.03   0.0025 ** 
+			progVocational   0.3698     0.4411    0.84   0.4018    
+			math             0.0702     0.0106    6.62  3.6e-11 ***
+			---
+			Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+			
+			\end{verbatim}
+		
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+
+
+			\begin{verbatim}
+			
+			(Dispersion parameter for poisson family taken to be 1)
+			
+			Null deviance: 287.67  on 199  degrees of freedom
+			Residual deviance: 189.45  on 196  degrees of freedom
+			AIC: 373.5
+			
+			Number of Fisher Scoring iterations: 6
+			
+			\end{verbatim}
+	
+	\end{frame}
+	
+	%================================================================================================%
+
+\end{document}

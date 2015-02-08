@@ -1,0 +1,117 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+
+
+%====================================================================================================== %
+\begin{frame}[fragile]
+We can get confidence intervals for the parameters and the exponentiated parameters using bootstrapping. For the Poisson model, these would be incident risk ratios, for the zero inflation model, odds ratios. We use the boot package. First, we get the coefficients from our original model to use as start values for the model to speed up the time it takes to estimate. Then we write a short function that takes data and indices as input and returns the parameters we are interested in. Finally, we pass that to the boot function and do 1200 replicates, using snow to distribute across four cores. Note that you should adjust the number of cores to whatever your machine has. Also, for final results, one may wish to increase the number of replications to help ensure stable results.
+\end{frame}
+%====================================================================================================== %
+\begin{frame}[fragile]
+dput(coef(m1, "count"))
+## structure(c(1.59788828690411, -1.04283909332231, 0.834023618148891
+## ), .Names = c("(Intercept)", "child", "camper1"))
+dput(coef(m1, "zero"))
+## structure(c(1.29744027908309, -0.564347365357873), .Names = c("(Intercept)", 
+## "persons"))
+f <- function(data, i) {
+  require(pscl)
+  m <- zeroinfl(count ~ child + camper | persons, data = data[i, ],
+    start = list(count = c(1.598, -1.0428, 0.834), zero = c(1.297, -0.564)))
+  as.vector(t(do.call(rbind, coef(summary(m)))[, 1:2]))
+}
+
+set.seed(10)
+res <- boot(zinb, f, R = 1200, parallel = "snow", ncpus = 4)
+
+## print results
+res
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = zinb, statistic = f, R = 1200, parallel = "snow", 
+##     ncpus = 4)
+## 
+## 
+## Bootstrap Statistics :
+##      original    bias    std. error
+## t1*   1.59789 -0.056661     0.30307
+## t2*   0.08554  0.004257     0.01670
+## t3*  -1.04284 -0.002510     0.40557
+## t4*   0.09999  0.004395     0.01539
+## t5*   0.83402  0.017178     0.40465
+## t6*   0.09363  0.004581     0.01536
+## t7*   1.29744  0.020810     0.48058
+## t8*   0.37385  0.008224     0.03662
+## t9*  -0.56435 -0.030103     0.26673
+## t10*  0.16296  0.005272     0.02981
+The results are alternating parameter estimates and standard errors. That is, the first row has the first parameter estimate from our model. The second has the standard error for the first parameter. The third column contains the bootstrapped standard errors, which are considerably larger than those estimated by zeroinfl.
+
+Now we can get the confidence intervals for all the parameters. We start on the original scale with percentile and bias adjusted CIs. We also compare these results with the regular confidence intervals based on the standard errors.
+
+## basic parameter estimates with percentile and bias adjusted CIs
+parms <- t(sapply(c(1, 3, 5, 7, 9), function(i) {
+  out <- boot.ci(res, index = c(i, i + 1), type = c("perc", "bca"))
+  with(out, c(Est = t0, pLL = percent[4], pUL = percent[5],
+     bcaLL = bca[4], bcaLL = bca[5]))
+}))
+
+## add row names
+row.names(parms) <- names(coef(m1))
+## print results
+parms
+##                       Est     pLL      pUL     bcaLL    bcaLL
+## count_(Intercept)  1.5979  0.8793  2.07810  1.087354  2.22614
+## count_child       -1.0428 -1.7509 -0.17531 -1.618509 -0.02203
+## count_camper1      0.8340  0.0596  1.62653  0.001571  1.59995
+## zero_(Intercept)   1.2974  0.3503  2.21984  0.293577  2.12070
+## zero_persons      -0.5643 -1.1087 -0.07847 -1.008526  0.00633
+## compare with normal based approximation
+confint(m1)
+##                     2.5 %  97.5 %
+## count_(Intercept)  1.4302  1.7655
+## count_child       -1.2388 -0.8469
+## count_camper1      0.6505  1.0175
+## zero_(Intercept)   0.5647  2.0302
+## zero_persons      -0.8838 -0.2449
+The bootstrapped confidence intervals are considerably wider than the normal based approximation. The bootstrapped CIs are more consistent with the CIs from Stata when using robust standard errors.
+
+Now we can estimate the incident risk ratio (IRR) for the Poisson model and odds ratio (OR) for the logistic (zero inflation) model. This is done using almost identical code as before, but passing a transformation function to the h argument of boot.ci, in this case, exp to exponentiate.
+
+## exponentiated parameter estimates with percentile and bias adjusted CIs
+expparms <- t(sapply(c(1, 3, 5, 7, 9), function(i) {
+  out <- boot.ci(res, index = c(i, i + 1), type = c("perc", "bca"), h = exp)
+  with(out, c(Est = t0, pLL = percent[4], pUL = percent[5],
+    bcaLL = bca[4], bcaLL = bca[5]))
+}))
+
+## add row names
+row.names(expparms) <- names(coef(m1))
+## print results
+expparms
+##                      Est    pLL    pUL  bcaLL  bcaLL
+## count_(Intercept) 4.9426 2.4091 7.9892 2.9664 9.2641
+## count_child       0.3525 0.1736 0.8392 0.1982 0.9782
+## count_camper1     2.3026 1.0614 5.0862 1.0016 4.9528
+## zero_(Intercept)  3.6599 1.4195 9.2058 1.3412 8.3370
+## zero_persons      0.5687 0.3300 0.9245 0.3648 1.0063
+To better understand our model, we can compute the expected number of fish caught for different combinations of our predictors. In fact, since we are working with essentially categorical predictors, we can compute the expected values for all combinations using the expand.grid function to create all combinations and then the predict function to do it. We also remove any rows where the number of children exceeds the number of persons, which does not make sense logically, using the subset function. Finally we create a graph.
+
+newdata1 <- expand.grid(0:3, factor(0:1), 1:4)
+colnames(newdata1) <- c("child", "camper", "persons")
+newdata1 <- subset(newdata1, subset=(child<=persons))
+newdata1$phat <- predict(m1, newdata1)
+
+ggplot(newdata1, aes(x = child, y = phat, colour = factor(persons))) +
+  geom_point() +
+  geom_line() +
+  facet_wrap(~camper) +
+  labs(x = "Number of Children", y = "Predicted Fish Caught")
+plot of chunk unnamed-chunk-10
+Things to consider
+Since zip has both a count model and a logit model, each of the two models should have good predictors. The two models do not necessarily need to use the same predictors.
+Problems of perfect prediction, separation or partial separation can occur in the logistic part of the zero-inflated model.
+Count data often use exposure variables to indicate the number of times the event could have happened. You can incorporate a logged version of the exposure variable into your model by using the offset() option.
+It is not recommended that zero-inflated Poisson models be applied to small samples. What constitutes a small sample does not seem to be clearly defined in the literature.

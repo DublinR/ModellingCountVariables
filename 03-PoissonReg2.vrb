@@ -1,0 +1,16 @@
+
+\frametitle{Poisson Regression with \texttt{R}}
+
+
+\begin{verbatim}
+
+(Dispersion parameter for poisson family taken to be 1)
+
+Null deviance: 287.67  on 199  degrees of freedom
+Residual deviance: 189.45  on 196  degrees of freedom
+AIC: 373.5
+
+Number of Fisher Scoring iterations: 6
+
+\end{verbatim}
+

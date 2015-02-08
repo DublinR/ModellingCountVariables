@@ -1,0 +1,10 @@
+\frametitle{Poisson Regression : Exposure and Offset}
+\Large
+Offset in the case of a GLM in R can be achieved using the offset() function:
+
+\begin{framed}
+\begin{verbatim}
+glm(y ~ offset(log(exposure)) + x, family=poisson(link=log) )
+\end{verbatim}
+\end{framed}
+

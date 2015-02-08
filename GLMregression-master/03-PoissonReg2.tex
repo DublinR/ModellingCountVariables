@@ -1,0 +1,158 @@
+\documentclass[00-GLMregslides.tex]{subfiles}
+\begin{document}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\Large
+ 
+\textbf{Poisson regression}
+ \begin{itemize}
+\item At this point, we are ready to perform our Poisson model analysis using the \texttt{glm} function. 
+\item We fit the model and store it in the object \texttt{m1} and get a summary of the model.
+\end{itemize}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\begin{framed}
+	\begin{verbatim}
+m1 <- glm(num_awards ~ prog + math, 
+  family="poisson", data=p)
+
+summary(m1)
+\end{verbatim}
+\end{framed}
+\end{frame}
+%================================================================================================%
+ \begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\begin{framed}
+\begin{verbatim}
+
+ Call:
+ glm(formula = num_awards ~ prog + math, family = "poisson", data = p)
+  Deviance Residuals: 
+    Min      1Q  Median      3Q     Max  
+ -2.204  -0.844  -0.511   0.256   2.680  
+ \end{verbatim}
+\end{framed}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\begin{framed}
+\begin{verbatim}
+
+ Coefficients:
+                Estimate Std. Error z value Pr(>|z|)    
+ (Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
+ progAcademic     1.0839     0.3583    3.03   0.0025 ** 
+ progVocational   0.3698     0.4411    0.84   0.4018    
+ math             0.0702     0.0106    6.62  3.6e-11 ***
+ ---
+ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+ 
+\end{verbatim}
+\end{framed}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\begin{framed}
+\begin{verbatim}
+
+ (Dispersion parameter for poisson family taken to be 1)
+ 
+     Null deviance: 287.67  on 199  degrees of freedom
+ Residual deviance: 189.45  on 196  degrees of freedom
+ AIC: 373.5
+ 
+ Number of Fisher Scoring iterations: 6
+ 
+ \end{verbatim}
+\end{framed}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\Large 
+\begin{itemize}
+% Cameron and Trivedi (2009) 
+\item It is recommended using robust standard errors for the parameter estimates to control for mild violation of the distribution assumption that the variance equals the mean. 
+\item The  R package \textbf{\textit{sandwich}} can be used to obtain the robust standard errors and calculated the p-values accordingly. 
+\item Together with the p-values, we have also calculated the 95\% confidence interval using the parameter estimates and their robust standard errors. 
+\end{itemize}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\textbf{sandwich \texttt{R} Package }
+\begin{itemize}
+\item Robust Covariance Matrix Estimators
+ 
+\item Model-robust standard error estimators for cross-sectional, time series, and longitudinal data.
+
+\end{itemize}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large
+\textbf{Robust Standard Errors}
+\begin{framed}
+\begin{verbatim}
+cov.m1 <- vcovHC(m1, type="HC0")
+std.err <- sqrt(diag(cov.m1))
+
+r.est <- cbind(Estimate= coef(m1), 
+  "Robust SE" = std.err,
+  "Pr(>|z|)" = 2 * pnorm(abs(coef(m1)/std.err), 
+  lower.tail=FALSE),
+LL = coef(m1) - 1.96 * std.err,
+UL = coef(m1) + 1.96 * std.err)
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+
+%================================================================================================%
+\begin{frame}[fragile]
+
+\frametitle{Poisson Regression with \texttt{R}}
+\large 
+
+\begin{framed}
+\begin{verbatim}
+r.est
+ 
+                Estimate Robust SE  Pr(>|z|)      LL       UL
+ (Intercept)    -5.24712   0.64600 4.567e-16 -6.5133 -3.98097
+ progAcademic    1.08386   0.32105 7.355e-04  0.4546  1.71311
+ progVocational  0.36981   0.40042 3.557e-01 -0.4150  1.15463
+ math            0.07015   0.01044 1.784e-11  0.0497  0.09061
+\end{verbatim}
+\end{framed}
+
+\end{frame}
+
+%================================================================================================%
+\end{document}

@@ -1,0 +1,137 @@
+\documentclass[00-GLMregslides.tex]{subfiles}
+\begin{document}
+	%==================================================================%
+\section*{Appendix 1 : Standard Errors for Poisson Regression}
+	\begin{frame}[fragile]
+		
+		\frametitle{Standard Errors for Poisson Regression}
+		\large 
+	
+		\begin{itemize}
+			% Cameron and Trivedi (2009) 
+			\item It is recommended using robust standard errors for the parameter estimates to control for mild violation of the distribution assumption that the variance equals the mean. 
+			\item The \texttt{R} package \textbf{\textit{sandwich}} can be used to obtain the robust standard errors and calculated the p-values accordingly. 
+			\item Together with the p-values, we have also calculated the 95\% confidence interval using the parameter estimates and their robust standard errors. 
+		\end{itemize}
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Standard Errors for Poisson Regression}
+		\large
+		\textbf{sandwich \texttt{R} Package }
+		\begin{itemize}
+			\item Robust Covariance Matrix Estimators
+			
+			\item Model-robust standard error estimators for cross-sectional, time series, and longitudinal data.
+			
+		\end{itemize}
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+		\large
+		\textbf{Robust Standard Errors}
+		\begin{framed}
+			\begin{verbatim}
+			cov.model1 <- vcovHC(model1, type="HC0")
+			std.err <- sqrt(diag(cov.model1))
+			
+			r.est <- cbind(Estimate= coef(model1), 
+			"Robust SE" = std.err,
+			"Pr(>|z|)" = 2 * pnorm(abs(coef(model1)/std.err), 
+			lower.tail=FALSE),
+			 LL = coef(model1) - 1.96 * std.err,
+			 UL = coef(model1) + 1.96 * std.err)
+			
+			\end{verbatim}
+		\end{framed}
+	\end{frame}
+	
+	%================================================================================================%
+	\begin{frame}[fragile]
+		
+		\frametitle{Poisson Regression with \texttt{R}}
+		\large 
+		\textbf{Robust Standard Errors}
+		\begin{verbatim}
+		r.est
+		
+		       Estimate Robust SE   Pr(>|z|)      LL       UL
+		(Intercept)    -5.24712   0.64600 4.567e-16 -6.5133 -3.98097
+		progAcademic    1.08386   0.32105 7.355e-04  0.4546  1.71311
+		progVocational  0.36981   0.40042 3.557e-01 -0.4150  1.15463
+		math            0.07015   0.01044 1.784e-11  0.0497  0.09061
+		\end{verbatim}
+		
+		
+	\end{frame}
+	
+	%=============================================================================================== %
+	
+%==================================================================%
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+with(p, tapply(num_awards, prog, function(x) {
+  sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))
+}))
+ 
+
+
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+##                General               Academic             Vocational 
+## "M (SD) = 0.20 (0.40)" "M (SD) = 1.00 (1.28)" "M (SD) = 0.24 (0.52)"
+ 
+ggplot(p, aes(num_awards, fill = prog)) +
+  geom_histogram(binwidth=.5, position="dodge")
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\frametitle{Negative Binomial Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+
+ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(binwidth = 1) + facet_grid(prog ~ 
+    ., margins = TRUE, scales = "free")
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\begin{framed}
+\begin{verbatim}
+
+with(dat, tapply(daysabs, prog, function(x) {
+    sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))
+}))
+
+##                 General                Academic              Vocational 
+## "M (SD) = 10.65 (8.20)"  "M (SD) = 6.93 (7.45)"  "M (SD) = 2.67 (3.73)"
+
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[00-GLMregslides.tex]{subfiles}
+\begin{document}
+	%==================================================================%
+	
+\begin{frame}[fragile]
+\frametitle{Multinomial Logistic Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+
+## melt data set to long for ggplot2
+lpp <- melt(pp.write, id.vars = c("ses", "write"), value.name = "probability")
+head(lpp)  # view first few rows
+ 
+##   ses write variable probability
+## 1 low    30 academic     0.09844
+## 2 low    31 academic     0.10717
+## 3 low    32 academic     0.11650
+## 4 low    33 academic     0.12646
+## 5 low    34 academic     0.13705
+## 6 low    35 academic     0.14828
+ 
+
+
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+
+\begin{frame}[fragile]
+\frametitle{Multinomial Logistic Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+## plot predicted probabilities across write values for each level of ses
+## facetted by program type
+ggplot(lpp, aes(x = write, y = probability, colour = ses)) + geom_line() + facet_grid(variable ~
+    ., scales = "free")
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\frametitle{Ordinal Logistic Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+ggplot(dat, aes(x = apply, y = gpa)) +
+  geom_boxplot(size = .75) +
+  geom_jitter(alpha = .5) +
+  facet_grid(pared ~ public, margins = TRUE) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+with(p, tapply(num_awards, prog, function(x) {
+  sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))
+}))
+ 
+
+
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+##                General               Academic             Vocational 
+## "M (SD) = 0.20 (0.40)" "M (SD) = 1.00 (1.28)" "M (SD) = 0.24 (0.52)"
+ 
+ggplot(p, aes(num_awards, fill = prog)) +
+  geom_histogram(binwidth=.5, position="dodge")
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\frametitle{Negative Binomial Regression with \texttt{R} }
+\begin{framed}
+\begin{verbatim}
+
+
+ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(binwidth = 1) + facet_grid(prog ~ 
+    ., margins = TRUE, scales = "free")
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\begin{frame}[fragile]
+\begin{framed}
+\begin{verbatim}
+
+with(dat, tapply(daysabs, prog, function(x) {
+    sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))
+}))
+
+##                 General                Academic              Vocational 
+## "M (SD) = 10.65 (8.20)"  "M (SD) = 6.93 (7.45)"  "M (SD) = 2.67 (3.73)"
+
+
+\end{verbatim}
+\end{framed}
+\end{frame}
+%==================================================================%
+\end{document}

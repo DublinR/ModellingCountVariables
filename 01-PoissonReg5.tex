@@ -1,14 +1,28 @@
-
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+	
+\begin{frame}
 %===================================================================================%
-\frametitle{"Exposure" and offset}
-Poisson regression may also be appropriate for rate data, where the rate is a count of events occurring to a particular unit of observation, divided by some measure of that unit's exposure. For example, biologists may count the number of tree species in a forest, and the rate would be the number of species per square kilometre. Demographers may model death rates in geographic areas as the count of deaths divided by person−years. More generally, event rates can be calculated as events per unit time, which allows the observation window to vary for each unit. In these examples, exposure is respectively unit area, person−years and unit time. In Poisson regression this is handled as an offset, where the exposure variable enters on the right-hand side of the equation, but with a parameter estimate (for log(exposure)) constrained to 1.
-\log{(\operatorname{E}(Y\mid x))} = \log{(\text{exposure})} + \theta' x
-which implies
-\log{(\operatorname{E}(Y\mid x))} - \log{(\text{exposure})} = 
-       \log{\left(\frac{\operatorname{E}(Y\mid x)}{\text{exposure}}\right)} = \theta' x\]
+\frametitle{Poisson Regression "Exposure" and offset}
+\begin{itemize}
+\item Poisson regression may also be appropriate for rate data, where the rate is a count of events occurring to a particular unit of observation, divided by some measure of that unit's exposure. 
+\item For example, biologists may count the number of tree species in a forest, and the rate would be the number of species per square kilometre. 
+\item Demographers may model death rates in geographic areas as the count of deaths divided by person−years. 
+\item More generally, event rates can be calculated as events per unit time, which allows the observation window to vary for each unit. 
+\end{itemize}
 \end{frame}
 %============================================================================%
 \begin{frame}
+	\frametitle{Poisson Regression : Exposure and Offset}
+	\Large
+In these examples, exposure is respectively unit area, person−years and unit time. In Poisson regression this is handled as an offset, where the exposure variable enters on the right-hand side of the equation, but with a parameter estimate (for log(exposure)) constrained to 1.
+\[\log{(\operatorname{E}(Y\mid x))} = \log{(\text{exposure})} + \theta' x\]
+which implies
+\[\log{(\operatorname{E}(Y\mid x))} - \log{(\text{exposure})} = 
+       \log{\left(\frac{\operatorname{E}(Y\mid x)}{\text{exposure}}\right)} = \theta' x\]
+\end{frame}
+%============================================================================%
+\begin{frame}[fragile]
 \frametitle{Poisson Regression : Exposure and Offset}
 \Large
 Offset in the case of a GLM in R can be achieved using the offset() function:
@@ -21,3 +35,4 @@ glm(y ~ offset(log(exposure)) + x, family=poisson(link=log) )
 
 \end{frame}
 %============================================================================%
+\end{document}
