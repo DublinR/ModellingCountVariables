@@ -2,52 +2,23 @@
 \begin{document}
 %============================================================%
 
-%============================================================%
-\begin{frame}
-\frametitle{Zero Truncated Poisson Distribution}
-\Large
-
-The zero-truncated Poisson (ZTP) distribution is a certain discrete probability distribution whose support is the set of positive integers. This distribution is also known as the conditional Poisson distribution[1] or the positive Poisson distribution.[2] It is the conditional probability distribution of a Poisson-distributed random variable, given that the value of the random variable is not zero. Thus it is impossible for a ZTP random variable to be zero. 
-
-\end{frame}
-%============================================================%
-\begin{frame}
-\frametitle{Zero Truncated Poisson Distribution}
-\Large
-Since the ZTP is a truncated distribution with the truncation stipulated as k > 0, one can derive the probability mass 
-function g(k;λ) from a standard Poisson distribution f(k;λ) as follows: [4]
-\[g(k;\lambda) = P(X = k \mid k > 0) = 
-\frac{f(k;\lambda)}{1-f(0;\lambda)} = 
-\frac{\lambda ^ k e^{- \lambda} }{k ! \left ( 1 - e^{- \lambda} \right )} = \frac{\lambda^k}{(e^\lambda-1)k!}\]
-
-\end{frame}
-%============================================================%
-\begin{frame}
-	\frametitle{Zero Truncated Poisson Distribution}
-	\Large
-\textbf{Distribution Parameters}\\
-The mean is
-\[ \operatorname{E}[X]=\frac{\lambda}{1-e^{-\lambda}}=\frac{\lambda e^\lambda}{e^\lambda-1} \]
-and the variance is
-\[ \operatorname{Var}[X]=\frac{\lambda}{1-e^{-\lambda}} - \frac{\lambda^2 e^{-\lambda}}{(1-e^{-\lambda})^2}\] 
-\[ = \frac{\lambda e^\lambda}{e^\lambda-1}\left[1-\frac{\lambda}{e^\lambda-1}\right] \]
-
-\end{frame}
 
 %================================================================== %
 \begin{frame}
 \frametitle{Zero-Truncated Poisson regression}
-\textbf{Data Set}
+\textbf{Data Set :  hospitalstay}
 \begin{itemize}
 	\item 
-We have a hypothetical data file, \textbf{\textit{ztpoiss}} with 1,493 observations. 
+We have a hypothetical data file, \textbf{\textit{hospitalstay}} with 1,493 observations. 
 \item The length of hospital stay variable is \textbf{stay}. 
 \item The variable \textbf{age} gives the age group from 1 to 9 which will be treated as interval in this example. 
 \item The variables \textbf{hmo} and \textbf{died} are binary indicator variables for HMO insured patients and patients who died while in the hospital, respectively.
 \end{itemize}
 \end{frame}
-
+%========================================================== %
 \begin{frame}[fragile]
+\frametitle{Zero-Truncated Poisson regression}
+\textbf{Data Set :  hospitalstay}
 \begin{verbatim}
 ##       stay            age       hmo      died   
 ##  Min.   : 1.00   Min.   :1.00   0:1254   0:981  
@@ -58,4 +29,26 @@ We have a hypothetical data file, \textbf{\textit{ztpoiss}} with 1,493 observati
 ##  Max.   :74.00   Max.   :9.00
 \end{verbatim}
 \end{frame}
+%=========================================================== %
+\begin{frame}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{hospitalstay}
+
+\end{figure}
+\end{frame}
+%=========================================================== %
+\begin{frame}
+\frametitle{Zero-Truncated Poisson regression}
+\textbf{Data Set :  hospitalstay}
+	\begin{itemize}
+\item For the lowest ages, a smaller proportion of people in HMOs died, but for higher ages, there does not seem to be a huge difference, with a slightly higher proportion in HMOs dying if anything. \item Overall, as age group increases, the proportion of those dying increases, as expected.
+	\end{itemize}
+
+	
+	
+\end{frame}
+
+
+
 \end{document}

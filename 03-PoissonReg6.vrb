@@ -1,0 +1,10 @@
+\frametitle{Poisson Regression :  Crabs Example}
+
+\begin{framed}
+\begin{verbatim}
+plot(crabs$Width, crabs$Satellites,
+pch=16, col="darkred")
+points(crabs$Width, crabs.pois$fitted.values,
+col="green", lwd=3)
+\end{verbatim}
+\end{framed}

@@ -1,5 +1,5 @@
 \beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Poisson Regression}{5}{0}{1}
-\beamer@sectionintoc {2}{Negative Binomial Regression}{56}{0}{2}
-\beamer@sectionintoc {3}{Zero Inflation Models}{101}{0}{3}
-\beamer@sectionintoc {4}{Zero Truncated Models}{103}{0}{4}
+\beamer@sectionintoc {1}{Poisson Regression}{15}{0}{1}
+\beamer@sectionintoc {2}{Negative Binomial Regression}{71}{0}{2}
+\beamer@sectionintoc {3}{Zero Inflation Models}{113}{0}{3}
+\beamer@sectionintoc {4}{Zero Truncated Models}{142}{0}{4}

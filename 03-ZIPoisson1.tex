@@ -3,9 +3,10 @@
 
 \begin{frame}[fragile]
 \frametitle{Zero-inflated Poisson regression}
-	Though we can run a Poisson regression in R using the \texttt{glm} function in one of the core packages, we need another package to run the zero-inflated poisson model. We use the pscl package.
+	Though we can run a Poisson regression in \texttt{R} using the \texttt{glm} function in one of the core packages, we need another package to run the zero-inflated poisson model. We use the \textbf{pscl} package.
 \begin{verbatim}
-	summary(m1 <- zeroinfl(count ~ child + camper | persons, data = zinb))
+	summary(m1 <- zeroinfl(count ~ child + camper | 
+	     persons, data = zinb))
 \end{verbatim}
 \end{frame}
 \begin{frame}[fragile]

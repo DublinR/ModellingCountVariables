@@ -7,6 +7,26 @@
 nonnegative integer or count values. \item The dependent variable is usually the number of times an event occurs. 
 \end{itemize}
 \end{frame}
+%================================================================== %
+\begin{frame}[fragile]
+	\begin{itemize}
+		\item Linear regression is used to model and predict continuous measurement variables.
+		\item Poisson regression is used to model and predict discrete count variables.
+	\end{itemize}
+	Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. A Poisson regression model is sometimes known as a log-linear model, especially when used to model contingency tables.
+	
+\end{frame}
+%================================================================== %
+\begin{frame}[fragile]
+	\textbf{Examples of Poisson regression}
+	\begin{itemize}
+		\item[(1) ]The number of persons killed by mule or horse kicks in the Prussian army per year. Ladislaus Bortkiewicz collected data from 20 volumes of\textit{ Preussischen Statistik}. These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years.
+		
+		\item[(2)] The number of people in line in front of you at the grocery store. Predictors may include the number of items currently offered at a special discounted price and whether a special event (e.g., a holiday, a big sporting event) is three or fewer days away.
+		
+		\item[(3)] The number of awards earned by students at one high school. Predictors of the number of awards earned include the type of program in which the student was enrolled (e.g., vocational, general or academic) and the score on their final exam in math.
+	\end{itemize}
+\end{frame}
 %======================================================== %
 \begin{frame}
 	\frametitle{Overview}
@@ -141,12 +161,20 @@ glm(formula, family=familytype(link=linkfunction),
 \end{frame}
 %========================================================== %
 \begin{frame}
-\textbf{VGAM: Vector Generalized Linear and Additive Models}
+	\textbf{glm2: Fitting Generalized Linear Models}
+\begin{description}
+	\item[Author(s):] Ian Marschner 
+
+\end{description}
+Fits generalized linear models using the same model specification as glm in the stats package, but with a modified default fitting method that provides greater stability for models that may fail to converge using glm
+\end{frame}
+\begin{frame}
+	\textbf{VGAM: Vector Generalized Linear and Additive Models}
 \begin{description}
 \item[Author(s):] Thomas W. Yee (t.yee@auckland.ac.nz)
-\item[License:] GPL-2
+%\item[License:] GPL-2
 \item[URL:] http://www.stat.auckland.ac.nz/$\sim$ yee/VGAM
-\end{description}
+\end{description}\bigskip
 Vector generalized linear and additive models, and associated models (Reduced-Rank VGLMs, Quadratic RR-VGLMs, Reduced-Rank VGAMs). \\ \bigskip This package fits many models and distribution by maximum likelihood estimation (MLE) or penalized MLE. Also fits constrained ordination models in ecology.
 \end{frame}
 %================================================================== %

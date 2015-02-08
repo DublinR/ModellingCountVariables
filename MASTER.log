@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 23:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  8 FEB 2015 22:16
 entering extended mode
 **MASTER.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.tex
@@ -935,18 +935,18 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Info: Redefining \includegraphics on input line 8.
 
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 14.
+line 13.
 
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\sansmathaccent\ot1mathkern
 cmss.fd
@@ -955,7 +955,7 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 14.
+(Font)              size <5> substituted on input line 13.
 
 [1
 
@@ -963,16 +963,17 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Overview.tex
 [2
 
-]
-Missing character: There is no ‚ in font cmss12!
-Missing character: There is no Ä in font cmss12!
-Missing character: There is no ô in font cmss12!
- [3
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[3
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [4
 
-] [5
+]
+Missing character: There is no ‚ in font cmss12!
+Missing character: There is no Ä in font cmss12!
+Missing character: There is no ô in font cmss12!
+ [5
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [6
@@ -982,28 +983,35 @@ Missing character: There is no ô in font cmss12!
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [8
 
+] [9
+
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[9
+[10
 
-] [10
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[11
 
-] [11
+] [12
+
+] [13
+
+] [14
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg1.tex
-[12
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[13
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[14
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [15
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [16
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[17
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[18
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[19
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (20.38533pt too wide) in paragraph at lines 5--5
@@ -1047,34 +1055,34 @@ Overfull \hbox (26.13402pt too wide) in paragraph at lines 11--11
 0[] 
  []
 
-) [17
+) [20
 
-] <poisson1.png, id=473, 505.89pt x 505.89pt>
+] <poisson1.png, id=550, 505.89pt x 505.89pt>
 File: poisson1.png Graphic file (type png)
  <use poisson1.png>
-Package pdftex.def Info: poisson1.png used on input line 144.
+Package pdftex.def Info: poisson1.png used on input line 145.
 (pdftex.def)             Requested size: 245.83282pt x 245.83493pt.
 
-Overfull \vbox (19.23276pt too high) detected at line 144
+Overfull \vbox (19.23276pt too high) detected at line 145
  []
 
-[18
+[21
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/poisson1.png>]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [19
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [20
-
-])
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg2.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [21
-
-]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [22
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [23
+
+])
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg2.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [24
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [25
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [26
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1101,7 +1109,7 @@ Overfull \hbox (49.12877pt too wide) in paragraph at lines 13--13
 ' ' 1[] 
  []
 
-) [24
+) [27
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 7--7
@@ -1109,17 +1117,17 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 7--7
  
  []
 
-) [25
+) [28
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg3.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [26
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [29
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [27
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [30
 
 ]
-[28
+[31
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 8--8
@@ -1145,7 +1153,7 @@ Overfull \hbox (49.12877pt too wide) in paragraph at lines 13--13
 ' ' 1[] 
  []
 
-) [29
+) [32
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 
@@ -1164,16 +1172,7 @@ Missing character: There is no ú in font cmssbx10!
 Missing character: There is no ‚ in font cmssbx10!
 Missing character: There is no Ä in font cmssbx10!
 Missing character: There is no ù in font cmssbx10!
-) [30
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[31
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[32
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[33
+) [33
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [34
@@ -1187,13 +1186,8 @@ Missing character: There is no ù in font cmssbx10!
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [37
 
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
-Overfull \hbox (73.67744pt too wide) in paragraph at lines 15--15
-[] \OT1/cmtt/m/n/10.95 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1
- ' ' 1[] 
- []
-
-) [38
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[38
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [39
@@ -1201,8 +1195,22 @@ Overfull \hbox (73.67744pt too wide) in paragraph at lines 15--15
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [40
 
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
+Overfull \hbox (73.67744pt too wide) in paragraph at lines 15--15
+[] \OT1/cmtt/m/n/10.95 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1
+ ' ' 1[] 
+ []
+
+) [41
+
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[41
+[42
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[43
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[44
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (194.39989pt too wide) in paragraph at lines 7--7
@@ -1216,7 +1224,7 @@ Overfull \hbox (50.6827pt too wide) in paragraph at lines 13--13
 ts[] 
  []
 
-) [42
+) [45
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (4.69319pt too wide) in paragraph at lines 8--8
@@ -1243,16 +1251,7 @@ Overfull \hbox (4.69319pt too wide) in paragraph at lines 12--12
 [] \OT1/cmtt/m/n/10.95 math           1.072672   0.01119 1.050955 1.09484[] 
  []
 
-) [43
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[44
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[45
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[46
+) [46
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [47
@@ -1263,7 +1262,16 @@ Overfull \hbox (4.69319pt too wide) in paragraph at lines 12--12
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [49
 
-] <poisson2.png, id=1283, 505.89pt x 505.89pt>
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[50
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[51
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[52
+
+] <poisson2.png, id=1359, 505.89pt x 505.89pt>
 File: poisson2.png Graphic file (type png)
  <use poisson2.png>
 Package pdftex.def Info: poisson2.png used on input line 375.
@@ -1272,13 +1280,13 @@ Package pdftex.def Info: poisson2.png used on input line 375.
 Overfull \vbox (48.07672pt too high) detected at line 375
  []
 
-[50
+[53
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/poisson2.png>]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [51
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [54
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [52
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [55
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1298,19 +1306,10 @@ Overfull \hbox (63.48529pt too wide) in paragraph at lines 11--11
 
  []
 
-) [53
+) [56
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg4.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [54
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [55
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [56
-
-]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [57
 
 ]
@@ -1319,8 +1318,7 @@ Overfull \hbox (63.48529pt too wide) in paragraph at lines 11--11
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [59
 
-])
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.tex
+]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [60
 
 ]
@@ -1329,11 +1327,57 @@ Overfull \hbox (63.48529pt too wide) in paragraph at lines 11--11
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [62
 
-]
+])
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-PoissonReg6.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [63
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [64
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [65
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [66
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [67
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [68
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
+<./DAquiz5Q3c.jpeg, id=1764, 1445.4pt x 785.93625pt>
+File: ./DAquiz5Q3c.jpeg Graphic file (type jpg)
+ <use ./DAquiz5Q3c.jpeg>
+Package pdftex.def Info: ./DAquiz5Q3c.jpeg used on input line 4.
+(pdftex.def)             Requested size: 322.65529pt x 175.4369pt.
+
+Overfull \hbox (15.36542pt too wide) in paragraph at lines 4--7
+ [] 
+ []
+
+) [69
+
+ <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/DAquiz5Q3c.jpeg>] (C:
+\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [70
+
+])
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [71
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [72
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [73
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [74
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [75
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1378,9 +1422,9 @@ Overfull \hbox (20.38533pt too wide) in paragraph at lines 13--13
 [] 
  []
 
-) [65
+) [76
 
-] <negbin1.png, id=1687, 505.89pt x 505.89pt>
+] <negbin1.png, id=1966, 505.89pt x 505.89pt>
 File: negbin1.png Graphic file (type png)
  <use negbin1.png>
 Package pdftex.def Info: negbin1.png used on input line 139.
@@ -1389,26 +1433,26 @@ Package pdftex.def Info: negbin1.png used on input line 139.
 Overfull \vbox (33.07556pt too high) detected at line 139
  []
 
-[66
+[77
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/negbin1.png>]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [67
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [78
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [68
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [79
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [69
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [80
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [70
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [81
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [71
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [82
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [72
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [83
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1441,10 +1485,10 @@ Overfull \hbox (54.87746pt too wide) in paragraph at lines 11--11
  ' ' 1[] 
  []
 
-) [73
+) [84
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[74
+[85
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (123.86171pt too wide) in paragraph at lines 4--4
@@ -1464,13 +1508,13 @@ Overfull \hbox (14.63664pt too wide) in paragraph at lines 7--7
 ] 
  []
 
-) [75
+) [86
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[76
+[87
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[77
+[88
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (100.86696pt too wide) in paragraph at lines 9--9
@@ -1484,40 +1528,7 @@ Overfull \hbox (100.86696pt too wide) in paragraph at lines 11--11
     2    45.05[] 
  []
 
-) [78
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[79
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[80
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[81
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[82
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[83
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[84
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[85
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[86
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[87
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[88
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[89
+) [89
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [90
@@ -1525,15 +1536,48 @@ Overfull \hbox (100.86696pt too wide) in paragraph at lines 11--11
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [91
 
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[92
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[93
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[94
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[95
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[96
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[97
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[98
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[99
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[100
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[101
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[102
+
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg2.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [92
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [103
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [93
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [104
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [94
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [105
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1547,7 +1591,7 @@ Overfull \hbox (69.6603pt too wide) in paragraph at lines 10--10
  
  []
 
-) [95
+) [106
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (174.36037pt too wide) in paragraph at lines 5--5
@@ -1555,42 +1599,42 @@ Overfull \hbox (174.36037pt too wide) in paragraph at lines 5--5
 nk", se.fit=TRUE))[] 
  []
 
-) [96
+) [107
 
-] <negbin2.png, id=2472, 505.89pt x 505.89pt>
+] <negbin2.png, id=2749, 505.89pt x 505.89pt>
 File: negbin2.png Graphic file (type png)
  <use negbin2.png>
 Package pdftex.def Info: negbin2.png used on input line 89.
 (pdftex.def)             Requested size: 215.10196pt x 215.1046pt.
- [97
+ [108
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/negbin2.png>]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [98
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [109
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [99
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [110
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [100
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [111
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [101
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [112
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\ZeroInflation.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [102
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [113
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [103
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [114
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [104
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [115
 
 ]
-[105
+[116
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[106
+[117
 
 ]
 Overfull \hbox (79.45967pt too wide) detected at line 92
@@ -1605,25 +1649,20 @@ ncmss/m/sl/10.95 E\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y \OT1/cmss
 ss/m/sl/10.95 goneshing\OT1/cmss/m/n/10.95 )
  []
 
-[107
+[118
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-ZIPoisson1.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [119
+
+]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
-Overfull \hbox (95.11827pt too wide) in paragraph at lines 4--4
-[]\OT1/cmtt/m/n/10.95 summary(m1 <- zeroinfl(count ~ child + camper | persons, 
-data = zinb))[] 
- []
-
-) [108
-
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (83.6209pt too wide) in paragraph at lines 5--5
 []\OT1/cmtt/m/n/10.95 ## zeroinfl(formula = count ~ child + camper | persons, d
 ata = zinb)[] 
  []
 
-) [109
+) [120
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 5--5
@@ -1643,7 +1682,7 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 7--7
  
  []
 
-) [110
+) [121
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (60.62614pt too wide) in paragraph at lines 3--3
@@ -1669,20 +1708,20 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 8--8
 .1 ' ' 1[] 
  []
 
-) [111
+) [122
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[112
+[123
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\03-ZIPoisson2.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [113
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [124
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [114
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [125
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [115
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [126
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1696,14 +1735,14 @@ Overfull \hbox (94.08533pt too wide) in paragraph at lines 5--5
 r the[] 
  []
 
-) [116
+) [127
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.tex
-[117
+[128
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[118
+[129
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 3--3
@@ -1711,10 +1750,10 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 3--3
  
  []
 
-) [119
+) [130
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[120
+[131
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 4--4
@@ -1740,7 +1779,7 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 7--7
  
  []
 
-) [121
+) [132
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (60.62614pt too wide) in paragraph at lines 2--2
@@ -1754,21 +1793,21 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 7--7
 .1 ' ' 1[] 
  []
 
-) [122
+) [133
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[123
+[134
 
-] <zinbreg10.png, id=3152, 722.7pt x 505.89pt>
+] <zinbreg10.png, id=3430, 722.7pt x 505.89pt>
 File: zinbreg10.png Graphic file (type png)
  <use zinbreg10.png>
 Package pdftex.def Info: zinbreg10.png used on input line 116.
 (pdftex.def)             Requested size: 215.10196pt x 150.57167pt.
- [124
+ [135
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/zinbreg10.png>])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg2.tex
-[125
+[136
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (26.13402pt too wide) in paragraph at lines 3--3
@@ -1776,7 +1815,7 @@ Overfull \hbox (26.13402pt too wide) in paragraph at lines 3--3
 )[] 
  []
 
-) [126
+) [137
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (8.88795pt too wide) in paragraph at lines 4--4
@@ -1802,7 +1841,7 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 8--8
 .1 ' ' 1[] 
  []
 
-) [127
+) [138
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (66.37483pt too wide) in paragraph at lines 5--5
@@ -1810,74 +1849,94 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 5--5
 nder the[] 
  []
 
-) [128
+) [139
 
-] [129
+] [140
 
-] [130
+] [141
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\ZeroTruncation.tex
-[131
+[142
 
-] [132
+] [143
 
-] [133
+] [144
 
-] [134
+] [145
 
-] [135
+] [146
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZTPoisson1.tex
-[136
+[147
 
-]
-Missing character: There is no Œ in font cmss12!
-Missing character: There is no ª in font cmss12!
-Missing character: There is no Œ in font cmss12!
-Missing character: There is no ª in font cmss12!
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[148
 
-Overfull \hbox (121.65074pt too wide) detected at line 23
-\OT1/mathkerncmss/m/sl/14.4 g\OT1/cmss/m/n/14.4 (\OT1/mathkerncmss/m/sl/14.4 k\
-OT1/cmss/m/n/14.4 ; \OML/cmm/m/it/14.4 \OT1/cmss/m/n/14.4 ) = \OT1/mathkerncms
-s/m/sl/14.4 P\OT1/cmss/m/n/14.4 (\OT1/mathkerncmss/m/sl/14.4 X \OT1/cmss/m/n/14
-.4 = \OT1/mathkerncmss/m/sl/14.4 k \OMS/cmsy/m/n/14.4 j \OT1/mathkerncmss/m/sl/
-14.4 k \OML/cmm/m/it/14.4 > \OT1/cmss/m/n/14.4 0) = [] = [] = []
- []
+] <hospitalstay.png, id=3784, 505.89pt x 505.89pt>
+File: hospitalstay.png Graphic file (type png)
+ <use hospitalstay.png>
+Package pdftex.def Info: hospitalstay.png used on input line 39.
+(pdftex.def)             Requested size: 245.83282pt x 245.83493pt.
 
-[137
+[149
 
-] [138
-
-] [139
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [140
+ <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/hospitalstay.png>] [1
+50
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZTPoisson2.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [141
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [142
-
-])
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\06ZTNBinom1.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [143
-
-]
-[144
-
-])
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Appendices.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [145
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [151
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
-) [146
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
+) [152
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [153
+
+]
+[154
+
+] [155
+
+] <hospitalstay2.png, id=3962, 505.89pt x 505.89pt>
+File: hospitalstay2.png Graphic file (type png)
+
+<use hospitalstay2.png>
+Package pdftex.def Info: hospitalstay2.png used on input line 76.
+(pdftex.def)             Requested size: 245.83282pt x 245.83493pt.
+ [156
+
+ <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/hospitalstay2.png>])
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\06ZTNBinom1.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [157
+
+]
+[158
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[159
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[160
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[161
+
+] [162
+
+] [163
+
+])
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Appendices.tex
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [164
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [165
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1885,7 +1944,7 @@ Overfull \hbox (14.08527pt too wide) in paragraph at lines 12--12
 []\OT1/cmtt/m/n/12 "Pr(>|z|)" = 2 * pnorm(abs(coef(model1)/std.err),[] 
  []
 
-) [147
+) [166
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (19.98529pt too wide) in paragraph at lines 8--8
@@ -1916,14 +1975,14 @@ Overfull \hbox (63.21031pt too wide) in paragraph at lines 12--12
 [] 
  []
 
-) [148
+) [167
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (4.69319pt too wide) in paragraph at lines 6--6
 []  \OT1/cmtt/m/n/10.95 sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))[] 
  []
 
-) [149
+) [168
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (119.66695pt too wide) in paragraph at lines 5--5
@@ -1937,7 +1996,7 @@ Overfull \hbox (119.66695pt too wide) in paragraph at lines 6--6
 = 0.24 (0.52)"[] 
  []
 
-) [150
+) [169
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (223.14333pt too wide) in paragraph at lines 6--6
@@ -1945,7 +2004,7 @@ Overfull \hbox (223.14333pt too wide) in paragraph at lines 6--6
 inwidth = 1) + facet_grid(prog ~[] 
  []
 
-) [151
+) [170
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (16.19057pt too wide) in paragraph at lines 5--5
@@ -1964,21 +2023,56 @@ Overfull \hbox (136.91301pt too wide) in paragraph at lines 9--9
 D) = 2.67 (3.73)"[] 
  []
 
-) [152
+) [171
 
-]))
-! Emergency stop.
-<*> MASTER.tex
-              
-*** (job aborted, no legal \end found)
+])
+\tf@nav=\write6
+\tf@toc=\write7
+\tf@snm=\write8
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
+ (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
+Package rerunfilecheck Info: File `MASTER.out' has not changed.
+(rerunfilecheck)             Checksum: B9888EE736938F346EBBFF53A435D1B0;232.
 
- 
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
+ ) 
 Here is how much of TeX's memory you used:
- 17348 strings out of 493921
- 342784 string characters out of 3144875
- 382709 words of memory out of 3000000
- 19631 multiletter control sequences out of 15000+200000
+ 17439 strings out of 493921
+ 345650 string characters out of 3144875
+ 383511 words of memory out of 3000000
+ 19643 multiletter control sequences out of 15000+200000
  23273 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,14n,55p,760b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MASTER.pdf (171 pages, 1289992 bytes).
+PDF statistics:
+ 4500 PDF objects out of 5155 (max. 8388607)
+ 351 named destinations out of 1000 (max. 500000)
+ 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+
