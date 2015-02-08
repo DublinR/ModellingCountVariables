@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  8 FEB 2015 22:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  8 FEB 2015 22:51
 entering extended mode
 **MASTER.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.tex
@@ -1601,7 +1601,7 @@ nk", se.fit=TRUE))[]
 
 ) [107
 
-] <negbin2.png, id=2749, 505.89pt x 505.89pt>
+] <negbin2.png, id=2751, 505.89pt x 505.89pt>
 File: negbin2.png Graphic file (type png)
  <use negbin2.png>
 Package pdftex.def Info: negbin2.png used on input line 89.
@@ -1798,7 +1798,7 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 7--7
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [134
 
-] <zinbreg10.png, id=3430, 722.7pt x 505.89pt>
+] <zinbreg10.png, id=3434, 722.7pt x 505.89pt>
 File: zinbreg10.png Graphic file (type png)
  <use zinbreg10.png>
 Package pdftex.def Info: zinbreg10.png used on input line 116.
@@ -1863,80 +1863,78 @@ nder the[]
 
 ] [144
 
-] [145
-
-] [146
-
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZTPoisson1.tex
-[147
+[145
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[148
+[146
 
-] <hospitalstay.png, id=3784, 505.89pt x 505.89pt>
+] <hospitalstay.png, id=3738, 505.89pt x 505.89pt>
 File: hospitalstay.png Graphic file (type png)
  <use hospitalstay.png>
-Package pdftex.def Info: hospitalstay.png used on input line 39.
+Package pdftex.def Info: hospitalstay.png used on input line 40.
 (pdftex.def)             Requested size: 245.83282pt x 245.83493pt.
 
-[149
+[147
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/hospitalstay.png>] [1
-50
+48
 
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZTPoisson2.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [151
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [149
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
-) [152
+) [150
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [153
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [151
 
 ]
-[154
+[152
 
-] [155
+] [153
 
-] <hospitalstay2.png, id=3962, 505.89pt x 505.89pt>
+] <hospitalstay2.png, id=3916, 505.89pt x 505.89pt>
 File: hospitalstay2.png Graphic file (type png)
 
 <use hospitalstay2.png>
 Package pdftex.def Info: hospitalstay2.png used on input line 76.
 (pdftex.def)             Requested size: 245.83282pt x 245.83493pt.
- [156
+ [154
 
  <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/hospitalstay2.png>])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\06ZTNBinom1.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [157
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [155
 
 ]
+[156
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
+[157
+
+] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [158
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
 [159
 
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[160
+] [160
 
-] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb)
-[161
+] [161
 
 ] [162
 
-] [163
-
 ])
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\00-Appendices.tex
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [164
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [163
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [165
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb) [164
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
@@ -1944,7 +1942,7 @@ Overfull \hbox (14.08527pt too wide) in paragraph at lines 12--12
 []\OT1/cmtt/m/n/12 "Pr(>|z|)" = 2 * pnorm(abs(coef(model1)/std.err),[] 
  []
 
-) [166
+) [165
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (19.98529pt too wide) in paragraph at lines 8--8
@@ -1975,14 +1973,14 @@ Overfull \hbox (63.21031pt too wide) in paragraph at lines 12--12
 [] 
  []
 
-) [167
+) [166
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (4.69319pt too wide) in paragraph at lines 6--6
 []  \OT1/cmtt/m/n/10.95 sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))[] 
  []
 
-) [168
+) [167
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (119.66695pt too wide) in paragraph at lines 5--5
@@ -1996,7 +1994,7 @@ Overfull \hbox (119.66695pt too wide) in paragraph at lines 6--6
 = 0.24 (0.52)"[] 
  []
 
-) [169
+) [168
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (223.14333pt too wide) in paragraph at lines 6--6
@@ -2004,7 +2002,7 @@ Overfull \hbox (223.14333pt too wide) in paragraph at lines 6--6
 inwidth = 1) + facet_grid(prog ~[] 
  []
 
-) [170
+) [169
 
 ] (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\MASTER.vrb
 Overfull \hbox (16.19057pt too wide) in paragraph at lines 5--5
@@ -2023,7 +2021,7 @@ Overfull \hbox (136.91301pt too wide) in paragraph at lines 9--9
 D) = 2.67 (3.73)"[] 
  []
 
-) [171
+) [170
 
 ])
 \tf@nav=\write6
@@ -2047,32 +2045,35 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 17439 strings out of 493921
- 345650 string characters out of 3144875
- 383511 words of memory out of 3000000
- 19643 multiletter control sequences out of 15000+200000
+ 17555 strings out of 493921
+ 346684 string characters out of 3144875
+ 385938 words of memory out of 3000000
+ 19760 multiletter control sequences out of 15000+200000
  23273 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,14n,55p,760b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MASTER.pdf (171 pages, 1289992 bytes).
+pdfTeX warning (dest): name{Navigation171} has been referenced but does not e
+xist, replaced by a fixed one
+
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MASTER.pdf (170 pages, 1285506 bytes).
 PDF statistics:
- 4500 PDF objects out of 5155 (max. 8388607)
- 351 named destinations out of 1000 (max. 500000)
+ 4476 PDF objects out of 5155 (max. 8388607)
+ 350 named destinations out of 1000 (max. 500000)
  115 words of extra memory for PDF output out of 10000 (max. 10000000)
 
