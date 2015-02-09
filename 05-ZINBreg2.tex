@@ -1,6 +1,7 @@
 \documentclass[MASTER.tex]{subfiles}
 \begin{document} 
 \begin{frame}
+\frametitle{Vuong Testing}
 	\begin{itemize}
 \item Note that the model output above does not indicate in any way if our zero-inflated model is an improvement over a standard negative binomial regression. 
 \item We can determine this by running the corresponding standard negative binomial model and then performing a Vuong test of the two models.
@@ -11,6 +12,7 @@
 \end{frame}
 %============================================================================== %
 \begin{frame}[fragile]
+	\frametitle{Vuong Testing}
 \begin{verbatim}
 library(MASS)
 summary(m2 <- glm.nb(count ~ child + camper, data = zinb))
@@ -19,6 +21,7 @@ summary(m2 <- glm.nb(count ~ child + camper, data = zinb))
 \end{frame}
 %============================================================================== %
 \begin{frame}[fragile]
+	\frametitle{Vuong Testing}
 \begin{verbatim}
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)    
@@ -53,6 +56,7 @@ summary(m2 <- glm.nb(count ~ child + camper, data = zinb))
 %\end{frame}
 %============================================================================== %
 \begin{frame}[fragile]
+\frametitle{Vuong Testing}
 	\begin{verbatim}
 vuong(m1, m2)
  
@@ -64,14 +68,7 @@ vuong(m1, m2)
 \end{verbatim}
 \end{frame}
 %========================================================================== %
-\begin{frame}
-\begin{itemize}
-\item The predictors child and camper in the part of the negative binomial regression model predicting number of fish caught (count) are both significant predictors.
-\item The predictor person in the part of the logit model predicting excessive zeros is statistically significant.
-\item For these data, the expected change in log(count) for a one-unit increase in child is -1.515255 holding other variables constant. 
-\item A camper (camper = 1) has an expected log(count) of 0.879051 higher than that of a non-camper (camper = 0) holding other variables constant.
-\end{itemize}
-\end{frame}
+
 %========================================================================== %
 \begin{frame}
 \begin{itemize}

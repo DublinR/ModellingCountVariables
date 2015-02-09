@@ -8,9 +8,10 @@
 \begin{frame}
 	%R Data Analysis Examples: Poisson Regression
 	
-	{\Large
-		Poisson Regression
-	}
+	{\LARGE
+	PART 1:	Poisson Regression
+	} \bigskip
+	\Large
 	\begin{itemize}
 		\item Poisson regression is used to model count variables.
 		\item Poisson regression has a number of extensions useful for count models.
@@ -78,9 +79,9 @@
 \begin{itemize}
 \item For the purpose of illustration, we have simulated a data set for the last example.
 
-\item The data set is called \textit{poissonreg.csv}  
+\item The data set is called \textit{poisreg.csv}  
 
-\item In this example, \textbf{num\_awards} is the outcome variable and indicates the number of awards earned by students at a high school in a year
+\item In this example, \textbf{num\_awards} is the outcome variable and indicates the number of awards earned by students at a high school in a year.
 
 \end{itemize}
 \end{frame}
@@ -123,12 +124,12 @@
 \normalsize
 	\begin{verbatim}
         id        num_awards           prog          math     
-1      :  1   Min.   :0.00   General   : 45   Min.   :33.0  
-2      :  1   1st Qu.:0.00   Academic  :105   1st Qu.:45.0  
-3      :  1   Median :0.00   Vocational: 50   Median :52.0  
-4      :  1   Mean   :0.63                    Mean   :52.6  
-5      :  1   3rd Qu.:1.00                    3rd Qu.:59.0  
-6      :  1   Max.   :6.00                    Max.   :75.0  
+1    :  1   Min.   :0.00   General   : 45   Min.   :33.0  
+2    :  1   1st Qu.:0.00   Academic  :105   1st Qu.:45.0  
+3    :  1   Median :0.00   Vocational: 50   Median :52.0  
+4    :  1   Mean   :0.63                    Mean   :52.6  
+5    :  1   3rd Qu.:1.00                    3rd Qu.:59.0  
+6    :  1   Max.   :6.00                    Max.   :75.0  
   (Other):194
 \end{verbatim}
 \end{frame}
@@ -162,16 +163,16 @@
 %\end{frame}
 %\end{document}
 %================================================================================================%
-\begin{frame}[fragile]
-\frametitle{Poisson Regression with \texttt{R}}
-\Large
-\begin{itemize}
-\item Additionally, the means and variances within each level of prog--\textit{the conditional means and variances}--are similar. 
-\item A conditional histogram separated out by program type is plotted to show the distribution.
-\end{itemize}
-
-
-\end{frame}
+%\begin{frame}[fragile]
+%\frametitle{Poisson Regression with \texttt{R}}
+%\Large
+%\begin{itemize}
+%\item Additionally, the means and variances within each level of prog--\textit{the conditional means and variances}--are similar. 
+%\item A conditional histogram separated out by program type is plotted to show the distribution.
+%\end{itemize}
+%
+%
+%\end{frame}
 
 %%================================================================================================%
 %\begin{frame}[fragile]

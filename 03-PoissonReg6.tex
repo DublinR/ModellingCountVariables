@@ -3,7 +3,7 @@
 %================================================================== %
 \begin{frame}[fragile]
 	\frametitle{Poisson Regression :  Crabs Example}
-	\textbf{The crabs data set}
+	\textbf{Coursera Course: The crabs data set}
 	The crabs data set is derived from Agresti \textit{(2007, Table 3.2, pp.76-77)}. It gives 4 variables for each of 173 female horseshoe crabs.
 	\begin{itemize}
 		\item \textbf{Satellites}
@@ -63,7 +63,11 @@
 	%================================================================== %
 	\begin{frame}[fragile]
 		\frametitle{Poisson Regression :  Crabs Example}
-		Fit a Poisson regression model with the number of Satellites as the outcome and the width of the female as the covariate. What is the multiplicative change in the expected number of crabs for each additional centimeter of width?
+		\begin{itemize}
+		\item Fit a Poisson regression model with the number of Satellites as the outcome and the width of the female as the covariate. 
+		
+		\item What is the multiplicative change in the expected number of crabs for each additional centimeter of width?
+		\end{itemize}
 		\begin{framed}
 			\begin{verbatim}
 			crabs.pois <- glm2(Satellites ~ Width, 
@@ -109,6 +113,7 @@
 \begin{frame}[fragile]
 	\frametitle{Poisson Regression :  Crabs Example}
 	
+	\textbf{Code for Crabs Data Plot}
 	\begin{framed}
 		\begin{verbatim}
 		plot(crabs$Width, crabs$Satellites,

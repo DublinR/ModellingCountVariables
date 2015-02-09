@@ -1,8 +1,9 @@
+
 \frametitle{Poisson Regression with \texttt{R}}
 \Large
+
 \begin{itemize}
-\item Additionally, the means and variances within each level of prog--\textit{the conditional means and variances}--are similar.
-\item A conditional histogram separated out by program type is plotted to show the distribution.
+\item Each variable has 200 valid observations and their distributions seem quite reasonable.
+\item The mean and variance of our outcome variable are more or less the same.
+\item Our model assumes that these values, conditioned on the predictor variables, will be equal (or at least roughly so).
 \end{itemize}
-
-

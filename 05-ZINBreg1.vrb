@@ -1,7 +1,7 @@
 \frametitle{Tests of Significance}
 \begin{itemize}
 \item All of the predictors in both the count and inflation portions of the model are statistically significant.
-\item This model will fit the data significantly better than the null model, i.e., the intercept-only model.
-\item To show that this is the case, we could compare with the current model to a null model without predictors using chi-squared test on the difference of log likelihoods.
+%\item This model will fit the data significantly better than the null model, i.e., the intercept-only model.
+%\item To show that this is the case, we could compare with the current model to a null model without predictors using chi-squared test on the difference of log likelihoods.
 \end{itemize}
 

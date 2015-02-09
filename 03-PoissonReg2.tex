@@ -9,7 +9,7 @@
 		
 		\textbf{Poisson regression}
 		\begin{itemize}
-			\item At this point, we are ready to perform our Poisson regression model analysis using the \texttt{glm} function. 
+			\item At this point, we are ready to perform our Poisson regression model analysis using the \texttt{glm()} function. 
 			\item We fit the model and save it in the object \texttt{model1} and get a summary of the model.
 		\end{itemize}
 	\end{frame}
@@ -22,7 +22,7 @@
 		\begin{framed}
 			\begin{verbatim}
 			model1 <- glm(num_awards ~ prog + math, 
-			family="poisson", data=poissonreg)
+			family="poisson", data=poisreg)
 			
 			summary(model1)
 			\end{verbatim}
@@ -38,7 +38,7 @@
 			Call:
 			glm(formula = num_awards ~ prog + math, 
 			      family = "poisson", 
-			      data = poissonreg)
+			      data = poisreg)
 			               
 			Deviance Residuals: 
 			Min      1Q  Median      3Q     Max  

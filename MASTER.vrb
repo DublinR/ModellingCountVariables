@@ -1,13 +1,10 @@
-\begin{framed}
+\frametitle{Zero Truncated Negative Binomial Regression}
 \begin{verbatim}
-
-with(dat, tapply(daysabs, prog, function(x) {
-    sprintf("M (SD) = %1.2f (%1.2f)", mean(x), sd(x))
-}))
-
-##                 General                Academic              Vocational
-## "M (SD) = 10.65 (8.20)"  "M (SD) = 6.93 (7.45)"  "M (SD) = 2.67 (3.73)"
-
-
+## Coefficients:
+##               Estimate Std. Error z value
+## (Intercept):1    2.408      0.072    33.6
+## (Intercept):2    0.569      0.055    10.4
+## age             -0.016      0.013    -1.2
+## hmo1            -0.147      0.059    -2.5
+## died1           -0.218      0.046    -4.7
 \end{verbatim}
-\end{framed}

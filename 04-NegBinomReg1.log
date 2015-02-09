@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 22:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  9 FEB 2015 17:13
 entering extended mode
 **04-NegBinomReg1.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.tex
@@ -1036,6 +1036,48 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [7
 
 ]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [8
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [9
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
+Overfull \hbox (100.86696pt too wide) in paragraph at lines 9--9
+[]\OT1/cmtt/m/n/10.95 ##         Model  theta Resid. df    2 x log-lik.   Test 
+   df LR stat.[] 
+ []
+
+
+Overfull \hbox (100.86696pt too wide) in paragraph at lines 11--11
+[]\OT1/cmtt/m/n/10.95 ## 2 math + prog 1.0327       310           -1731 1 vs 2 
+    2    45.05[] 
+ []
+
+)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [10
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [11
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [12
+
+]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
 Overfull \hbox (123.86171pt too wide) in paragraph at lines 4--4
 []\OT1/cmtt/m/n/10.95 ## (Dispersion parameter for Negative Binomial(1.033) fam
@@ -1057,53 +1099,11 @@ Overfull \hbox (14.63664pt too wide) in paragraph at lines 7--7
 )
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [8
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [9
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [10
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb
-Overfull \hbox (100.86696pt too wide) in paragraph at lines 9--9
-[]\OT1/cmtt/m/n/10.95 ##         Model  theta Resid. df    2 x log-lik.   Test 
-   df LR stat.[] 
- []
-
-
-Overfull \hbox (100.86696pt too wide) in paragraph at lines 11--11
-[]\OT1/cmtt/m/n/10.95 ## 2 math + prog 1.0327       310           -1731 1 vs 2 
-    2    45.05[] 
- []
-
-)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [11
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [12
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
  [13
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (14.9796pt too high) detected at line 204
+Overfull \vbox (34.7796pt too high) detected at line 206
  []
 
 
@@ -1148,30 +1148,22 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [20
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [21
 
 ]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
+<negbin2.png, id=552, 505.89pt x 505.89pt>
+File: negbin2.png Graphic file (type png)
+ <use negbin2.png>
+Package pdftex.def Info: negbin2.png used on input line 333.
+(pdftex.def)             Requested size: 215.10196pt x 215.1046pt.
+
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [22
 
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [23
-
-]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\04-NegBinomReg1.vrb)
-Overfull \vbox (11.5pt too high) has occurred while \output is active []
-
- [24
-
-]
+ <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/negbin2.png>]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
@@ -1190,10 +1182,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16506 strings out of 493921
- 321539 string characters out of 3144875
+ 16500 strings out of 493921
+ 320979 string characters out of 3144875
  380278 words of memory out of 3000000
- 19309 multiletter control sequences out of 15000+200000
+ 19313 multiletter control sequences out of 15000+200000
  16935 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,14n,57p,456b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1208,9 +1200,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 04-NegBinomReg1.pdf (24 pages, 244511 bytes).
+Output written on 04-NegBinomReg1.pdf (22 pages, 241334 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

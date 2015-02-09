@@ -5,11 +5,15 @@
 %================================================ %
 \begin{frame}[fragile]
 \frametitle{Negative Binomial Regression with \texttt{R} }
-\Large
+\LARGE
 
 % - R Data Analysis Examples: Negative Binomial Regression
-\textbf{Introduction}\\ 
-Negative binomial regression is for modeling count variables, usually for over-dispersed count outcome variables.
+\textbf{PART 2: Negative Binomial Regression}\\ 
+
+\bigskip{
+	\Large
+Negative binomial regression is for modeling over-dispersed count outcome variables.
+}
 
 \end{frame}
 %%	%================================================ %
@@ -41,26 +45,28 @@ Negative binomial regression is for modeling count variables, usually for over-d
 %================================================================================================%
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial regression with \texttt{R}}
-	\Large	
+	\large	
 	\begin{itemize}
 		\item Negative binomial regression can be used for over-dispersed count data, that is when the conditional 
 		variance exceeds the conditional mean. 
 		\item It can be considered as a generalization of Poisson regression since it has the same mean structure as Poisson 	
-		regression and it has an extra parameter to model the over-dispersion. 
+		regression and it has an extra parameter (\textit{r}) to model the over-dispersion. 
 	\end{itemize}
+	\[\Pr(X = k) = {k+r-1 \choose k} p^k(1-p)^r \quad\text{for }k = 0, 1, 2, \dots \]
+	
 \end{frame}
 %================================================================================================%
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial regression with \texttt{R}}
-	\Large	
-\begin{itemize}
-		\item If the conditional distribution of the outcome variable is over-dispersed, the confidence intervals for Negative binomial regression are likely to be narrower as compared to those from a Poisson regression.
-	\end{itemize}
-\end{frame}
+%\begin{frame}[fragile]
+%	\frametitle{Negative Binomial regression with \texttt{R}}
+%	\Large	
+%\begin{itemize}
+%		\item If the conditional distribution of the outcome variable is over-dispersed, the confidence intervals for Negative binomial regression are likely to be narrower as compared to those from a Poisson regression.
+%	\end{itemize}
+%\end{frame}
 %================================================ %
 \begin{frame}[fragile]
 	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
+	\large
 	
 \textbf{Examples of negative binomial regression}
 \begin{itemize}
@@ -147,8 +153,12 @@ Histogram plots showing distribution of the data
 %., margins = TRUE, scales = "free")
 %\end{verbatim}
 
-Each variable has 314 valid observations and their distributions seem quite reasonable. 
-The unconditional mean of our outcome variable is much lower than its variance.
+\begin{itemize}
+
+\item Each variable has 314 valid observations and their distributions seem quite reasonable. 
+\item The unconditional mean of our outcome variable is much lower than its variance.
+\end{itemize}
+
 \end{frame}
 
 \end{document}

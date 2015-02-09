@@ -2,9 +2,10 @@
 \begin{document}
 \begin{frame}
 	\Large
+\textbf{Introduction}
 \begin{itemize}
 \item This talks is about regression methods in which the dependent variable takes
-nonnegative integer or count values. \item The dependent variable is usually the number of times an event occurs. 
+ count (nonnegative integer) values. \item The dependent variable is usually the number of times an event occurs in a certain period of time.
 \end{itemize}
 \end{frame}
 %================================================================== %
@@ -13,20 +14,20 @@ nonnegative integer or count values. \item The dependent variable is usually the
 		\item Linear regression is used to model and predict continuous measurement variables.
 		\item Poisson regression is used to model and predict discrete count variables.
 	\end{itemize}
-	Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. A Poisson regression model is sometimes known as a log-linear model, especially when used to model contingency tables.
+	\textit{Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. A Poisson regression model is sometimes known as a log-linear model, especially when used to model contingency tables.}
 	
 \end{frame}
 %================================================================== %
-\begin{frame}[fragile]
-	\textbf{Examples of Poisson regression}
-	\begin{itemize}
-		\item[(1) ]The number of persons killed by mule or horse kicks in the Prussian army per year. Ladislaus Bortkiewicz collected data from 20 volumes of\textit{ Preussischen Statistik}. These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years.
-		
-		\item[(2)] The number of people in line in front of you at the grocery store. Predictors may include the number of items currently offered at a special discounted price and whether a special event (e.g., a holiday, a big sporting event) is three or fewer days away.
-		
-		\item[(3)] The number of awards earned by students at one high school. Predictors of the number of awards earned include the type of program in which the student was enrolled (e.g., vocational, general or academic) and the score on their final exam in math.
-	\end{itemize}
-\end{frame}
+%\begin{frame}[fragile]
+%	\textbf{Examples of Poisson regression}
+%	\begin{itemize}
+%		\item[(1) ]The number of persons killed by mule or horse kicks in the Prussian army per year. Ladislaus Bortkiewicz collected data from 20 volumes of\textit{ Preussischen Statistik}. These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years.
+%		
+%		\item[(2)] The number of people in line in front of you at the grocery store. Predictors may include the number of items currently offered at a special discounted price and whether a special event (e.g., a holiday, a big sporting event) is three or fewer days away.
+%		
+%		\item[(3)] The number of awards earned by students at one high school. Predictors of the number of awards earned include the type of program in which the student was enrolled (e.g., vocational, general or academic) and the score on their final exam in math.
+%	\end{itemize}
+%\end{frame}
 %======================================================== %
 \begin{frame}
 	\frametitle{Overview}
@@ -48,7 +49,7 @@ examples of event counts are:
 	\begin{itemize}
 		\item The number of persons killed by mule or horse kicks in the Prussian army per year. 
 		\item Ladislaus Bortkiewicz collected data from 20 volumes of Preussischen Statistik. 
-		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. The period or module of observation is thus one year. 
+		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. \item The period or module of observation is thus one year. 
 		
 	\end{itemize}
 	
@@ -102,13 +103,25 @@ examples of event counts are:
 \item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead.
 
 
-\item  For example, Negative Binomial regression is for modelling count variables, usually for over-dispersed count outcome variables.
+\item  For example, Negative Binomial regression is for modelling "over-dispersed" count outcome variables.
 \end{itemize}
 \end{frame}
-%=========================================================== %
 
+
+\begin{frame}
+\frametitle{Problem Areas}
+
+\begin{description}
+\item[Over-Dispersion] Important Poisson Distributon does not hold 
+\[ \mathrm{E}(X)  < \mathrm{Var}(X) \]
+\item[Zero-Inflation] More ``Zeros" would occure than in conventional Poisson Process (This is actually "overdispersion" also, but we will treat them separately).
+\item[ Zero-Truncation] Process does not allow for a ``Zero" outcome. 
+\end{description}
+\end{frame}
+%=========================================================== %
 \begin{frame}[fragile]
 \frametitle{Generalized Linear Models}\large
+\textbf{The \texttt{glm()} function}
 \begin{itemize}
 \item In statistics, the problem of modelling count variables is an example of generalized linear modelling.
 \item Generalized linear models are fit using the \texttt{glm()} function. 
@@ -159,6 +172,23 @@ glm(formula, family=familytype(link=linkfunction),
 \end{itemize}
 
 \end{frame}
+
+
+
+%========================================================== %
+\begin{frame}
+	\textbf{pscl: Political Science Computational Laboratory} %, Stanford University
+
+\begin{description}
+	\item[Author(s):] Simon Jackman et al (Stanford University)
+	%\item[License:] GPL-2
+	\item[URL:] http://pscl.stanford.edu/
+\end{description}\bigskip
+
+\textbf{Description}\\
+Bayesian analysis of item-response theory (IRT) models, roll call analysis; computing highest density regions; maximum likelihood estimation of zero-inflated and hurdle models for count data; goodness-of-fit measures for GLMs; data sets used in writing and teaching at the Political Science Computational Laboratory; seats-votes curves.
+\end{frame}
+
 %========================================================== %
 \begin{frame}
 	\textbf{glm2: Fitting Generalized Linear Models}

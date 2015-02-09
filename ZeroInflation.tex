@@ -32,6 +32,36 @@
 		%\item You may want to review these Data Analysis Example pages, Poisson Regression and Logit Regression.
 	\end{itemize}
 \end{frame}
+%=========================================================================== %
+\begin{frame}
+\frametitle{The \texttt{zeroinfl()} function}
+\large
+\begin{itemize}
+\item In \texttt{R}, zero-inflated count data models can be fitted with the \texttt{zeroinfl()} function from the
+\textbf{pscl} package. 
+\item Both the fitting function interface and the returned model objects of class
+``\texttt{zeroinfl()}`` are  modelled
+after the corresponding GLM functionality in \texttt{R}. 
+\end{itemize}
+
+\end{frame}
+%========================================================================== %
+\begin{frame}[fragile]
+\frametitle{The \texttt{zeroinfl()} function}
+
+	The arguments of \texttt{zeroinfl(}) are given
+	by
+\begin{framed}
+\begin{verbatim}
+zeroinfl(formula, data, subset, na.action, 
+       weights, offset,
+       dist = "poisson", link = "logit", 
+       control = zeroinfl.control(...),
+       model = TRUE, y = TRUE, x = FALSE, ...)
+\end{verbatim}
+\end{framed}
+
+\end{frame}
 
 %================================================================================================%
 \begin{frame}[fragile]
@@ -49,6 +79,7 @@
 
 %================================================================== %
 \begin{frame}
+\frametitle{Zero-inflated Regression models}
 	\textbf{Fishing Data Set}
 	%Let's pursue Example 2 from above.
 	\begin{itemize}
@@ -84,11 +115,13 @@
 \begin{itemize}
 \item A zero-inflated model assumes that zero outcome is due to two different processes.
 
-\item For instance, in the example of fishing presented here, the two processes are that a subject has \textit{gone fishing} vs. \textit{not gone fishing}.
+\item For instance, in the example of fishing presented here, the two processes are that a subject has gone 1. \textit{ fishing} vs. 2. \textit{not fishing}.
 \item If not gone fishing, the only outcome possible is zero. 
 \item If gone fishing, it is then a count process. 
 \end{itemize}
-\[E(n fish caught =k)=P(not gone fishing)\times 0+P(gone fishing) \times E(y=k|gone fishing) \]
+\begin{framed}
+\[E(\mbox{no. fish caught} =k) \]\[=P(\mbox{not fishing})\times 0+P( \mbox{fishing}) \times E(y=k| \mbox{fishing}) \]
+\end{framed}
 \end{frame}
  
 % \begin{frame}

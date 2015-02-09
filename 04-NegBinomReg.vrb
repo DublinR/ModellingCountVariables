@@ -6,5 +6,9 @@
 %., margins = TRUE, scales = "free")
 %\end{verbatim}
 
-Each variable has 314 valid observations and their distributions seem quite reasonable.
-The unconditional mean of our outcome variable is much lower than its variance.
+\begin{itemize}
+
+\item Each variable has 314 valid observations and their distributions seem quite reasonable.
+\item The unconditional mean of our outcome variable is much lower than its variance.
+\end{itemize}
+
