@@ -1,9 +1,0 @@
-\frametitle{Poisson Regression with \texttt{R}}
-\Large
-\begin{itemize}
-
-\item Many different measures of pseudo-R-squared exist. They all attempt to provide information similar to that provided by R-squared in OLS regression, even though none of them can be interpreted exactly as R-squared in OLS regression is interpreted.
-
-%For a discussion of various pseudo-R-squares, see Long and Freese (2006) or our FAQ page What are pseudo R-squareds?.
-\item Poisson regression is estimated via maximum likelihood estimation. It usually requires a large sample size.
-\end{itemize}
