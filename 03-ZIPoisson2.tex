@@ -2,9 +2,24 @@
 \begin{document}
 %\subsection*{Analysis of Deviance Procedure}
 %====================================================================================================== %
+
+\begin{frame}[fragile]
+	\large
+	\begin{verbatim}
+	confint(m1)
+	##                     2.5 %  97.5 %
+	## count_(Intercept)  1.4302  1.7655
+	## count_child       -1.2388 -0.8469
+	## count_camper1      0.6505  1.0175
+	## zero_(Intercept)   0.5647  2.0302
+	## zero_persons      -0.8838 -0.2449
+	\end{verbatim}
+\end{frame}
+%========================================================================= %
 \begin{frame}[fragile]
 	\begin{itemize}
 		\item	All of the predictors in both the count and inflation portions of the model are statistically significant. 
+		\item Can use other methods  (for example non parametric methods) to compute CIs ( probably more accurate )
 %		\item This model fits the data significantly better than the null model, i.e., the intercept-only model. 
 %		\item To show that this is the case, we can compare with the current model to a null model without predictors using chi-squared test on the difference of log likelihoods.
 	\end{itemize}
@@ -40,6 +55,8 @@
 \end{frame}
 %====================================================================================================== %
 \begin{frame}[fragile]
+	\frametitle{Vuong Testing}
+	\large
 	\begin{itemize}
 		\item The Vuong test compares the zero-inflated model with an ordinary Poisson regression model. 
 		\item In this example, we can see that our test statistic is significant, indicating that the zero-inflated model is superior to the standard Poisson model.

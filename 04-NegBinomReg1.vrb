@@ -1,7 +1,0 @@
-\frametitle{Negative Binomial Regression with \texttt{R} }
-\Large
-
-\begin{itemize}
-\item First, we can look at predicted counts for each value of prog while holding math at its mean.
-\item To do this, we create a new dataset with the combinations of prog and math for which we would like to find predicted values, then use the \texttt{predict} command.
-\end{itemize}

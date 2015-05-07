@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  7 FEB 2015 22:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.12)  9 FEB 2015 17:39
 entering extended mode
 **05-ZINBreg1.tex
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.tex
@@ -940,18 +940,18 @@ ts\translator-theorem-dictionary\translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 2.
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 15.
+line 12.
 
 (C:\Users\Kevin\AppData\Roaming\MiKTeX\2.9\tex\latex\sansmathaccent\ot1mathkern
 cmss.fd
@@ -960,7 +960,7 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 15.
+(Font)              size <5> substituted on input line 12.
 
 
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
@@ -968,10 +968,20 @@ Overfull \vbox (11.5pt too high) has occurred while \output is active []
  [1
 
 {C:/Users/Kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
  [2
+
+]
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [3
+
+]
+(C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb)
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [4
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb
@@ -983,13 +993,13 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 3--3
 )
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [3
+ [5
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [4
+ [6
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb
@@ -1019,7 +1029,7 @@ Overfull \hbox (8.88795pt too wide) in paragraph at lines 7--7
 )
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [5
+ [7
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb
@@ -1037,24 +1047,45 @@ Overfull \hbox (66.37483pt too wide) in paragraph at lines 7--7
 )
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [6
+ [8
+
+]
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [9
 
 ]
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.vrb)
 Overfull \vbox (11.5pt too high) has occurred while \output is active []
 
- [7
+ [10
+
+]
+<zinbreg10.png, id=271, 722.7pt x 505.89pt>
+File: zinbreg10.png Graphic file (type png)
+ <use zinbreg10.png>
+Package pdftex.def Info: zinbreg10.png used on input line 144.
+(pdftex.def)             Requested size: 215.10196pt x 150.57167pt.
+
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [11
+
+ <C:/Users/Kevin/Documents/GitHub/ModellingCountVariables/zinbreg10.png>]
+Overfull \vbox (11.5pt too high) has occurred while \output is active []
+
+ [12
 
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 (C:\Users\Kevin\Documents\GitHub\ModellingCountVariables\05-ZINBreg1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `05-ZINBreg1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1064,22 +1095,23 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 16397 strings out of 493921
- 317617 string characters out of 3144875
+ 16444 strings out of 493921
+ 318388 string characters out of 3144875
  379278 words of memory out of 3000000
- 19273 multiletter control sequences out of 15000+200000
- 10889 words of font info for 41 fonts, out of 3000000 for 9000
+ 19303 multiletter control sequences out of 15000+200000
+ 15607 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,14n,57p,452b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on 05-ZINBreg1.pdf (7 pages, 108323 bytes).
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on 05-ZINBreg1.pdf (12 pages, 157758 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

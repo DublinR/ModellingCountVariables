@@ -13,23 +13,23 @@
 \end{itemize}
 \end{frame}
 %============================================================================================ %
-	\begin{frame}[fragile]
-		\frametitle{Poisson Regression with \texttt{R}}
-		
-		\begin{framed}
-			\begin{verbatim}
-			
-			Call:
-			glm(formula = num_awards ~ prog + math, 
-			family = "poisson", 
-			data = poissonreg)
-			
-			Deviance Residuals: 
-			Min      1Q     Median      3Q     Max  
-			-2.204  -0.844  -0.511   0.256   2.680  
-			\end{verbatim}
-		\end{framed}
-	\end{frame}
+%	\begin{frame}[fragile]
+%		\frametitle{Poisson Regression with \texttt{R}}
+%		
+%		\begin{framed}
+%			\begin{verbatim}
+%			
+%			Call:
+%			glm(formula = num_awards ~ prog + math, 
+%			family = "poisson", 
+%			data = poissonreg)
+%			
+%			Deviance Residuals: 
+%			Min      1Q     Median      3Q     Max  
+%			-2.204  -0.844  -0.511   0.256   2.680  
+%			\end{verbatim}
+%		\end{framed}
+%	\end{frame}
 %================================================================================================%
 \begin{frame}
 \Large 
@@ -73,7 +73,29 @@ count for \textbf{\textit{prog = “Academic” }}increases by about 1.1.
 \textbf{\textit{prog = "Vocational"}} and the reference group (\textbf{\textit{prog = "General"}} ).
 \end{itemize}
 \end{frame}
-
+%================================================================================================%
+\begin{frame}[fragile]
+	
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large 
+	\begin{itemize}
+		\item The output above indicates that the incident rate for prog = "Academic" is 2.96 times the incident rate for the reference group (\textbf{prog = "General"}). 
+		\item Likewise, the incident rate for \textbf{prog = "Vocational"} is 1.45 times the incident rate for the reference group holding the other variables at constant. 
+		
+	\end{itemize}
+	
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
+	
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large 
+	\begin{itemize}
+		\item
+		The percent change in the incident rate of \textbf{num\_awards} is by 7\% for every unit increase in math. 
+		% For additional information on the various metrics in which the results can be presented, and the interpretation of such, please see Regression Models for Categorical Dependent Variables Using Stata, Second Edition by J. Scott Long and Jeremy Freese (2006).
+	\end{itemize}
+\end{frame}
 %===========================================================%
 \begin{frame}[fragile]
 \frametitle{Poisson Regression with \texttt{R}}
@@ -104,8 +126,9 @@ residuals in ordinary least squares to cases where model-fitting is achieved by 
 \textbf{glm} function output
 \begin{itemize}
 \item Therefore, if the residual difference is small enough, the goodness of fit test will not be significant, indicating that the model fits the data. 
-\item We conclude that the model fits reasonably well because the goodness-of-fit chi-squared test is not statistically significant.
+%\item We conclude that the model fits reasonably well because the goodness-of-fit chi-squared test is not statistically significant.
 
+\item \textbf{REMARK:} Model Appraisal for GLMs subject of future talk.
 \end{itemize}
 \end{frame}
 %===========================================================%
@@ -120,29 +143,30 @@ residuals in ordinary least squares to cases where model-fitting is achieved by 
 \end{frame}
 
 %================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R}}
-\large
-
-\begin{framed}
-\begin{verbatim}
-with(m1, cbind(res.deviance = deviance, 
-	df = df.residual,
-        p = pchisq(deviance, df.residual, 
-            lower.tail=FALSE)))
- 
-      res.deviance  df      p
- [1,]        189.4 196 0.6182
-\end{verbatim}
-\end{framed}
-\end{frame}
+%\begin{frame}[fragile]
+%
+%\frametitle{Poisson Regression with \texttt{R}}
+%\large
+%
+%\begin{framed}
+%\begin{verbatim}
+%with(m1, cbind(res.deviance = deviance, 
+%	df = df.residual,
+%        p = pchisq(deviance, df.residual, 
+%            lower.tail=FALSE)))
+% 
+%      res.deviance  df      p
+% [1,]        189.4 196 0.6182
+%\end{verbatim}
+%\end{framed}
+%\end{frame}
 
 %================================================================================================%
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
+\textbf{Comparing Candidate Models}
 \begin{itemize}
 \item 
 We can also test the overall effect of prog by comparing the deviance of the full model with the deviance of the model 
@@ -175,8 +199,6 @@ anova(m2, m1, test="Chisq")
 
 \frametitle{Poisson Regression with \texttt{R}}
 
-
-\begin{framed}
 \begin{verbatim}
  Analysis of Deviance Table
  
@@ -188,7 +210,7 @@ anova(m2, m1, test="Chisq")
  ---
  Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
-\end{framed}
+
 \end{frame}
 
 %================================================================================================%
@@ -230,9 +252,9 @@ Note: the same time intervals must be used for both incidence rates.
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
+\textbf{
+Delta Method}
 
-
-\begin{framed}
 \begin{verbatim}
 s <- deltamethod(list(~ exp(x1), ~ exp(x2), ~ exp(x3), ~ exp(x4)), coef(m1), cov.m1)
 
@@ -245,7 +267,7 @@ rexp.est <- exp(r.est[, -3])
 rexp.est[, "Robust SE"] <- s
 
 \end{verbatim}
-\end{framed}
+
 \end{frame}
 
 %================================================================================================%
@@ -265,29 +287,7 @@ rexp.est
 \end{verbatim}
 \end{framed}
 \end{frame}
-%================================================================================================%
-\begin{frame}[fragile]
 
-\frametitle{Poisson Regression with \texttt{R}}
-\Large 
-\begin{itemize}
-\item The output above indicates that the incident rate for prog = "Academic" is 2.96 times the incident rate for the reference group (prog = "General"). 
-\item Likewise, the incident rate for prog = "Vocational" is 1.45 times the incident rate for the reference group holding the other variables at constant. 
-
-\end{itemize}
-
-\end{frame}
-%================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R}}
-\Large 
-\begin{itemize}
-\item
-The percent change in the incident rate of num\_awards is by 7\% for every unit increase in math. 
-% For additional information on the various metrics in which the results can be presented, and the interpretation of such, please see Regression Models for Categorical Dependent Variables Using Stata, Second Edition by J. Scott Long and Jeremy Freese (2006).
-\end{itemize}
-\end{frame}
 
 %================================================================================================%
 \begin{frame}[fragile]
@@ -388,39 +388,39 @@ especially if the student has a high math score.
 \item The graph overlays the lines of expected values onto the actual points, although a small amount of random noise was added vertically to lessen overplotting.
 \end{itemize}
 \end{frame}
-
-%================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R}}
-\Large
-
-\begin{framed}
-\begin{verbatim}
-# Calculate and store predicted values
-p$phat <- predict(m1, type="response")
-
-# order by program and then by math
-p <- p[with(p, order(prog, math)), ]
-\end{verbatim}
-\end{framed}
-\end{frame}
-%================================================================================================%
-\begin{frame}[fragile]
-
-\frametitle{Poisson Regression with \texttt{R}}
-\large
-% create the plot
-
-\begin{framed}
-\begin{verbatim}
-ggplot(p, aes(x = math, y = phat, colour = prog)) +
-  geom_point(aes(y = num_awards), alpha=.5, position=position_jitter(h=.2)) +
-  geom_line(size = 1) +
-  labs(x = "Math Score", y = "Expected number of awards")
-\end{verbatim}
-\end{framed}
-\end{frame}
+%
+%%================================================================================================%
+%\begin{frame}[fragile]
+%
+%\frametitle{Poisson Regression with \texttt{R}}
+%\Large
+%
+%\begin{framed}
+%\begin{verbatim}
+%# Calculate and store predicted values
+%p$phat <- predict(m1, type="response")
+%
+%# order by program and then by math
+%p <- p[with(p, order(prog, math)), ]
+%\end{verbatim}
+%\end{framed}
+%\end{frame}
+%%================================================================================================%
+%\begin{frame}[fragile]
+%
+%\frametitle{Poisson Regression with \texttt{R}}
+%\large
+%% create the plot
+%
+%\begin{framed}
+%\begin{verbatim}
+%ggplot(p, aes(x = math, y = phat, colour = prog)) +
+%  geom_point(aes(y = num_awards), alpha=.5, position=position_jitter(h=.2)) +
+%  geom_line(size = 1) +
+%  labs(x = "Math Score", y = "Expected number of awards")
+%\end{verbatim}
+%\end{framed}
+%\end{frame}
 %======================================================
 
 

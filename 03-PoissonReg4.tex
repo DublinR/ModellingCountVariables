@@ -57,13 +57,30 @@ same model using negative binomial distribution.
 and count data including \texttt{odTest} for testing over-dispersion. 
 \end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{The \texttt{odTest()} command (pscl package)}
+\begin{itemize}
+\item	The function \texttt{odTest} is a \textbf{likelihood ratio test} for over-dispersion in count data
+	
+\item \texttt{odTest()}	Compares the log-likelihoods of a negative binomial regression model and a Poisson regression
+	model.
+\end{itemize}
+	\begin{framed}
+	\begin{verbatim}
+	odTest(glmobj, alpha=.05, 
+	  digits = max(3, getOption("digits") - 3))
+\end{verbatim}
+\end{framed}
+\end{frame}
 %==========================================%
 \begin{frame}[fragile]
 	\frametitle{Poisson Regression with \texttt{R}}
 	\Large
+\textbf{Exposure Variables - SKIP }
 	\begin{itemize} 
 \item Count data often have an exposure variable, which indicates the number of times the event could have happened. 
-\item This variable should be incorporated into a Poisson model with the use of the offset option.
+\item This variable should be incorporated into a Poisson model with the use of the \texttt{offset} option.
 \item The outcome variable in a Poisson regression cannot have negative numbers, and the exposure cannot have 0s.
 \end{itemize}
 \end{frame}
@@ -71,6 +88,8 @@ and count data including \texttt{odTest} for testing over-dispersion.
 \begin{frame}[fragile]
 	\frametitle{Poisson Regression with \texttt{R}}
 	\Large
+	
+\textbf{Some Remarks}
 	\begin{itemize} 
 
 \item Many different measures of pseudo-R-squared exist. They all attempt to provide information similar to that provided by R-squared in OLS regression, even though none of them can be interpreted exactly as R-squared in OLS regression is interpreted.

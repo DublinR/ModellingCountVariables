@@ -1,9 +1,0 @@
-\large
-\begin{verbatim}
-vuong(p1, m1)
-## Vuong Non-Nested Hypothesis Test-Statistic: -3.574
-## (test-statistic is asymptotically distributed N(0,1) under the
-##  null that the models are indistinguishible)
-## in this case:
-## model2 > model1, with p-value 0.0001756
-\end{verbatim}
