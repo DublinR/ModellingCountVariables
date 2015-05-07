@@ -1,5 +1,0 @@
-\frametitle{Negative Binomial Regression with \texttt{R} }
-\Large
-
-\[ \widehat{daysabs_i} = e^{Intercept + b_1(prog_i = 2) + b_2(prog_i = 3) + b_3math_i}\]\[ = e^{Intercept}e^{b_1(prog_i = 2)}e^{b_2(prog_i = 3)}e^{b_3math_i} \]
-

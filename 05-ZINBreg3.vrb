@@ -1,2 +1,0 @@
-
-To better understand our model, we can compute the expected number of fish caught for different combinations of our predictors. In fact, since we are working with essentially categorical predictors, we can compute the expected values for all combinations using the expand.grid function to create all combinations and then the predict function to do it. Finally we create a graph.
