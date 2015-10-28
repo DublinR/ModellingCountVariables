@@ -1,5 +1,0 @@
-\beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Multinomial Logistic Regression}{4}{0}{1}
-\beamer@sectionintoc {2}{Ordinal Logistic Regression}{42}{0}{2}
-\beamer@sectionintoc {3}{Poisson Regression}{93}{0}{3}
-\beamer@sectionintoc {4}{Negative Binomial Regression}{146}{0}{4}
