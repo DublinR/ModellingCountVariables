@@ -1,2 +1,0 @@
-\beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Poisson Regression}{2}{0}{1}

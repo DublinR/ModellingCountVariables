@@ -1,2 +1,0 @@
-\beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Zero Truncated Models}{2}{0}{1}
