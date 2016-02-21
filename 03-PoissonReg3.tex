@@ -1,8 +1,7 @@
-\documentclass[00-GLMregslides.tex]{subfiles}
+\documentclass[MASTER.tex]{subfiles}
 \begin{document}
 %================================================================================================%
 \begin{frame}[fragile]
-
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
 \textbf{glm} function output
@@ -12,25 +11,7 @@
  \item Here it shows a little bit of skeweness since median is not quite zero. 
 \end{itemize}
 \end{frame}
-%============================================================================================ %
-%	\begin{frame}[fragile]
-%		\frametitle{Poisson Regression with \texttt{R}}
-%		
-%		\begin{framed}
-%			\begin{verbatim}
-%			
-%			Call:
-%			glm(formula = num_awards ~ prog + math, 
-%			family = "poisson", 
-%			data = poissonreg)
-%			
-%			Deviance Residuals: 
-%			Min      1Q     Median      3Q     Max  
-%			-2.204  -0.844  -0.511   0.256   2.680  
-%			\end{verbatim}
-%		\end{framed}
-%	\end{frame}
-%================================================================================================%
+%================================================%
 \begin{frame}
 \Large 
 \textbf{glm} function output
@@ -42,24 +23,21 @@ and 95\% confidence intervals for the coefficients.
 \end{itemize}
 \end{frame}
 %============================================================================ %
-		\begin{frame}[fragile]
-			
-			\frametitle{Poisson Regression with \texttt{R}}
-			
-			\begin{verbatim}
-			
-			Coefficients:
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R}}
+\begin{verbatim}
+Coefficients:
 			Estimate Std. Error z value Pr(>|z|)    
-			(Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
-			progAcademic     1.0839     0.3583    3.03   0.0025 ** 
-			progVocational   0.3698     0.4411    0.84   0.4018    
-			math             0.0702     0.0106    6.62  3.6e-11 ***
-			---
-			Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+(Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
+progAcademic     1.0839     0.3583    3.03   0.0025 ** 
+progVocational   0.3698     0.4411    0.84   0.4018    
+math             0.0702     0.0106    6.62  3.6e-11 ***
+	---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 			
-			\end{verbatim}
-			
-		\end{frame}
+\end{verbatim}
+\end{frame}
+
 %===========================================================%
 \begin{frame}[fragile]
 \frametitle{Poisson Regression with \texttt{R}}
@@ -67,28 +45,26 @@ and 95\% confidence intervals for the coefficients.
 \textbf{glm} function output
 	\begin{itemize}
 
-\item The indicator variable \textbf{progAcademic} compares between \textbf{\textit{prog = “Academic” }}and \textbf{\textit{prog = "General"}} , the expected log 
-count for \textbf{\textit{prog = “Academic” }}increases by about 1.1. 
+\item The indicator variable \textbf{progAcademic} compares between \textbf{\textit{prog = “Academic” }}and \textbf{\textit{prog = ``General"}} , the expected log 
+count for \textbf{\textit{prog = “Academic” }}increases by about 1.1. \smallskip
 \item The indicator variable \textbf{prog.Vocational}  is the expected difference in log count (\(\approx 0.37\)) between 
 \textbf{\textit{prog = "Vocational"}} and the reference group (\textbf{\textit{prog = "General"}} ).
 \end{itemize}
 \end{frame}
 %================================================================================================%
 \begin{frame}[fragile]
-	
-	\frametitle{Poisson Regression with \texttt{R}}
+\frametitle{Poisson Regression with \texttt{R}}
 	\Large 
 	\begin{itemize}
-		\item The output above indicates that the incident rate for prog = "Academic" is 2.96 times the incident rate for the reference group (\textbf{prog = "General"}). 
-		\item Likewise, the incident rate for \textbf{prog = "Vocational"} is 1.45 times the incident rate for the reference group holding the other variables at constant. 
+		\item The output above indicates that the incident rate for \textbf{prog = ``Academic"} is 2.96 times the incident rate for the reference group (\textbf{prog = "General"}). 
+		\item Likewise, the incident rate for \textbf{prog = ``Vocational"} is 1.45 times the incident rate for the reference group holding the other variables at constant. 
 		
 	\end{itemize}
 	
 \end{frame}
 %================================================================================================%
 \begin{frame}[fragile]
-	
-	\frametitle{Poisson Regression with \texttt{R}}
+\frametitle{Poisson Regression with \texttt{R}}
 	\Large 
 	\begin{itemize}
 		\item
@@ -102,10 +78,8 @@ count for \textbf{\textit{prog = “Academic” }}increases by about 1.1.
 \Large 
 \textbf{Deviance}
 \begin{itemize}
-\item In statistics, deviance is a quality of fit statistic for a model that is often used for statistical 
-hypothesis testing. 
-\item It is a generalization of the idea of using the sum of squares of 
-residuals in ordinary least squares to cases where model-fitting is achieved by maximum likelihood.
+\item In statistics, deviance is a quality of fit statistic for a model that is often used for statistical hypothesis testing. 
+\item It is a generalization of the idea of using the sum of squares of residuals in ordinary least squares to cases where model-fitting is achieved by maximum likelihood.
 \end{itemize}
 \end{frame}
 %===========================================================%
@@ -116,7 +90,7 @@ residuals in ordinary least squares to cases where model-fitting is achieved by 
 \begin{itemize}
 \item The information on deviance is also provided. 
 \item We can use the residual deviance to perform a goodness of fit test for the overall model. 
-\item The residual deviance is the difference between the deviance of the current model and the maximum deviance of the ideal model where the predicted values are identical to the observed. 
+
 \end{itemize}
 \end{frame}
 %===========================================================%
@@ -125,18 +99,19 @@ residuals in ordinary least squares to cases where model-fitting is achieved by 
 \Large 
 \textbf{glm} function output
 \begin{itemize}
+\item The residual deviance is the difference between the deviance of the current model and the maximum deviance of the ideal model where the predicted values are identical to the observed. \smallskip
 \item Therefore, if the residual difference is small enough, the goodness of fit test will not be significant, indicating that the model fits the data. 
 %\item We conclude that the model fits reasonably well because the goodness-of-fit chi-squared test is not statistically significant.
 
-\item \textbf{REMARK:} Model Appraisal for GLMs subject of future talk.
+%\item \textbf{REMARK:} Model Appraisal for GLMs subject of future talk.
 \end{itemize}
 \end{frame}
 %===========================================================%
 \begin{frame}[fragile]
-	\frametitle{Poisson Regression with \texttt{R}}
-	\Large 
-	\textbf{glm} function output
-	\begin{itemize}
+\frametitle{Poisson Regression with \texttt{R}}
+\Large 
+\textbf{glm} function output
+\begin{itemize}
 \item If the test had been statistically significant, it would indicate that the data do not fit the model well. 
 \item We could try to determine if there are omitted predictor variables, if our linearity assumption holds and/or if there is an issue of over-dispersion. 
 \end{itemize}
@@ -196,9 +171,7 @@ anova(m2, m1, test="Chisq")
 
 %================================================================================================%
 \begin{frame}[fragile]
-
 \frametitle{Poisson Regression with \texttt{R}}
-
 \begin{verbatim}
  Analysis of Deviance Table
  
@@ -215,7 +188,6 @@ anova(m2, m1, test="Chisq")
 
 %================================================================================================%
 \begin{frame}[fragile]
-
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
 \textbf{Incident Rate Ratios}
@@ -226,43 +198,45 @@ their standard errors, together with the confidence interval.
 \item To this end, we make use the function \texttt{deltamethod} implemented in R package \textbf{msm}.
 \end{itemize}
 \end{frame}
-
 %================================================================================================%
 \begin{frame}[fragile]
-
+	
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large 
+	\textbf{Incident Rates} \\
+	Incidence rate is the occurrence of an event over person-time, for example person-years.
+	
+	\[ \mbox{Incidence Rate}  = \frac{\mbox{events}}{\mbox{Person Time}} \]
+	\smallskip
+	Note: the same time intervals must be used for both incidence rates.
+\end{frame}
+%===================================================%
+\begin{frame}[fragile]
 \frametitle{Poisson Regression with \texttt{R}}
 \Large 
 \textbf{Incident Rate Ratios}\\
-A rate ratio (sometimes called an incidence density ratio) in epidemiology, is a relative difference measure used to compare the incidence rates of events occurring at any given point in time. A common application for this measure in analytic epidemiologic studies is in the search for a causal association between a certain risk factor and an outcome.
+A \textbf{rate ratio} (sometimes called an incidence density ratio) in epidemiology, is a relative difference measure used to compare the incidence rates of events occurring at any given point in time. %A common application for this measure in analytic epidemiologic studies is in the search for a causal association between a certain risk factor and an outcome.
+\smallskip
 \[ \mbox{Incidence Rate Ratio }  = \frac{\mbox{Incidence Rate 1}}{\mbox{Incidence Rate 2}} \]
 \end{frame}
 %================================================================================================%
-\begin{frame}[fragile]
 
-\frametitle{Poisson Regression with \texttt{R}}
-\Large 
-\textbf{Incident Rate Ratios} \\
-Incidence rate is the occurrence of an event over person-time, for example person-years.
- 
-\[ \mbox{Incidence Rate}  = \frac{\mbox{events}}{\mbox{Person Time}} \]
-
-Note: the same time intervals must be used for both incidence rates.
-\end{frame}
 %================================================================================================%
 \begin{frame}[fragile]
 
 \frametitle{Poisson Regression with \texttt{R}}
-\textbf{
-Delta Method}
+\textbf{Delta Method}
 
 \begin{verbatim}
-s <- deltamethod(list(~ exp(x1), ~ exp(x2), ~ exp(x3), ~ exp(x4)), coef(m1), cov.m1)
+s <- deltamethod(list(~ exp(x1), ~ exp(x2), ~ exp(x3), 
+      ~ exp(x4)), coef(m1), cov.m1)
 
 #exponentiate old estimates dropping the p values
 
 rexp.est <- exp(r.est[, -3])
 
-# replace SEs with estimates for exponentiated coefficients
+# replace SEs with estimates 
+# for exponentiated coefficients
 
 rexp.est[, "Robust SE"] <- s
 
@@ -367,27 +341,27 @@ we saw looking at the IRR.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.99\linewidth]{poisson2}
+\includegraphics[width=0.85\linewidth]{poisson2}
 %\caption{}
 %\label{fig:poisson2}
 \end{figure}
 
 \end{frame}
 %================================================================================================%
-\begin{frame}[fragile]
+%\begin{frame}[fragile]
 %--------- PLOTTING
 % -------- CUT NEXT THREE SLIDES
-\frametitle{Poisson Regression with \texttt{R}}
-\Large
-
-\begin{itemize}
-\item We can also graph the predicted number of events with the commands below. 
-\item The graph indicates that the most awards are predicted for those in the academic program (prog = 2), 
-especially if the student has a high math score. 
-\item The lowest number of predicted awards is for those students in the general program (prog = 1). 
-\item The graph overlays the lines of expected values onto the actual points, although a small amount of random noise was added vertically to lessen overplotting.
-\end{itemize}
-\end{frame}
+%\frametitle{Poisson Regression with \texttt{R}}
+%\Large
+%
+%\begin{itemize}
+%\item We can also graph the predicted number of events with the commands below. 
+%\item The graph indicates that the most awards are predicted for those in the academic program (prog = 2), 
+%especially if the student has a high math score. 
+%\item The lowest number of predicted awards is for those students in the general program (prog = 1). 
+%\item The graph overlays the lines of expected values onto the actual points, although a small amount of random noise was added vertically to lessen overplotting.
+%\end{itemize}
+%\end{frame}
 %
 %%================================================================================================%
 %\begin{frame}[fragile]

@@ -1,73 +1,32 @@
 \documentclass[MASTER.tex]{subfiles}
 \begin{document}
-	
-
-%================================================ %
-\begin{frame}[fragile]
-\frametitle{Negative Binomial Regression with \texttt{R} }
-\LARGE
-
-% - R Data Analysis Examples: Negative Binomial Regression
-\textbf{PART 2: Negative Binomial Regression}\\ 
-
-\bigskip{
-	\Large
-Negative binomial regression is for modeling over-dispersed count outcome variables.
-}
-
-\end{frame}
-%%	%================================================ %
-%%	\begin{frame}[fragile]
-%%	
-%%	
-%%	This page uses the following packages. Make sure that you can load them before trying to run the examples on this page. If you do not have a package installed, run: install.packages("packagename"), or if you see the version is out of date, run: update.packages().
-%%	
-%%	\begin{framed}
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	\end{framed}
-%%	
-
-
-	
-% Please note: The purpose of this page is to show how to use various data analysis commands. 
-% It % does not cover all aspects of the research process which researchers are expected to do. In 
-% particular, it does not cover data cleaning and checking, verification of assumptions, model 
-% diagnostics or potential follow-up analyses.
-%% \end{frame}
-
 %================================================================================================%
 \begin{frame}[fragile]
-	\frametitle{Negative Binomial regression with \texttt{R}}
-	\large	
-	\begin{itemize}
+\frametitle{Negative Binomial Regression with \texttt{R}}
+\LARGE
+\textbf{PART 3: Negative Binomial Regression}
+{
+\Large
+Negative binomial regression is for modeling over-dispersed count outcome variables.
+}
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
+\frametitle{Negative Binomial regression with \texttt{R}}
+\large	
+\begin{itemize}
 		\item Negative binomial regression can be used for over-dispersed count data, that is when the conditional 
 		variance exceeds the conditional mean. 
 		\item It can be considered as a generalization of Poisson regression since it has the same mean structure as Poisson 	
 		regression and it has an extra parameter (\textit{r}) to model the over-dispersion. 
-	\end{itemize}
-	\[\Pr(X = k) = {k+r-1 \choose k} p^k(1-p)^r \quad\text{for }k = 0, 1, 2, \dots \]
+\end{itemize}
+\[\Pr(X = k) = {k+r-1 \choose k} p^k(1-p)^r \quad \mbox{for }k = 0, 1, 2, \dots \]
 	
 \end{frame}
 %================================================================================================%
-%\begin{frame}[fragile]
-%	\frametitle{Negative Binomial regression with \texttt{R}}
-%	\Large	
-%\begin{itemize}
-%		\item If the conditional distribution of the outcome variable is over-dispersed, the confidence intervals for Negative binomial regression are likely to be narrower as compared to those from a Poisson regression.
-%	\end{itemize}
-%\end{frame}
-%================================================ %
 \begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\large
-	
+\frametitle{Negative Binomial Regression with \texttt{R} }
+\large
 \textbf{Examples of negative binomial regression}
 \begin{itemize}
 \item \textbf{Example 1}  School administrators study the attendance behavior of high school juniors at two schools. \\ Predictors of the number of days of absence include the type of program in which the student is enrolled and a standardized test in math.
@@ -77,9 +36,8 @@ Negative binomial regression is for modeling over-dispersed count outcome variab
 \end{frame}
 %================================================ %
 \begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-	
+\frametitle{Negative Binomial Regression with \texttt{R} }
+\Large
 \textbf{Description of the data}
 Let's pursue Example 1 from above.
 \begin{itemize}
@@ -89,25 +47,6 @@ Let's pursue Example 1 from above.
 \item The variable \textbf{\textit{prog}} is a three-level nominal variable indicating the type of instructional program in which the student is enrolled.
 \end{itemize}
 \end{frame}
-%================================================ %
-%% \begin{frame}[fragile]
-%%	\frametitle{Negative Binomial Regression with \texttt{R} }
-%%	\Large
-	
-% Let's look at the data. It is always a good idea to start with descriptive statistics and plots.
-
-%%	
-%%	\begin{framed}
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	
-%%	\end{framed}
-
-%% \end{frame}
 %================================================ %
 \begin{frame}[fragile]
 \frametitle{Negative Binomial Regression with \texttt{R} }
@@ -129,11 +68,9 @@ summary(dat)
   Academic  :167  
   Vocational:107  
 \end{verbatim}	
-
-	
-               
+            
 \end{frame}
-
+%===========================================================================%
 \begin{frame}
 \begin{figure}
 \centering
@@ -148,13 +85,8 @@ Histogram plots showing distribution of the data
 	\frametitle{Negative Binomial Regression with \texttt{R} }
 	\Large
 
-%\begin{verbatim}	
-%ggplot(dat, aes(daysabs, fill = prog)) + geom_histogram(binwidth = 1) + facet_grid(prog ~ 
-%., margins = TRUE, scales = "free")
-%\end{verbatim}
 
 \begin{itemize}
-
 \item Each variable has 314 valid observations and their distributions seem quite reasonable. 
 \item The unconditional mean of our outcome variable is much lower than its variance.
 \end{itemize}

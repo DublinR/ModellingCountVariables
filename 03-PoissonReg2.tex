@@ -1,8 +1,8 @@
 \documentclass[MASTER.tex]{subfiles}
 \begin{document}
 	
-	%================================================================================================%
-	\begin{frame}[fragile]
+%================================================================================================%
+\begin{frame}[fragile]
 		
 		\frametitle{Poisson Regression with \texttt{R}}
 		\Large
@@ -12,13 +12,13 @@
 			\item At this point, we are ready to perform our Poisson regression model analysis using the \texttt{glm()} function. 
 			\item We fit the model and save it in the object \texttt{model1} and get a summary of the model.
 		\end{itemize}
-	\end{frame}
+\end{frame}
 	
 	%================================================================================================%
 	\begin{frame}[fragile]
 		
 		\frametitle{Poisson Regression with \texttt{R}}
-		\large
+		\Large
 		\begin{framed}
 			\begin{verbatim}
 			model1 <- glm(num_awards ~ prog + math, 
@@ -27,13 +27,13 @@
 			summary(model1)
 			\end{verbatim}
 		\end{framed}
-	\end{frame}
+\end{frame}
 	%================================================================================================%
 	\begin{frame}[fragile]
 		\frametitle{Poisson Regression with \texttt{R}}
-	
-		\begin{framed}
-			\begin{verbatim}
+	\large
+\begin{framed}
+\begin{verbatim}
 			
 			Call:
 			glm(formula = num_awards ~ prog + math, 
@@ -45,17 +45,16 @@
 			-2.204  -0.844  -0.511   0.256   2.680  
 			\end{verbatim}
 		\end{framed}
-	\end{frame}
-	
-	%================================================================================================%
-	\begin{frame}[fragile]
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
 		
 		\frametitle{Poisson Regression with \texttt{R}}
 
 			\begin{verbatim}
 			
 			Coefficients:
-			Estimate Std. Error z value Pr(>|z|)    
+			               Estimate Std. Error z value Pr(>|z|)    
 			(Intercept)     -5.2471     0.6585   -7.97  1.6e-15 ***
 			progAcademic     1.0839     0.3583    3.03   0.0025 ** 
 			progVocational   0.3698     0.4411    0.84   0.4018    
@@ -65,11 +64,9 @@
 			
 			\end{verbatim}
 		
-	\end{frame}
-	
-	%================================================================================================%
-	\begin{frame}[fragile]
-		
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
 		\frametitle{Poisson Regression with \texttt{R}}
 
 
@@ -85,8 +82,31 @@
 			
 			\end{verbatim}
 	
-	\end{frame}
-	
-	%================================================================================================%
+\end{frame}
+%================================================================================================%
+\begin{frame}
+\frametitle{Poisson Regression with \texttt{R}}
+\noindent \textbf{Regression Coefficients}
+\begin{itemize}
+	\item        Intercept    $\beta_0 = -5.2471$
+	\item			progAcademic $\beta_1 =    1.0839   $
+	\item			progVocational  $\beta_2 =  0.3698  $
+	\item			math           $\beta_3 =   0.0702 $
+\end{itemize}
 
+\noindent \textbf{Exercise}\\
+Predict number of awards for Vocational Student with a maths mark of 70.
+
+\[\hat{Y} = e^{-5.2471} \times e^{1.0839 \times 0}\times e^{0.3698 \times 1}\times e^{0.0702 \times 70} =e^{0.0367} = 1.0373\]
+
+
+
+\end{frame}
+\begin{frame}
+	\frametitle{MA4128 Review}
+	\large
+	\begin{itemize}
+		\item[(i)] Based on \texttt{R} output, be able to carry out calculations similar to that in previous slide.
+	\end{itemize}
+\end{frame}
 \end{document}
