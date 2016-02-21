@@ -1,0 +1,27 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+%================================================================================================%
+\begin{frame}[fragile]
+\frametitle{Negative Binomial Regression with \texttt{R}}
+\LARGE
+\textbf{PART 3: Negative Binomial Regression}
+{
+\Large
+Negative binomial regression is for modeling over-dispersed count outcome variables.
+}
+\end{frame}
+%================================================================================================%
+\begin{frame}[fragile]
+\frametitle{Negative Binomial regression with \texttt{R}}
+\large	
+\begin{itemize}
+		\item Negative binomial regression can be used for over-dispersed count data, that is when the conditional 
+		variance exceeds the conditional mean. 
+		\item It can be considered as a generalization of Poisson regression since it has the same mean structure as Poisson 	
+		regression and it has an extra parameter (\textit{r}) to model the over-dispersion. 
+\end{itemize}
+\[\Pr(X = k) = {k+r-1 \choose k} p^k(1- p)^r \quad \mbox{for }k = 0, 1, 2, \dots \]
+	
+\end{frame}
+%================================================================================================%
+\end{document}

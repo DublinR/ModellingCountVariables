@@ -3,11 +3,13 @@
 %================================================================================================%
 \begin{frame}[fragile]
 \frametitle{Negative Binomial Regression with \texttt{R}}
-\LARGE
+\Large
 \textbf{PART 3: Negative Binomial Regression}
+
+\bigskip
 {
 \Large
-Negative binomial regression is for modeling over-dispersed count outcome variables.
+Negative binomial regression is for modeling count outcome variables, when over-dispersion is detected.
 }
 \end{frame}
 %================================================================================================%
@@ -17,6 +19,7 @@ Negative binomial regression is for modeling over-dispersed count outcome variab
 \begin{itemize}
 		\item Negative binomial regression can be used for over-dispersed count data, that is when the conditional 
 		variance exceeds the conditional mean. 
+		\[\operatorname{Var}(X) >  \operatorname{E}(X)\]
 		\item It can be considered as a generalization of Poisson regression since it has the same mean structure as Poisson 	
 		regression and it has an extra parameter (\textit{r}) to model the over-dispersion. 
 \end{itemize}
@@ -38,7 +41,7 @@ Negative binomial regression is for modeling over-dispersed count outcome variab
 \begin{frame}[fragile]
 \frametitle{Negative Binomial Regression with \texttt{R} }
 \Large
-\textbf{Description of the data}
+\textbf{Description of the data}\\
 Let's pursue Example 1 from above.
 \begin{itemize}
 \item We have attendance data on 314 high school juniors from two urban high schools in the file \textbf{negbin.csv }. 
@@ -50,9 +53,7 @@ Let's pursue Example 1 from above.
 %================================================ %
 \begin{frame}[fragile]
 \frametitle{Negative Binomial Regression with \texttt{R} }
-\normalsize
-\textbf{Exploratory Data Analysis}
-
+\noindent \textbf{Exploratory Data Analysis}
 \begin{verbatim}	
 summary(dat)
         id         gender         math         daysabs     
@@ -68,29 +69,26 @@ summary(dat)
   Academic  :167  
   Vocational:107  
 \end{verbatim}	
-            
 \end{frame}
 %===========================================================================%
 \begin{frame}
 \begin{figure}
 \centering
-\includegraphics[width=0.89\linewidth]{negbin1}
-%\caption{}
-%\label{fig:negbin1}
+\includegraphics[width=0.85\linewidth]{negbin1}
 \end{figure}
 Histogram plots showing distribution of the data
 \end{frame}
 %================================================ %
-\begin{frame}[fragile]
-	\frametitle{Negative Binomial Regression with \texttt{R} }
-	\Large
-
-
-\begin{itemize}
-\item Each variable has 314 valid observations and their distributions seem quite reasonable. 
-\item The unconditional mean of our outcome variable is much lower than its variance.
-\end{itemize}
-
-\end{frame}
+%\begin{frame}[fragile]
+%	\frametitle{Negative Binomial Regression with \texttt{R} }
+%	\Large
+%
+%
+%\begin{itemize}
+%\item Each variable has 314 valid observations and their distributions seem quite reasonable. 
+%\item The unconditional mean of our outcome variable is much lower than its variance.
+%\end{itemize}
+%
+%\end{frame}
 
 \end{document}
