@@ -1,15 +1,31 @@
 \documentclass[MASTER.tex]{subfiles}
 \begin{document}
+
+\begin{frame}
+\Large
+\noindent \textbf{Overview}
+\begin{enumerate}
+\item Introduction to Modelling Count Variables
+\item Poisson Regression
+\item Negative Binomial Regression
+\item Zero-Inflated Models and Vuong Tests
+\item Zero Truncation
+\end{enumerate}
+
+\end{frame}
+
+%==================================================================%
 \begin{frame}
 	\Large
 \textbf{Introduction}
 \begin{itemize}
-\item This talks is about regression methods in which the dependent variable takes
- count (nonnegative integer) values. \item The dependent variable is usually the number of times an event occurs in a certain period of time.
+\item This presentation is about regression methods in which the dependent variable takes
+ count (nonnegative integer) values. \smallskip \item The dependent variable is usually the number of times an event occurs in a certain period of time.
 \end{itemize}
 \end{frame}
 %================================================================== %
 \begin{frame}[fragile]
+\large
 	\begin{itemize}
 		\item Linear regression is used to model and predict continuous measurement variables.
 		\item Poisson regression is used to model and predict discrete count variables.
@@ -31,8 +47,9 @@
 %======================================================== %
 \begin{frame}
 	\frametitle{Overview}
+\vspace{-0.5cm}
 	\Large Some
-examples of event counts are:
+examples of \textbf{ event counts } are:
 \begin{itemize}
 \item number of claims per year on a particular car owner’s insurance policy,
 \item number of workdays missed due to sickness of a dependent in a one-year period,
@@ -41,24 +58,22 @@ examples of event counts are:
 \end{frame}
 %================================================================================================%
 \begin{frame}[fragile]
+\frametitle{Modelling Count Variables } 
+\Large	
+\textbf{Poisson Distribution} 
 	
-	\frametitle{Poisson Regression with \texttt{R} } 
-	\Large	
-	\textbf{Poisson Distribution} 
-	
-	\begin{itemize}
+\begin{itemize}
 		\item The number of persons killed by mule or horse kicks in the Prussian army per year. 
 		\item Ladislaus Bortkiewicz collected data from 20 volumes of Preussischen Statistik. 
-		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. \item The period or module of observation is thus one year. 
-		
-	\end{itemize}
+		\item These data were collected on 10 corps of the Prussian army in the late 1800s over the course of 20 years, giving a total of 200 observations of one corps for a one year period. \item The unit period of observation is thus one year. 
+\end{itemize}
 	
 \end{frame}
 
 %======================================================== %
 \begin{frame}
-	\frametitle{Poisson Distribution: Prussian Cavalary}
-	\Large
+\frametitle{Poisson Distribution: Prussian Cavalary}
+\Large
 	\begin{itemize}
 \item The total deaths from horse kicks were 122, and the average number of deaths per year per corps was thus 122/200 = 0.61. 
 %\item This is a rate of less than 1. It is also obvious that it is meaningless to ask how many times per year a cavalryman was not killed by the kick of a horse. 
@@ -68,55 +83,156 @@ examples of event counts are:
 \end{itemize}
 \end{frame}
 
+%======================================================== %
 \begin{frame}[fragile]
+\frametitle{Generating Random Numbers}
 	\begin{framed}
 		\begin{verbatim}
-		rpois(200,lambda=0.61)
+		> X <- rpois(200,lambda=0.61)
 		> X
 		[1]   1 2 0 1 0 3 0 0 1 0 0 4 0 0 0 1 0 1 0 2
 		[21]  0 0 0 2 2 0 0 0 1 0 0 0 0 1 0 0 0 1 2 0
 		[41]  0 0 1 0 1 0 1 0 0 1 1 0 1 0 0 1 0 0 3 1
 		.......
-		.......
 		[141] 0 0 0 0 1 2 0 1 0 1 0 0 0 0 0 0 0 1 0 0
 		[161] 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 1 0 2 0 1
 		[181] 0 0 2 0 2 0 0 1 0 0 3 1 0 0 0 1 1 0 0 0
 		>
-		> mean(X)
+		> mean(X) ;var(X) 
 		[1] 0.53
-		> var(X)
 		[1] 0.5317588
 		\end{verbatim}
 	\end{framed}
 \end{frame}
 %======================================================== %
 \begin{frame}
-\frametitle{Overview}
+\frametitle{Poisson Distribution Assumptions}
 \Large
 \begin{itemize}
-\item  Poisson regression is main technique used to model count variables.
+\item  Poisson Regression is main technique used to model count variables.
 
-\item Poisson Distribution : Mean and Variance are equal
+\item Assumption underlying Poisson Distribution : Mean and Variance are equal
 \[ \mathrm{E}(X)  = \mathrm{Var}(X) \]
 
+\item Allow for a margin of error of about 5\% . Simulation Studies can be used to determine the validity of this assumption. (see Next Slide)
 
-\item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead.
+% \item  Sometimes conventional Poisson Regression is not an appropriate technique, and alternative or variant techniques are used instead. For example, Negative Binomial regression is for modelling ``over-dispersed" count outcome variables.
 
 
-\item  For example, Negative Binomial regression is for modelling "over-dispersed" count outcome variables.
 \end{itemize}
+\end{frame}
+%=========================================================%
+\begin{frame}[fragile]
+\frametitle{Simulation Studies}
+\large
+	\begin{framed}
+		\begin{verbatim}
+> X=rpois(1000,lambda=1);mean(X);var(X)
+[1] 1.001
+[1] 1.028027
+> X=rpois(5000,lambda=0.5);mean(X);var(X)
+[1] 0.5074
+[1] 0.5232499
+> X=rpois(2500,lambda=0.7);mean(X);var(X)
+[1] 0.7248
+[1] 0.7317577
+> X=rpois(500,lambda=3);mean(X);var(X)
+[1] 3.076
+[1] 2.851928
+		\end{verbatim}
+	\end{framed}
+\end{frame}
+%=========================================================%
+\begin{frame}[fragile]
+\frametitle{Simulation Studies}
+\large
+	\begin{framed}
+		\begin{verbatim}
+> Ratio = numeric()
+> M = 10000
+> 
+> for ( i in 1:M){
++       X=rpois(2500,lambda=5);
++       Ratio[i] = var(X)/mean(X)
++ }
+> 
+> quantile(Ratio, c(0.025,0.975))
+     2.5%     97.5% 
+0.9452617 1.0563994 
+
+		\end{verbatim}
+	\end{framed}
 \end{frame}
 
 
+%============================================%
+
 \begin{frame}
 \frametitle{Problem Areas}
-
+\Large
 \begin{description}
-\item[Over-Dispersion] Important Poisson Distributon does not hold 
+\item[Over-Dispersion] : Important Poisson Distributon assumption does not hold 
 \[ \mathrm{E}(X)  < \mathrm{Var}(X) \]
-\item[Zero-Inflation] More ``Zeros" would occure than in conventional Poisson Process (This is actually "overdispersion" also, but we will treat them separately).
-\item[ Zero-Truncation] Process does not allow for a ``Zero" outcome. 
+\item[Zero-Inflation] : More ``Zeros" would occure than in conventional Poisson Process (This is actually "overdispersion" also, but we will treat them separately). \smallskip
+\item[ Zero-Truncation] : Process does not allow for a ``Zero" outcome. 
 \end{description}
+\end{frame}
+
+%==========================================%
+\begin{frame}[fragile]
+	
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large
+	\textbf{Over-Dispersion}\\ 
+	\begin{itemize}
+		\item Overdispersion is the presence of greater variability
+		in a data set than would be expected based on a given simple statistical model.
+		\item Poisson Distribution:
+		\[ \mathrm{Var}(X) >  \mathrm{E}(X) \]
+	\end{itemize}
+\end{frame}
+%==========================================%
+
+%==========================================%
+\begin{frame}[fragile]
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large
+	\textbf{Zero-Inflation}
+	\begin{itemize}
+		\item One common cause of over-dispersion is excess zeros, which in turn are generated by an additional data generating 
+		process. 
+		\item In this situation, zero-inflated model should be considered.
+		\item If the data generating process does not allow for any 0s (such as the number of days spent in the hospital), then a zero-truncated model may be more appropriate.
+	\end{itemize}
+\end{frame}
+%==========================================%
+\begin{frame}[fragile]
+\frametitle{Poisson Regression with \texttt{R}}
+	\Large
+	\textbf{Over-Dispersion}
+	\begin{itemize}
+		
+		\item When there seems to be an issue of dispersion, we should first check if our model is appropriately specified, 
+		such as omitted variables and functional forms. 
+		\item For example, if we omitted the predictor variable prog in the example above, our model would seem to have a 
+		problem with over-dispersion. 
+		\item In other words, a misspecified model could present a symptom like an over-dispersion problem. 
+	\end{itemize}
+\end{frame}
+
+
+%==========================================%
+\begin{frame}[fragile]
+	\frametitle{Poisson Regression with \texttt{R}}
+	\Large
+	\begin{itemize}
+		\item Assuming that the model is correctly specified, the assumption that the conditional variance is equal 
+		to the conditional mean should be checked. 
+		\item There are several tests including the likelihood ratio test of over-dispersion parameter alpha by running the 
+		same model using negative binomial distribution. 
+%		\item The \texttt{R} package \textbf{pscl} (Political Science Computational Laboratory, Stanford University) provides many functions for binomial 
+%		and count data including \texttt{odTest} for testing over-dispersion. 
+	\end{itemize}
 \end{frame}
 %=========================================================== %
 \begin{frame}[fragile]
@@ -131,16 +247,18 @@ examples of event counts are:
 \normalsize
 \begin{framed}
  \begin{verbatim}
-glm(formula, family=familytype(link=linkfunction),
-  data=dataname)
+glm( modelformula, 
+       family=familytype(link=linkfunction),
+       data=dataname)
 \end{verbatim}
 \end{framed}
 }
 \end{frame}
+
 %========================================================== %
 \begin{frame}[fragile]
 	\frametitle{Generalized Linear Models}
-	\large
+	\Large
 \begin{center}
 \begin{tabular}{|c|l|} \hline
 	Family &	Default Link Function \\ \hline \hline 
@@ -155,10 +273,10 @@ glm(formula, family=familytype(link=linkfunction),
 	
 \end{tabular}
 \end{center}
- 
 \end{frame}
-
+%========================================================== %
 \begin{frame}
+\frametitle{Generalized Linear Models}
 	\large
 	\textbf{Texts on GLMs}\\ \bigskip
 \begin{itemize}
@@ -172,7 +290,6 @@ glm(formula, family=familytype(link=linkfunction),
 \end{itemize}
 
 \end{frame}
-
 
 
 %========================================================== %
@@ -198,6 +315,8 @@ Bayesian analysis of item-response theory (IRT) models, roll call analysis; comp
 \end{description}
 Fits generalized linear models using the same model specification as glm in the stats package, but with a modified default fitting method that provides greater stability for models that may fail to converge using glm
 \end{frame}
+
+
 \begin{frame}
 	\textbf{VGAM: Vector Generalized Linear and Additive Models}
 \begin{description}
@@ -207,7 +326,21 @@ Fits generalized linear models using the same model specification as glm in the 
 \end{description}\bigskip
 Vector generalized linear and additive models, and associated models (Reduced-Rank VGLMs, Quadratic RR-VGLMs, Reduced-Rank VGAMs). \\ \bigskip This package fits many models and distribution by maximum likelihood estimation (MLE) or penalized MLE. Also fits constrained ordination models in ecology.
 \end{frame}
+
+
 %================================================================== %
+\begin{frame}
+	\large
+\noindent \textbf{MA4128  - Review Questions} \smallskip
+\begin{itemize}
+\item[(i)] Describe Event Counts / Count Variables.
+\item[(ii)] Poisson Distribution : Asummption of Parameter Equality what is it? how to check?
+\item[(iii)] State the three cases where assumption does not hold
+\end{itemize}
+\smallskip
+You are not required to know anything about \texttt{R} implementation.
+\end{frame}
+
 \end{document}
 
 

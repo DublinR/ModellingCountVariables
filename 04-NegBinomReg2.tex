@@ -1,22 +1,20 @@
-\documentclass[00-GLMregslides.tex]{subfiles}
+\documentclass[MASTER.tex]{subfiles}
 \begin{document}
 	%================================================ %
 	\begin{frame}[fragile]
 		\frametitle{Negative Binomial Regression with \texttt{R} }
 		\Large
-		
 		\textbf{Predicted values}
 		\begin{itemize}
 			\item	For assistance in further understanding the model, we can look at predicted counts for various levels of our predictors. 
 			\item Below we create new datasets with values of math and prog and then use the predict command to calculate the predicted number of events.
 		\end{itemize}
-	\end{frame}
+\end{frame}
 	%================================================ %
-	\begin{frame}[fragile]
+\begin{frame}[fragile]
 		\frametitle{Negative Binomial Regression with \texttt{R} }
 		\Large
-		
-		\begin{itemize}
+\begin{itemize}
 			\item	First, we can look at predicted counts for each value of prog while holding math at its mean. 
 			\item To do this, we create a new dataset with the combinations of prog and math for which we would like to find predicted values, then use the \texttt{predict} command.
 		\end{itemize}
