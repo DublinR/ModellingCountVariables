@@ -43,13 +43,22 @@
 %\end{itemize}
 %\end{frame}
 %=================================================================== %
+\begin{frame}
+	%R Data Analysis Examples: Poisson Regression
+	
+	{\LARGE
+		PART 4A:	Vuong Test for Zero-Inflation
+	} \bigskip
+	\Large
+	
 
+\end{frame}
 %====================================================================================================== %
 \begin{frame}[fragile]
 \frametitle{Vuong Testing}
 	\begin{itemize}
 		\item Note that the model output above does not indicate in any way if our zero-inflated model is an improvement over a standard Poisson regression. 
-		\item We can determine this by running the corresponding standard Poisson model and then performing a Vuong test of the two models.
+		\item We can determine this by running the corresponding standard Poisson model and then performing a \textbf{Vuong Test} of the two models.
 	\end{itemize}
 	\begin{verbatim}
 	summary(p1 <- glm(count ~ child + camper, 

@@ -1,0 +1,45 @@
+\documentclass[MASTER.tex]{subfiles}
+\begin{document}
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+	\Large
+	
+	\textbf{Things to consider}
+	\begin{itemize}
+	\item It is not recommended that negative binomial models be applied to small samples.
+	\item One common cause of over-dispersion is excess zeros by an additional data generating process. 
+	In this situation, \textbf{zero-inflated model} should be considered.
+	\item	
+	If the data generating process does not allow for any 0s (such as the number of days spent in the hospital), then a \textbf{zero-truncated model} may be more appropriate.
+	\end{itemize}
+\end{frame}
+
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+	\Large
+	\begin{itemize}
+	\item
+	Count data often have an exposure variable, which indicates the number of times the event could have happened. 
+	\item This variable should be incorporated into your negative binomial regression model with the 
+	use of the \texttt{offset} option. 
+	%See the glm documentation for details.
+	\end{itemize}
+\end{frame}
+%================================================ %
+\begin{frame}[fragile]
+	\frametitle{Negative Binomial Regression with \texttt{R} }
+	\Large
+		\begin{itemize}
+	\item
+	The outcome variable in a negative binomial regression cannot have negative numbers.
+	\item You will need to use the \texttt{m1\$resid} command to obtain the residuals from our model to check 
+	other assumptions of the negative binomial model 
+	% (see Cameron and Trivedi (1998) and Dupont (2002) for more information).
+	\end{itemize}
+\end{frame}
+
+
+%================================================== %	
+\end{document}
